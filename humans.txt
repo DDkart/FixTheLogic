@@ -1,0 +1,14 @@
+/* TEAM */
+Founder & Lead Author: Rohit Sharma
+Email: support@fixthelogic.in
+Twitter: @rohitsharma_ftl
+Location: India
+
+/* SITE */
+Standards: HTML5, CSS3
+Components: Vanilla JS, Google Fonts
+Software: Written by hand with care
+Language: English
+
+/* THANKS */
+To every user who writes in with error codes, feedback, and corrections.

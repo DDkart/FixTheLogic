@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canon Pixma Error P07 or 5B00 (Ink Absorber Full): Manual Reset Guide &ndash; Fix The Logic</title>
+  <meta name="description" content="Canon Pixma showing P07 or 5B00? Your ink absorber counter hit 100%. This guide explains what it means and walks through 4 fixes — from a power reset to the Canon Service Tool counter reset and physical pad replacement." />
+  <link rel="canonical" href="https://fixthelogic.in/canon-pixma-error-p07-5b00-ink-absorber-reset.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Canon Pixma Error P07 or 5B00 (Ink Absorber Full): Manual Reset Guide" />
+  <meta property="og:image" content="https://fixthelogic.in/images/canon-p07-5b00/hero-image.png" />
+  <meta property="og:site_name" content="Fix The Logic" />
+  <meta property="article:published_time" content="2026-03-06" />
+  <meta property="article:section" content="Printers &amp; Office" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Canon Pixma Error P07 or 5B00 (Ink Absorber Full): Manual Reset Guide","image":"https://fixthelogic.in/images/canon-p07-5b00/hero-image.png","datePublished":"2026-03-06","author":{"@type":"Organization","name":"Fix The Logic","url":"https://fixthelogic.in"},"publisher":{"@type":"Organization","name":"Fix The Logic","url":"https://fixthelogic.in"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to Fix Canon Pixma P07 or 5B00 Error","totalTime":"PT20M","step":[{"@type":"HowToStep","position":1,"name":"Power reset — unplug for 5 minutes"},{"@type":"HowToStep","position":2,"name":"Reset waste ink counter with Canon Service Tool V5103"},{"@type":"HowToStep","position":3,"name":"Manual button reset sequence (no PC needed)"},{"@type":"HowToStep","position":4,"name":"Physically clean or replace the waste ink absorber pad"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is P07 the same as 5B00 on Canon Pixma?","acceptedAnswer":{"@type":"Answer","text":"Yes — P07 and 5B00 are the same error displayed differently depending on the model. Both mean the waste ink counter has reached 100%."}},{"@type":"Question","name":"How many times can I reset the Canon waste ink counter?","acceptedAnswer":{"@type":"Answer","text":"There is no technical limit to how many times you can reset the counter using the Canon Service Tool. However, each reset without replacing the physical pad means the sponge is accumulating more ink."}},{"@type":"Question","name":"Will resetting the counter void my Canon warranty?","acceptedAnswer":{"@type":"Answer","text":"Resetting the software counter alone does not void the warranty. Physically opening the printer body to replace the pad may affect the warranty on units under 1 year old."}}]}</script>
+  <link rel="icon" href="css/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">Fix The <span>Logic</span></a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" role="navigation" aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="appliances.html">Appliances</a>
+          <a href="printers-office.html" class="active">Printers &amp; Office</a>
+          <a href="smart-home.html">Smart Home</a>
+          <a href="gadgets.html">Gadgets</a>
+          <a href="software-errors.html">Software Errors</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="cat-strip">
+    <div class="container">
+      <div class="cat-strip-inner">
+        <span class="label">Browse:</span>
+        <a href="appliances.html" class="cat-pill">Appliances</a>
+        <a href="printers-office.html" class="cat-pill">Printers &amp; Office</a>
+        <a href="smart-home.html" class="cat-pill">Smart Home</a>
+        <a href="gadgets.html" class="cat-pill">Gadgets</a>
+        <a href="software-errors.html" class="cat-pill">Software Errors</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="main-section">
+    <div class="container">
+      <div class="content-wrap">
+        <article class="col-main page-article" itemscope itemtype="https://schema.org/Article">
+
+          <nav aria-label="Breadcrumb" style="font-size:0.78rem;color:var(--gray-500);margin-bottom:16px;">
+            <a href="index.html" style="color:var(--gray-500);">Home</a>
+            <span style="margin:0 6px;color:var(--gray-300);">&#8250;</span>
+            <a href="printers-office.html" style="color:var(--gray-500);">Printers &amp; Office</a>
+            <span style="margin:0 6px;color:var(--gray-300);">&#8250;</span>
+            <span style="color:var(--gray-700);">Canon Pixma P07 / 5B00 Fix</span>
+          </nav>
+
+          <div class="article-meta-bar">
+            <span class="article-cat-tag">Printers &amp; Office</span>
+            <span class="meta-sep">|</span>
+            <span>Canon Pixma G2000 / G3010 / MG / TS Series</span>
+            <span class="meta-sep">|</span>
+            <time datetime="2026-03-06" itemprop="datePublished">March 6, 2026</time>
+            <span class="meta-sep">|</span>
+            <span>&#9201; 10 min read</span>
+          </div>
+
+          <nav class="toc-box" aria-label="Table of Contents">
+            <div class="toc-head">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+              Table of Contents
+            </div>
+            <ol class="toc-list">
+              <li><a href="#intro">Introduction</a></li>
+              <li><a href="#what-does-p07-mean">What Does P07 / 5B00 Mean?</a></li>
+              <li><a href="#tools-required">Tools Required</a></li>
+              <li><a href="#step-by-step-fixes">Step-by-Step Fixes</a></li>
+              <li><a href="#when-to-call">When to Call a Professional</a></li>
+              <li><a href="#quick-summary">Quick Summary</a></li>
+              <li><a href="#faq-section">Frequently Asked Questions</a></li>
+            </ol>
+          </nav>
+
+          <h1 itemprop="headline" style="font-family:var(--font-head);font-size:clamp(1.6rem,3.5vw,2.2rem);color:var(--gray-900);line-height:1.2;margin-bottom:20px;">
+            Canon Pixma Error P07 or 5B00 (Ink Absorber Full): Manual Reset Guide
+            <span style="display:block;font-size:0.58em;color:var(--blue);margin-top:8px;">Power Reset &#8212; Canon Service Tool V5103 &#8212; Button Sequence &#8212; Replace Absorber Pad</span>
+          </h1>
+
+          <img src="images/canon-p07-5b00/hero-image.png" alt="Canon Pixma printer displaying P07 error code with technician holding a multimeter next to the printer control panel" class="article-hero-img" width="1280" height="720" itemprop="image" />
+
+          <div class="article-body" itemprop="articleBody">
+
+            <h2 id="intro">You Hit Print. The Orange Light Started Blinking. Now: P07.</h2>
+            <p>You hit Print, the printer hums to life, and then &#8212; nothing. The orange light starts blinking, your computer throws up an error window, and your Canon Pixma displays either <strong>P07</strong> or <strong>5B00</strong> depending on the model. The printer refuses to do anything at all. No printing, no scanning, no copying. Completely locked up.</p>
+            <p>You&#8217;ve changed the ink cartridges recently. The paper tray is full. Everything looks fine from the outside. So why is your printer acting like it&#8217;s been condemned?</p>
+            <p>Here&#8217;s what you need to hear: <strong>your printer isn&#8217;t broken.</strong> It has deliberately locked itself because it believes a small internal sponge &#8212; one you&#8217;ve probably never heard of &#8212; has reached its maximum capacity. And it won&#8217;t unlock itself without a manual reset.</p>
+            <p>The good news is that this reset can be done at home, for free, in about ten minutes. Millions of Canon Pixma users have done it. This guide walks you through exactly what the error means, how to reset it properly, and what to do if the reset doesn&#8217;t hold.</p>
+
+            <div class="video-embed-wrap">
+              <div class="video-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                Watch: Canon Pixma P07 / 5B00 Error Fix &#8212; Service Tool Reset &amp; Absorber Pad Guide
+              </div>
+              <iframe src="https://www.youtube.com/embed/uqM6zg5eLmU" title="Canon Pixma P07 5B00 Error Fix — Service Tool V5103 Waste Ink Counter Reset Complete Guide" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <h2 id="what-does-p07-mean">What Do Error P07 and 5B00 Mean on Canon Pixma?</h2>
+            <p>In plain English, <strong>P07 and 5B00 both mean the same thing: Canon&#8217;s firmware believes the ink absorber &#8212; an internal waste ink pad &#8212; is completely full and needs to be replaced or reset.</strong></p>
+            <p>Every Canon Pixma inkjet printer has one or more small sponge pads made of foam or felt, tucked into the base of the printer. These pads are called <strong>waste ink absorbers</strong>, and their entire job is to soak up excess ink. This excess comes from three sources: ink flushed through the print head during automatic cleaning cycles, ink used during head alignment prints, and any ink that overshoots the paper during borderless printing.</p>
+            <p>Over months and years of use, these pads slowly absorb more ink. Canon&#8217;s printer firmware tracks this accumulation using an internal counter called the <strong>waste ink counter</strong>. When this counter hits 100%, the printer throws P07 or 5B00 and locks itself completely.</p>
+            <p>The critical thing to understand is: <strong>the counter is a software number, not a physical measurement.</strong> The actual pad may not be fully saturated &#8212; Canon sets the limit conservatively, well below the pad&#8217;s true capacity, as a safety margin. This is why resetting the counter often gives the printer perfectly functional service for months or years more. However, the pad is genuinely accumulating ink &#8212; if it eventually overflows, waste ink can drip onto internal circuitry and cause real damage.</p>
+
+            <div class="article-img-wrap">
+              <img src="images/canon-p07-5b00/canon-pixma-g2000-front.png" alt="Canon Pixma G2000 front view showing the ink tank system, paper tray and control panel buttons — a common model affected by P07 and 5B00 waste ink absorber errors" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption">The Canon Pixma G2000 is one of the most common models to display P07 or 5B00. The ink tank system on G-series printers means more ink passes through the absorber pad over time &#8212; making the waste ink counter reach 100% faster than on cartridge-based models.</div>
+            </div>
+
+            <h2 id="tools-required">Tools You&#8217;ll Need</h2>
+            <p>You won&#8217;t need everything for every fix &#8212; but having these within reach saves trips mid-repair:</p>
+            <ul>
+              <li>A Windows or Mac computer with a <strong>USB cable</strong> (for the software reset tool)</li>
+              <li>Internet access to download Canon Service Tool V5103</li>
+              <li>Paper towels and rubber gloves (if cleaning the physical pad)</li>
+              <li>A Phillips head screwdriver (only if physically replacing the pad)</li>
+              <li>About <strong>10&#8211;20 minutes</strong> of your time</li>
+            </ul>
+
+            <h2 id="step-by-step-fixes">Step-by-Step Fixes (Easiest to Hardest)</h2>
+            <p>Work through these in order. The majority of users are fully up and running after Fix 1 or Fix 2. Only proceed further if the error returns quickly after resetting.</p>
+
+            <div class="step-box">
+              <div class="step-box-head"><span class="step-num">1</span><span class="step-title">Power Reset &#8212; Start Here</span></div>
+              <p>Before downloading anything, try a basic power cycle. P07 or 5B00 occasionally appears as a one-time trigger &#8212; particularly after a power interruption mid-print &#8212; and a clean reset clears it without any further action.</p>
+              <ol>
+                <li>Press the printer&#8217;s <strong>Power</strong> button to turn it off.</li>
+                <li>Once the power light is completely off, <strong>unplug the printer from the wall socket</strong> &#8212; do not leave it on standby.</li>
+                <li>Wait a full <strong>5 minutes.</strong></li>
+                <li>Plug the power cable back in and turn the printer on.</li>
+                <li>Attempt to print a test page.</li>
+              </ol>
+              <p>If the error is gone and the printer prints normally, monitor it over the next few sessions. If P07 or 5B00 returns within a print or two, the waste ink counter is genuinely at its limit and needs a software reset &#8212; continue to Fix 2.</p>
+            </div>
+
+            <div class="step-box">
+              <div class="step-box-head"><span class="step-num">2</span><span class="step-title">Reset the Waste Ink Counter via Canon Service Tool V5103 &#8212; The Main Fix</span></div>
+              <p>This is the definitive fix for P07 and 5B00. Canon provides a free official service tool &#8212; <strong>Canon Service Tool V5103</strong> (also called ST-V5103) &#8212; that connects to your printer via USB and resets the waste ink counter back to zero. It is the same tool used by Canon&#8217;s own authorised service centres.</p>
+              <div class="warning-box"><strong>&#9888;&#65039; Safety Warning:</strong> Only download Canon Service Tool from reputable sources such as the official Canon support website or well-known driver repositories. Do not download from unfamiliar third-party sites that ask you to create an account, pay a fee, or install additional software &#8212; these are either scams or malware. The tool itself is completely free.</div>
+              <p><strong>On Windows:</strong></p>
+              <ol>
+                <li>Download <strong>Canon Service Tool V5103</strong> &#8212; search for &#8220;Canon Service Tool V5103 official download&#8221; and verify the source carefully before downloading.</li>
+                <li>Extract the downloaded ZIP file to a folder on your desktop.</li>
+                <li><strong>Connect your Canon Pixma to your computer via USB cable.</strong> The reset tool does not work reliably over Wi-Fi &#8212; use a direct USB connection.</li>
+                <li>Make sure the printer is <strong>powered on</strong> and showing the P07 or 5B00 error.</li>
+                <li>Open the extracted folder and run <strong>ServiceTool_V5103.exe</strong> &#8212; right-click it and select <strong>&#8220;Run as administrator&#8221;</strong> for best results.</li>
+                <li>The tool will automatically detect your connected Canon printer.</li>
+                <li>Find the <strong>&#8220;Ink Absorber Counter&#8221;</strong> section. You will see a current counter value &#8212; likely at or near 100%.</li>
+                <li>Click <strong>&#8220;Main&#8221;</strong> under the Ink Absorber section, then click <strong>&#8220;Set&#8221;</strong> to reset the main waste ink counter to zero.</li>
+                <li>If your model also shows a <strong>&#8220;Platen&#8221;</strong> counter, reset that too using the same process.</li>
+                <li>Once the counter shows <strong>0%</strong>, click the <strong>&#8220;EEPROM&#8221;</strong> button if present to write the reset value to the printer&#8217;s permanent memory.</li>
+                <li>Close the tool, turn the printer off, unplug it for 30 seconds, then power it back on.</li>
+                <li>Print a test page &#8212; P07 or 5B00 should be gone.</li>
+              </ol>
+              <p><strong>On Mac:</strong> The Canon Service Tool is Windows-only. Mac users can use a Windows PC with the USB cable, or try the free <strong>wic Reset Utility</strong> (the free trial allows one counter reset) &#8212; search for it by name and verify the source carefully.</p>
+            </div>
+
+            <div class="article-img-wrap">
+              <img src="images/canon-p07-5b00/service-tool-reset-guide.png" alt="Canon Service Tool V5103 interface showing Ink Absorber Counter at 100 percent triggering P07 error and the reset steps to bring it back to zero percent using Main Set and EEPROM buttons" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption">Canon Service Tool V5103 shows the waste ink counter at 100% &#8212; the trigger point for P07 and 5B00. Click &#8220;Main&#8221; &#8594; &#8220;Set&#8221; to reset to 0%, then &#8220;EEPROM&#8221; to save. Always use a USB cable &#8212; Wi-Fi resets fail silently on most models.</div>
+            </div>
+
+            <div class="step-box">
+              <div class="step-box-head"><span class="step-num">3</span><span class="step-title">Manual Button Reset Sequence (No PC Required)</span></div>
+              <p>If you don&#8217;t have access to a Windows computer, several Canon Pixma models support a manual hardware reset sequence that can clear P07 or 5B00 using only the printer&#8217;s buttons. This method varies by model and does not work on all Pixma units &#8212; but it&#8217;s worth trying before searching for a PC.</p>
+
+              <div class="article-img-wrap" style="margin:20px 0;">
+                <img src="images/canon-p07-5b00/canon-g3010-buttons-top.png" alt="Canon Pixma G3010 top-down view showing the Power, Stop, Black Start and Color Start buttons used in the manual service mode button reset sequence for P07 and 5B00 errors" width="1140" height="641" loading="lazy" />
+                <div class="article-img-caption">The Canon G3010&#8217;s Power and Stop buttons are the two you&#8217;ll use for the manual button reset sequence. On G-series models, hold Stop then Power &#8212; the exact sequence is below.</div>
+              </div>
+
+              <p><strong>For Canon Pixma MG and MX series (most common method):</strong></p>
+              <ol>
+                <li>With the printer <strong>powered off</strong>, press and hold the <strong>Stop/Reset</strong> button (the red circle with a triangle inside it).</li>
+                <li>While holding Stop/Reset, press and hold the <strong>Power</strong> button.</li>
+                <li>Continue holding Power and release the Stop/Reset button.</li>
+                <li>While still holding Power, press Stop/Reset <strong>5 times</strong> in quick succession.</li>
+                <li>Release the Power button. The printer should enter service mode &#8212; the display may flash or show dashes.</li>
+                <li>Press Stop/Reset <strong>2 more times</strong>, then press Power once to confirm.</li>
+                <li>The printer will restart and the P07 / 5B00 error should be cleared.</li>
+              </ol>
+              <p><strong>Note:</strong> The exact button sequence varies between Pixma models. If this sequence doesn&#8217;t match your model&#8217;s behaviour, search for your specific model number plus &#8220;service mode reset sequence&#8221; to find the correct combination. Canon Pixma IP, IX, and TS series models use different sequences.</p>
+            </div>
+
+            <div class="article-img-wrap">
+              <img src="images/canon-p07-5b00/canon-g3010-control-panel.png" alt="Canon Pixma G3010 control panel showing Color Start, Black Start, Stop and navigation buttons on the top surface along with the small LCD display and wireless indicator lights" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption">The Canon G3010 control panel &#8212; Color Start (left), Black Start, Stop (red), and + button alongside the LCD. For the G3010 and G3000 series, the manual button reset sequence uses Power + Stop in a specific combination. Confirm your exact model sequence before starting.</div>
+            </div>
+
+            <div class="step-box">
+              <div class="step-box-head"><span class="step-num">4</span><span class="step-title">Physically Clean or Replace the Waste Ink Absorber Pad</span></div>
+              <p>Resetting the software counter addresses the error code, but it does not change the physical state of the ink pad. If your printer has been in heavy use for several years and the reset keeps triggering quickly, the pad may be genuinely saturated and approaching the point where it could overflow. Cleaning or replacing the physical pad eliminates the root cause rather than just resetting the warning.</p>
+              <div class="warning-box"><strong>&#9888;&#65039; Safety Warning:</strong> Unplug the printer completely from the wall before opening the bottom casing or accessing internal components. Waste ink is a <strong>permanent stain</strong> &#8212; wear rubber gloves and work on a surface covered with several layers of paper towel. Waste ink from a Canon Pixma absorber can be significant in volume and will stain clothing, skin, and surfaces on contact.</div>
+              <ol>
+                <li>Unplug the printer and place it on a protected surface with several layers of paper towel underneath.</li>
+                <li>Remove the printer&#8217;s bottom cover &#8212; on most Pixma models, it is held by <strong>2&#8211;4 Phillips screws</strong> on the underside. Keep the screws safely together.</li>
+                <li>Locate the <strong>waste ink absorber pad</strong> &#8212; a rectangular or irregular piece of dark grey or black sponge foam, usually sitting in a dedicated tray at the bottom rear of the printer body. It will be visibly ink-stained, ranging from dark blue to black depending on ink usage.</li>
+                <li>Remove the pad carefully &#8212; it lifts out of its tray. Place it immediately into a sealed plastic bag to contain the ink.</li>
+                <li>You have two options:
+                  <ul style="margin-top:10px;">
+                    <li><strong>Clean and reuse:</strong> Rinse the pad under running water, squeezing gently until the water runs clear. Allow it to dry <strong>completely</strong> &#8212; at minimum 24&#8211;48 hours &#8212; before reinstalling. A damp pad will spread ink onto internal components.</li>
+                    <li><strong>Replace:</strong> Purchase a replacement pad for your specific Pixma model &#8212; available online for approximately <strong>&#8377;150&#8211;&#8377;400</strong> (India) or <strong>$5&#8211;$15</strong> (US). Generic pads can be trimmed to fit.</li>
+                  </ul>
+                </li>
+                <li>Reinstall the dry or new pad in the tray, reassemble the bottom cover, and tighten all screws.</li>
+                <li>Perform the software reset (Fix 2) to reset the counter after the physical pad has been replaced.</li>
+              </ol>
+            </div>
+
+            <div class="article-img-wrap">
+              <img src="images/canon-p07-5b00/absorber-pad-location-diagram.png" alt="Canon Pixma cross-section diagram showing the location of the waste ink absorber pad at the bottom rear of the printer with step-by-step instructions for Fix 4 physical pad replacement" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption">The waste ink absorber pad sits at the bottom rear of the printer body. It lifts out of its tray once the bottom cover screws are removed. Always replace the software counter (Fix 2) after physically replacing the pad &#8212; the counter won&#8217;t reset itself automatically.</div>
+            </div>
+
+            <div class="article-img-wrap">
+              <img src="images/canon-p07-5b00/canon-pixma-g3000-front.png" alt="Canon Pixma G3000 front view showing the full printer body with control panel and ink tanks visible from outside — same waste ink absorber system as G2000 and G3010 models" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption">The Canon Pixma G3000 shares the same waste ink absorber design as the G2000 and G3010. After physically replacing the absorber pad, always run Fix 2 (Canon Service Tool V5103) to reset the software counter &#8212; the printer won&#8217;t clear P07 or 5B00 automatically even with a new pad installed.</div>
+            </div>
+
+            <h2 id="when-to-call">When to Call a Professional</h2>
+            <p>P07 and 5B00 are among the most DIY-friendly Canon error codes, but there are situations where professional help makes more sense:</p>
+            <ul>
+              <li><strong>The error returns within a few print jobs after resetting the counter.</strong> This means the physical pad is genuinely saturated and possibly overflowing &#8212; and depending on how long this has been happening, waste ink may already have reached the circuit board. A technician can assess whether the board has been damaged before you invest more time in the printer.</li>
+              <li><strong>You see ink dripping or pooling under the printer.</strong> Stop using the printer immediately. This is the physical pad overflowing &#8212; continuing to print risks permanent damage to internal components. Unplug it and take it to a service centre.</li>
+              <li><strong>The printer shows P07 or 5B00 immediately after a fresh reset</strong>, before printing a single page. This indicates the counter reset did not write correctly to the printer&#8217;s EEPROM memory &#8212; either the reset tool didn&#8217;t save properly or the printer&#8217;s memory chip has developed a fault.</li>
+              <li><strong>Your printer is still under Canon&#8217;s warranty.</strong> Canon&#8217;s standard warranty is <strong>1 year</strong> from purchase for most Pixma models. Resetting the service counter yourself does not void the warranty, but physically opening the printer body to modify internal components might. If the printer is under a year old, contact Canon support before attempting Fix 4.</li>
+            </ul>
+            <p><strong>To reach Canon support in India:</strong> <strong>in.canon/en/support</strong> or call <strong>1800-180-3366</strong> (Monday to Saturday).<br />
+            <strong>In the US:</strong> <strong>usa.canon.com/support</strong> or call <strong>1-800-652-2666</strong>.<br />
+            Have your printer&#8217;s model number and purchase date ready when you call.</p>
+
+            <h2 id="quick-summary">Quick Summary</h2>
+            <table class="summary-table">
+              <thead><tr><th>Fix</th><th>Difficulty</th><th>Time Needed</th></tr></thead>
+              <tbody>
+                <tr><td>Power reset (unplug for 5 minutes)</td><td><span class="diff-easy">Very Easy</span></td><td>5 minutes</td></tr>
+                <tr><td>Reset counter via Canon Service Tool V5103</td><td><span class="diff-easy">Easy</span></td><td>10 minutes</td></tr>
+                <tr><td>Manual button reset sequence (no PC)</td><td><span class="diff-easy">Easy</span></td><td>5 minutes</td></tr>
+                <tr><td>Clean or replace the physical absorber pad</td><td><span class="diff-mod">Moderate</span></td><td>30 min + 24hr drying</td></tr>
+              </tbody>
+            </table>
+            <p>Start at the top. For most people, Fix 2 &#8212; running the Canon Service Tool and resetting the counter to zero &#8212; has the printer back in action in under ten minutes. Fix 4 is the responsible follow-up if you want to address the physical pad before it becomes a real problem, but it can wait until you have the time and a replacement pad in hand.</p>
+            <p><em>Cleared P07 or 5B00 with this guide? The counter reset buys you more time, but Fix 4 is the one that permanently fixes the underlying cause &#8212; especially if your Pixma is three or more years old and in daily use. Do both, and you&#8217;ll get another few years out of a printer that most people throw away unnecessarily.</em></p>
+
+          </div>
+
+          <div class="faq-section" id="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+                <span itemprop="name">Is P07 the same as 5B00 on Canon Pixma printers?</span>
+                <span class="faq-icon">&#43;</span>
+              </button>
+              <div class="faq-answer" id="faq-1" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Yes &#8212; P07 and 5B00 are the same error displayed differently depending on the Canon Pixma model. P07 typically appears on newer models with a small LED display, while 5B00 appears on older models that display 4-digit service codes. Both mean exactly the same thing: the waste ink counter has reached 100% and the printer has locked itself. The fix is identical for both codes &#8212; all four steps in this guide apply regardless of which code your printer is showing.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+                <span itemprop="name">How many times can I reset the Canon waste ink counter?</span>
+                <span class="faq-icon">&#43;</span>
+              </button>
+              <div class="faq-answer" id="faq-2" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">There is no technical limit to how many times you can reset the software counter using the Canon Service Tool. However, each reset without replacing the physical pad means the sponge is accumulating more ink. Most users find they can reset the counter once or twice before the pad becomes genuinely saturated and the counter starts reaching 100% again very quickly &#8212; sometimes within just 50&#8211;100 prints. If P07 or 5B00 returns quickly after a reset, that is your signal to do Fix 4 and physically replace the pad. The recommended approach is to reset the counter once, then order a replacement pad, clean or replace it, and reset the counter again after the pad is installed.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+                <span itemprop="name">Will resetting the waste ink counter void my Canon warranty?</span>
+                <span class="faq-icon">&#43;</span>
+              </button>
+              <div class="faq-answer" id="faq-3" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Resetting the software counter alone using Canon Service Tool does not void the warranty &#8212; it is the same tool Canon&#8217;s own authorised service centres use. Physically opening the printer body and replacing or removing internal components (Fix 4) may affect the warranty on units that are under 1 year old, depending on Canon&#8217;s regional terms. If your printer is within the 1-year warranty period, contact Canon support at 1800-180-3366 (India) or 1-800-652-2666 (US) before attempting Fix 4. They should address a P07 or 5B00 error under warranty, as it is a normal printer maintenance issue.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+                <span itemprop="name">The Canon Service Tool says &#8220;Main&#8221; is already at 0% but P07 still shows. Why?</span>
+                <span class="faq-icon">&#43;</span>
+              </button>
+              <div class="faq-answer" id="faq-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">This means the counter was reset but the change was not written to the printer&#8217;s EEPROM (permanent memory). After clicking &#8220;Main&#8221; then &#8220;Set&#8221; to bring the counter to 0%, you must click the <strong>&#8220;EEPROM&#8221;</strong> button in the service tool to save the reset to the printer&#8217;s memory chip. If you close the tool without clicking EEPROM, the printer retains the old 100% value in its memory and P07 or 5B00 persists after the next power cycle. Open the service tool again, ensure the USB connection is active, set the counter to 0% again, and this time click EEPROM before closing the tool. Then unplug the printer for 30 seconds before powering it on.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+                <span itemprop="name">Can I use the Canon Service Tool over Wi-Fi instead of USB?</span>
+                <span class="faq-icon">&#43;</span>
+              </button>
+              <div class="faq-answer" id="faq-5" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">No &#8212; the Canon Service Tool V5103 requires a direct USB connection to write the counter reset to the printer&#8217;s EEPROM. When connected over Wi-Fi, the tool may appear to detect the printer and show the counter values, but the EEPROM write command either fails silently or is blocked by the network interface firmware. The reset appears to complete but P07 or 5B00 returns at the next power-on. Always use a physical USB cable for the Service Tool reset. If you don&#8217;t have a USB cable for your model, Canon PIXMA printers typically use a standard USB-B (square connector) to USB-A cable, available for under &#8377;100 / $3 online.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
+                <span itemprop="name">How do I prevent P07 from happening so quickly again?</span>
+                <span class="faq-icon">&#43;</span>
+              </button>
+              <div class="faq-answer" id="faq-6" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The waste ink counter fills up primarily from automatic print head cleaning cycles, not from actual printing. Canon Pixma printers run these cleaning cycles automatically when they power on (if they have been off for a while) and periodically during printing. To slow down counter accumulation: avoid switching the printer on and off repeatedly in the same day, as each power-on may trigger a cleaning cycle; do not use the deep cleaning function unless you actually have print quality problems (deep cleaning flushes significantly more ink than standard cleaning); and if the printer will sit unused for more than a week, a single power-on every few days is better than leaving it off for a month and triggering a heavy cleaning cycle when it comes back on. Replacing the physical pad (Fix 4) before it is fully saturated also prevents the most common reason for rapid counter refill.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="author-box">
+            <div class="author-avatar-wrap">
+              <img src="images/rohit-sharma-author.jpg" alt="Rohit Sharma" width="64" height="64" style="width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:center top;display:block;" />
+            </div>
+            <div class="author-info">
+              <div class="author-name-row">
+                <h4>Rohit Sharma</h4>
+                <span class="author-title">Senior Tech Writer &amp; DIY Repair Specialist</span>
+              </div>
+              <p class="author-bio">Hi, I&#8217;m Rohit Sharma, the founder and lead troubleshooter at Fix The Logic. With a deep background in consumer technology, IT support, and hands-on DIY repair, I&#8217;ve spent years diagnosing hardware glitches, bypassing software errors, and taking apart gadgets just to see how they work. I created this site to help you skip the frustration of customer service hold times and fix your tech safely and efficiently. When I&#8217;m not writing repair guides, you can find me building custom PCs, tinkering with smart home automations, or reading sci-fi.</p>
+              <div class="author-social-row">
+                <a href="https://x.com/rohitsharma_ftl" class="author-social-link" target="_blank" rel="noopener">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                  <span>Follow on X</span>
+                </a>
+                <a href="https://www.linkedin.com/in/rohitsharma-fixthelogic" class="author-social-link" target="_blank" rel="noopener">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="contact.html" class="author-social-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span>Contact</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="related-posts">
+            <h3>More Printer &amp; Office Guides</h3>
+            <div class="related-grid">
+              <article class="article-card">
+                <a href="hp-printer-error-0x6100004a-carriage-jam.html" tabindex="-1" aria-hidden="true">
+                  <img src="images/hp-0x6100004a/hero-image.png" alt="HP Printer Error 0x6100004a" class="card-thumb" width="600" height="338" loading="lazy" />
+                </a>
+                <div class="card-body">
+                  <span class="card-tag">Printers &amp; Office</span>
+                  <h3><a href="hp-printer-error-0x6100004a-carriage-jam.html">HP Printer Error 0x6100004a: Carriage Jam Fix Guide</a></h3>
+                  <p class="card-excerpt">The 0x6100004a error means the print carriage is physically obstructed. 5 fixes from a simple power reset to manually clearing the jam.</p>
+                  <div class="card-meta"><time datetime="2026-03-03">Mar 3, 2026</time><a href="hp-printer-error-0x6100004a-carriage-jam.html" class="read-more">Read More &#8594;</a></div>
+                </div>
+              </article>
+              <article class="article-card">
+                <a href="haier-ac-f3-error-code-sensor-fix.html" tabindex="-1" aria-hidden="true">
+                  <img src="images/haier-f3-error/hero-image.png" alt="Haier AC F3 error" class="card-thumb" width="600" height="338" loading="lazy" />
+                </a>
+                <div class="card-body">
+                  <span class="card-tag">Appliances</span>
+                  <h3><a href="haier-ac-f3-error-code-sensor-fix.html">Haier AC Showing F3 Error Code: Sensor Troubleshooting &amp; Replacement</a></h3>
+                  <p class="card-excerpt">F3 means the indoor ambient temperature sensor is sending a bad signal. 6 fixes from MCB reset to multimeter testing and NTC probe replacement.</p>
+                  <div class="card-meta"><time datetime="2026-03-05">Mar 5, 2026</time><a href="haier-ac-f3-error-code-sensor-fix.html" class="read-more">Read More &#8594;</a></div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+        </article>
+
+        <aside class="col-sidebar" aria-label="Sidebar">
+          <div class="sidebar-widget">
+            <div class="widget-head">Quick Summary</div>
+            <div class="widget-body">
+              <p style="font-size:0.83rem;color:var(--gray-700);margin-bottom:12px;"><strong style="color:var(--blue);">P07 / 5B00</strong> = Waste ink counter at 100%</p>
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;padding:0;">
+                <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">1.</span><strong>Power reset &#8212; unplug 5 min</strong></li>
+                <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">2.</span>Run Canon Service Tool V5103 via USB</li>
+                <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">3.</span>Button sequence reset (no PC)</li>
+                <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">4.</span>Clean / replace absorber pad</li>
+              </ul>
+              <p style="font-size:0.79rem;color:var(--gray-500);margin-top:12px;border-top:1px solid #eee;padding-top:10px;">Always click EEPROM after resetting &#8212; otherwise the reset won&#8217;t save.</p>
+            </div>
+          </div>
+          <div class="sidebar-widget">
+            <div class="widget-head">Search Guides</div>
+            <div class="widget-body">
+              <div class="search-form" role="search">
+                <input type="search" placeholder="e.g. Canon P07, 5B00&#8230;" aria-label="Search" />
+                <button type="submit">Go</button>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-widget">
+            <div class="widget-head">About This Site</div>
+            <div class="widget-body">
+              <div class="about-logo">Fix The <span>Logic</span></div>
+              <p>DIY troubleshooting guides in plain English. No jargon, no upsells &#8212; just fixes that work.</p>
+              <p style="margin-top:10px;"><a href="about.html" style="font-size:0.83rem;font-weight:700;color:var(--blue);">Learn more &#8594;</a></p>
+            </div>
+          </div>
+          <div class="ad-placeholder">Advertisement<br/>300 &#215; 250</div>
+          <div class="sidebar-widget">
+            <div class="widget-head">All Categories</div>
+            <div class="widget-body">
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;padding:0;">
+                <li><a href="appliances.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">&#8594; Appliances</a></li>
+                <li><a href="printers-office.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">&#8594; Printers &amp; Office</a></li>
+                <li><a href="smart-home.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">&#8594; Smart Home</a></li>
+                <li><a href="gadgets.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">&#8594; Gadgets</a></li>
+                <li><a href="software-errors.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">&#8594; Software Errors</a></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">Fix The <span>Logic</span></div>
+          <p>Your go-to resource for clear, reliable troubleshooting guides. We help you solve tech problems quickly and safely &#8212; no jargon, no guesswork.</p>
+          <div class="footer-social">
+            <a href="https://x.com/fixthelogic" class="footer-social-link" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://www.linkedin.com/company/fixthelogic" class="footer-social-link" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="https://www.facebook.com/fixthelogic" class="footer-social-link" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="contact.html" class="footer-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+          </div>
+          <p style="font-size:0.78rem;color:rgba(255,255,255,0.3);margin-top:14px;">fixthelogic.in</p>
+        </div>
+        <div class="footer-col"><h4>Categories</h4><ul><li><a href="appliances.html">Appliances</a></li><li><a href="printers-office.html">Printers &amp; Office</a></li><li><a href="smart-home.html">Smart Home</a></li><li><a href="software-errors.html">Software Errors</a></li><li><a href="gadgets.html">Gadgets</a></li></ul></div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="write-for-us.html">Write for Us</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="cookie-policy.html">Cookie Policy</a></li></ul></div>
+      </div>
+      <div class="footer-disclaimer"><strong style="color:rgba(255,255,255,0.55);">Disclaimer:</strong> Fix The Logic provides informational troubleshooting guides only. Always unplug appliances before attempting repairs and follow all manufacturer safety guidelines. We are not responsible for voided warranties or any unintended device changes.</div>
+    </div>
+    <div class="footer-bottom"><div class="container">&#169; 2026 Fix The Logic. All rights reserved. &#124; <a href="privacy-policy.html" style="color:rgba(255,255,255,0.4);">Privacy Policy</a> &#124; <a href="terms.html" style="color:rgba(255,255,255,0.4);">Terms</a> &#124; <a href="disclaimer.html" style="color:rgba(255,255,255,0.4);">Disclaimer</a></div></div>
+  </footer>
+  <script src="css/nav.js"></script>
+</body>
+</html>

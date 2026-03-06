@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Block access to any potential admin or config paths
+Disallow: /admin/
+Disallow: /css/
+Disallow: /*.json$
+
+# Sitemap location
+Sitemap: https://fixthelogic.in/sitemap.xml

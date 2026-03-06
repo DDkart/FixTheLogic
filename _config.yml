@@ -1,0 +1,9 @@
+# GitHub Pages configuration for Fix The Logic
+# This file ensures GitHub Pages serves the site correctly without Jekyll processing
+
+# Disable Jekyll processing
+# (The .nojekyll file handles this, but this is belt-and-suspenders)
+
+title: Fix The Logic
+description: DIY troubleshooting guides for home appliances, smart home devices, printers, and software errors.
+url: "https://fixthelogic.in"
