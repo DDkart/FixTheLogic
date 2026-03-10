@@ -164,6 +164,37 @@
     </image:image>
   </url>
 
+  <url>
+    <loc>https://fixthelogic.in/lenovo-laptop-preparing-automatic-repair-loop-fix.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://fixthelogic.in/images/lenovo-auto-repair/hero-image.png</image:loc>
+      <image:title>Lenovo Laptop Stuck on Preparing Automatic Repair Loop (Safe Mode Fix)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://fixthelogic.in/dell-monitor-entering-power-save-mode-fix.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://fixthelogic.in/images/dell-power-save/hero-image.png</image:loc>
+      <image:title>Fix Dell Monitor Entering Power Save Mode Randomly on Windows 11</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://fixthelogic.in/brother-printer-replace-drum-reset.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://fixthelogic.in/images/brother-replace-drum/hero-image.png</image:loc>
+      <image:title>Brother Printer 'Replace Drum' Message Won't Go Away (How to Reset)</image:title>
+    </image:image>
+  </url>
+
   <!-- Utility pages -->
   <url>
     <loc>https://fixthelogic.in/about.html</loc>
