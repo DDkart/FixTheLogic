@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lenovo Laptop Stuck on "Preparing Automatic Repair" Loop (Safe Mode Fix) &ndash; Fix The Logic</title>
+  <meta name="description" content="Lenovo laptop stuck in the Preparing Automatic Repair loop? This guide covers 7 fixes — from the 3-boot interrupt trick to BCD rebuild, CHKDSK, and Safe Mode — without losing your data." />
+  <link rel="canonical" href="https://fixthelogic.in/lenovo-laptop-preparing-automatic-repair-loop-fix.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Lenovo Laptop Stuck on Preparing Automatic Repair Loop (Safe Mode Fix)" />
+  <meta property="og:image" content="https://fixthelogic.in/images/lenovo-auto-repair/hero-image.png" />
+  <meta property="og:site_name" content="Fix The Logic" />
+  <meta property="article:published_time" content="2026-03-10" />
+  <meta property="article:section" content="Software Errors" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Lenovo Laptop Stuck on Preparing Automatic Repair Loop (Safe Mode Fix)","image":"https://fixthelogic.in/images/lenovo-auto-repair/hero-image.png","datePublished":"2026-03-10","author":{"@type":"Organization","name":"Fix The Logic","url":"https://fixthelogic.in"},"publisher":{"@type":"Organization","name":"Fix The Logic","url":"https://fixthelogic.in"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to Fix Lenovo Laptop Stuck on Preparing Automatic Repair Loop","totalTime":"PT60M","step":[{"@type":"HowToStep","position":1,"name":"Force interrupt boot to access recovery options"},{"@type":"HowToStep","position":2,"name":"Boot into Safe Mode and remove conflicting drivers"},{"@type":"HowToStep","position":3,"name":"Run Startup Repair from Advanced Options"},{"@type":"HowToStep","position":4,"name":"Rebuild Boot Configuration Data via Command Prompt"},{"@type":"HowToStep","position":5,"name":"Run CHKDSK and SFC to repair corrupted system files"},{"@type":"HowToStep","position":6,"name":"Use System Restore to roll back to a working state"},{"@type":"HowToStep","position":7,"name":"Back up files then reset Windows"}]}</script>
+  <link rel="icon" href="css/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://fixthelogic.in/" class="logo">Fix The <span>Logic</span></a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" role="navigation" aria-label="Main">
+          <a href="https://fixthelogic.in/">Home</a>
+          <a href="appliances.html">Appliances</a>
+          <a href="printers-office.html" class="active">Printers &amp; Office</a>
+          <a href="smart-home.html">Smart Home</a>
+          <a href="gadgets.html">Gadgets</a>
+          <a href="software-errors.html">Software Errors</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="cat-strip">
+    <div class="container">
+      <div class="cat-strip-inner">
+        <span class="label">Browse:</span>
+        <a href="appliances.html" class="cat-pill">Appliances</a>
+        <a href="printers-office.html" class="cat-pill">Printers &amp; Office</a>
+        <a href="smart-home.html" class="cat-pill">Smart Home</a>
+        <a href="gadgets.html" class="cat-pill">Gadgets</a>
+        <a href="software-errors.html" class="cat-pill">Software Errors</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="main-section">
+    <div class="container">
+      <div class="content-wrap">
+        <article class="col-main page-article" itemscope itemtype="https://schema.org/Article">
+
+          <nav aria-label="Breadcrumb" style="font-size:0.78rem;color:var(--gray-500);margin-bottom:16px;">
+            <a href="https://fixthelogic.in/" style="color:var(--gray-500);">Home</a>
+            <span style="margin:0 6px;color:var(--gray-300);">&#8250;</span>
+            <a href="printers-office.html" style="color:var(--gray-500);">Printers &amp; Office</a>
+            <span style="margin:0 6px;color:var(--gray-300);">&#8250;</span>
+            <span style="color:var(--gray-700);">Lenovo Automatic Repair Loop Fix</span>
+          </nav>
+
+          <div class="article-meta-bar">
+            <span class="article-cat-tag">Printers &amp; Office</span>
+            <span class="meta-sep">|</span>
+            <span>Lenovo Laptop</span>
+            <span class="meta-sep">|</span>
+            <time datetime="2026-03-10" itemprop="datePublished">March 10, 2026</time>
+            <span class="meta-sep">|</span>
+            <span>&#9201; 13 min read</span>
+          </div>
+
+          <nav class="toc-box" aria-label="Table of Contents">
+            <div class="toc-head">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+              Table of Contents
+            </div>
+            <ol class="toc-list">
+              <li><a href="#intro">Introduction</a></li>
+              <li><a href="#what-does-it-mean">What Does &#8220;Preparing Automatic Repair&#8221; Mean?</a></li>
+              <li><a href="#tools-required">Tools Required</a></li>
+              <li><a href="#step-by-step-fixes">Step-by-Step Fixes</a></li>
+              <li><a href="#when-to-call">When to Call a Professional</a></li>
+              <li><a href="#quick-summary">Quick Summary</a></li>
+              <li><a href="#faq-section">Frequently Asked Questions</a></li>
+            </ol>
+          </nav>
+
+          <h1 itemprop="headline" style="font-family:var(--font-head);font-size:clamp(1.6rem,3.5vw,2.2rem);color:var(--gray-900);line-height:1.2;margin-bottom:20px;">
+            Lenovo Laptop Stuck on &#8220;Preparing Automatic Repair&#8221; Loop (Safe Mode Fix)
+            <span style="display:block;font-size:0.58em;color:var(--blue);margin-top:8px;">Interrupt the Boot &#8212; Enter Safe Mode &#8212; Rebuild BCD &#8212; Recover Your Files</span>
+          </h1>
+
+          <img src="images/lenovo-auto-repair/hero-image.png" alt="Lenovo Legion laptop on a desk displaying the Preparing Automatic Repair screen with a spinning circle and Safe Mode fix steps overlay" class="article-hero-img" width="1280" height="720" itemprop="image" />
+
+          <div class="article-body" itemprop="articleBody">
+
+            <h2 id="intro">Preparing Automatic Repair. Spinning Circle. Repeat.</h2>
+            <p>There&#8217;s nothing more stomach-dropping than turning on your Lenovo laptop in the morning, watching it start to boot, and then seeing those words appear on a dark screen: <strong>&#8220;Preparing Automatic Repair.&#8221;</strong> You wait. A spinning circle. More waiting. Then either a black screen that goes nowhere, or the laptop restarts itself &#8212; only to show you the exact same message again. And again.</p>
+            <p>You&#8217;re caught in a loop. Windows promised to fix itself. It hasn&#8217;t. And now you can&#8217;t get past the boot screen, you can&#8217;t access your files, and every restart takes you back to exactly the same place.</p>
+            <p>The panic that sets in here is understandable &#8212; especially if you have work documents, photos, or anything important on that drive. But here&#8217;s what you need to know immediately: <strong>the Automatic Repair loop almost never means your data is gone.</strong> In the vast majority of cases, your files are sitting completely intact on the hard drive. The problem is with Windows itself &#8212; specifically, the files Windows needs to start properly have become corrupted or misconfigured &#8212; and that is a problem that can be fixed.</p>
+            <p>This guide walks you through exactly what the loop means, how to break out of it using Safe Mode and Windows recovery tools, and what to do if those methods don&#8217;t work &#8212; all without losing your data wherever possible.</p>
+
+            <div class="video-embed-wrap">
+              <div class="video-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                Watch: Fix &#8220;Preparing Automatic Repair&#8221; Loop on Windows &#8212; Complete Step-by-Step Guide
+              </div>
+              <iframe src="https://www.youtube.com/embed/w7bC3nfZVQ8?si=q4Bnp3MEJtMQHmBC" title="Fix Lenovo Laptop Stuck on Preparing Automatic Repair Loop — Safe Mode and BCD Rebuild Guide" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <h2 id="what-does-it-mean">What Does &#8220;Preparing Automatic Repair&#8221; Mean?</h2>
+            <p>In plain English, <strong>&#8220;Preparing Automatic Repair&#8221; means Windows has detected that it failed to boot successfully and has launched its own built-in recovery tool to try to fix whatever went wrong.</strong></p>
+            <p>Every time Windows starts, it runs through a sequence of boot steps &#8212; loading the bootloader, initialising the kernel, starting system services, loading drivers. When this sequence fails two times in a row &#8212; because of a corrupted file, a failed update, a sudden shutdown at the wrong moment, or a driver conflict &#8212; Windows automatically activates a recovery mode called <strong>Automatic Repair (or Startup Repair).</strong></p>
+            <p>When the repair tool fails &#8212; which happens more often than Microsoft would like &#8212; you see one of several outcomes:</p>
+            <ul>
+              <li>The screen spins forever and never progresses</li>
+              <li>You see &#8220;Diagnosing your PC&#8221; followed by a black screen</li>
+              <li>You see &#8220;Automatic Repair couldn&#8217;t repair your PC&#8221; with limited options</li>
+              <li>The laptop restarts and the whole sequence repeats in a loop</li>
+            </ul>
+            <p>The four most common triggers for this loop are:</p>
+            <ul>
+              <li><strong>A Windows Update that failed or was interrupted</strong> &#8212; particularly during a major feature update if the laptop lost power or was force-shut down during the process.</li>
+              <li><strong>Corrupted Boot Configuration Data (BCD)</strong> &#8212; the file Windows reads at startup to know how and where to load the operating system. If this file becomes corrupted, Windows can&#8217;t start, triggering the repair loop every time.</li>
+              <li><strong>A recently installed driver or software</strong> that conflicts with Windows at the system level &#8212; particularly graphics drivers, antivirus software with kernel components, or third-party disk utilities.</li>
+              <li><strong>A failing or newly failing hard drive or SSD</strong> &#8212; physical storage problems manifest almost identically to software corruption because the end result is the same: Windows can&#8217;t read the files it needs.</li>
+            </ul>
+            <p>In most cases, the fix is a software repair. In a smaller number of cases it involves the storage hardware &#8212; but even then, your data is usually recoverable first.</p>
+
+            <div class="article-img-wrap">
+              <img src="images/lenovo-auto-repair/preparing-automatic-repair-screen.png" alt="Windows laptop screen showing 'Preparing Automatic Repair' message with spinning dots circle under the Windows logo on a dark blue background" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption">The &#8220;Preparing Automatic Repair&#8221; screen appears after Windows detects two consecutive failed boot attempts. When it can&#8217;t fix the problem itself, the loop repeats indefinitely &#8212; your goal is to break out of it using the 3-boot interrupt method in Fix 1.</div>
+            </div>
+
+            <h2 id="tools-required">Tools You&#8217;ll Need</h2>
+            <p>Here&#8217;s everything you may need across all the steps:</p>
+            <ul>
+              <li>Your Lenovo laptop</li>
+              <li>A <strong>power adapter</strong> &#8212; keep it plugged in throughout. Do not run on battery during recovery operations</li>
+              <li>A <strong>USB flash drive of at least 8GB</strong> &#8212; only needed for Fix 4 and beyond if creating a Windows recovery drive</li>
+              <li>A second working computer with internet access (to download recovery tools if needed)</li>
+              <li>About <strong>30&#8211;60 minutes</strong> of your time depending on how far into the fixes you need to go</li>
+            </ul>
+
+            <h2 id="step-by-step-fixes">Step-by-Step Fixes (Easiest to Hardest)</h2>
+            <p>Work through these in order. Many users escape the loop at Fix 1 or Fix 2. Do not skip ahead &#8212; each step gathers information that helps the next one if needed.</p>
+
+            <div class="step-box">
+              <div class="step-box-head"><span class="step-num">1</span><span class="step-title">Force Interrupt the Boot to Access Recovery Options &#8212; Start Here</span></div>
+              <p>The most important first move is breaking out of the automatic loop so you can access Windows&#8217; built-in recovery menu. You do this by interrupting the boot process three times in a row &#8212; which sounds aggressive but is completely safe and is the official Microsoft-documented method.</p>
+              <ol>
+                <li>If the laptop is currently in the loop, wait until you see the <strong>&#8220;Preparing Automatic Repair&#8221;</strong> or <strong>&#8220;Diagnosing your PC&#8221;</strong> screen.</li>
+                <li>Press and hold the <strong>Power button for 10 seconds</strong> to force a hard shutdown.</li>
+                <li>Power the laptop back on.</li>
+                <li>As soon as you see the <strong>Lenovo splash screen</strong> (the Lenovo logo on a black background), press and hold the <strong>Power button again for 10 seconds</strong> to shut it off a second time.</li>
+                <li>Power on again and repeat the forced shutdown a <strong>third time</strong> during the boot screen.</li>
+                <li>On the <strong>fourth power-on</strong>, Windows detects the repeated failed boot attempts and instead of trying Automatic Repair again, it presents the <strong>&#8220;Choose an option&#8221;</strong> recovery screen &#8212; a blue screen with three tiles: Continue, Troubleshoot, and Turn off your PC.</li>
+                <li>If you reach this screen, <strong>do not click anything yet</strong> &#8212; this is the gateway to all the fixes below. Proceed to Fix 2 immediately from this screen.</li>
+              </ol>
+              <div class="warning-box"><strong>&#9888;&#65039; If the &#8220;Choose an option&#8221; screen doesn&#8217;t appear</strong> after three interrupted boots, try pressing <strong>F11</strong> or <strong>F12</strong> repeatedly during the Lenovo logo screen on the next boot &#8212; Lenovo laptops use these keys to access the boot menu and recovery environment directly.</div>
+            </div>
+
+            <div class="article-img-wrap">
+              <img src="images/lenovo-auto-repair/boot-interrupt-recovery-flowchart.png" alt="Flowchart showing the 8-step 3-interrupted-boot method to break out of the Automatic Repair loop and access the Windows recovery menu with all fix paths shown" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption">The 3-interrupted-boot method works because Windows counts consecutive failed starts. After three in a row, it presents the recovery menu instead of repeating Automatic Repair &#8212; giving you access to Safe Mode, BCD rebuild, and all other recovery tools.</div>
+            </div>
+
+            <div class="article-img-wrap">
+              <img src="images/lenovo-auto-repair/automatic-repair-your-pc-did-not-start.png" alt="Blue Windows Automatic Repair screen showing 'Your PC did not start correctly' with Restart and Advanced options buttons" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption">If you see this &#8220;Your PC did not start correctly&#8221; screen, click <strong>Advanced options</strong> rather than Restart &#8212; restarting will just put you back in the loop. Advanced options is the gateway to Safe Mode, Startup Repair, and Command Prompt.</div>
+            </div>
+
+            <div class="step-box">
+              <div class="step-box-head"><span class="step-num">2</span><span class="step-title">Boot Into Safe Mode</span></div>
+              <p>Safe Mode loads Windows with the bare minimum &#8212; no third-party drivers, no startup software, no non-essential services. If Windows can load in Safe Mode but not normally, the problem is almost certainly a driver or software conflict, and you can fix it from within Safe Mode itself.</p>
+              <ol>
+                <li>From the <strong>&#8220;Choose an option&#8221;</strong> recovery screen (reached in Fix 1), click <strong>Troubleshoot.</strong></li>
+                <li>Click <strong>Advanced Options.</strong></li>
+                <li>Click <strong>Startup Settings.</strong></li>
+                <li>Click <strong>Restart</strong> &#8212; the laptop will restart and present a numbered menu.</li>
+                <li>Press <strong>F4</strong> to boot into <strong>Safe Mode</strong>, or <strong>F5</strong> to boot into <strong>Safe Mode with Networking</strong> (recommended &#8212; networking allows you to download updates or drivers if needed).</li>
+                <li>Windows will attempt to boot with minimal drivers. This may take 2&#8211;3 minutes.</li>
+              </ol>
+              <p><strong>If Windows loads successfully in Safe Mode, do the following immediately:</strong></p>
+              <ol start="7">
+                <li>Open <strong>Device Manager</strong> (right-click Start &gt; Device Manager) and look for any device with a <strong>yellow warning triangle</strong> &#8212; right-click it and select <strong>&#8220;Uninstall device.&#8221;</strong></li>
+                <li>Open <strong>Settings &gt; Windows Update</strong> and install any pending updates, particularly any showing as &#8220;failed&#8221; or &#8220;pending restart.&#8221;</li>
+                <li>If the loop started after installing new software, go to <strong>Control Panel &gt; Programs &gt; Uninstall a program</strong> and remove whatever was installed most recently before the problem began.</li>
+                <li>Restart normally &#8212; not into Safe Mode &#8212; and observe whether Windows boots successfully.</li>
+              </ol>
+            </div>
+
+            <div class="article-img-wrap">
+              <img src="images/lenovo-auto-repair/choose-an-option-screen.png" alt="Windows blue 'Choose an option' recovery screen showing Continue, Troubleshoot and Turn off your PC tiles" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption">The &#8220;Choose an option&#8221; screen is your control centre &#8212; click <strong>Troubleshoot</strong> to access Safe Mode, Startup Repair, Command Prompt, and System Restore. This screen appears after the 3-interrupted-boot method or via F11/F12 on the Lenovo logo screen.</div>
+            </div>
+
+            <div class="step-box">
+              <div class="step-box-head"><span class="step-num">3</span><span class="step-title">Run Startup Repair from Advanced Options</span></div>
+              <p>If Safe Mode didn&#8217;t load or didn&#8217;t resolve the issue, the next step is running <strong>Startup Repair</strong> from the Windows recovery environment &#8212; a more thorough diagnostic than the Automatic Repair loop was performing on its own.</p>
+              <ol>
+                <li>Return to the <strong>&#8220;Choose an option&#8221;</strong> screen (repeat Fix 1 if needed).</li>
+                <li>Click <strong>Troubleshoot &gt; Advanced Options &gt; Startup Repair.</strong></li>
+                <li>Windows will ask you to select an account &#8212; click your user account and enter your password if prompted.</li>
+                <li>Startup Repair will run and attempt to detect and fix boot issues. This process takes <strong>5&#8211;15 minutes</strong> &#8212; do not interrupt it or close the laptop lid.</li>
+                <li>Once complete, the laptop will restart automatically. Observe whether Windows boots normally.</li>
+              </ol>
+              <div class="warning-box"><strong>&#9888;&#65039; If Startup Repair reports &#8220;Startup Repair couldn&#8217;t repair your PC&#8221;</strong> &#8212; do not be discouraged. This message appears even when the repair made partial progress. Continue to Fix 4.</div>
+            </div>
+
+            <div class="article-img-wrap">
+              <img src="images/lenovo-auto-repair/troubleshoot-advanced-options.png" alt="Windows Troubleshoot screen showing 'Reset this PC' and 'Advanced options' tiles on a blue background" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption">The Troubleshoot screen gives you two paths: <strong>Reset this PC</strong> (last resort &#8212; use only after Fix 6 fails) and <strong>Advanced options</strong> (your next destination) which contains Startup Repair, Command Prompt, System Restore, and Startup Settings.</div>
+            </div>
+
+            <div class="step-box">
+              <div class="step-box-head"><span class="step-num">4</span><span class="step-title">Rebuild the Boot Configuration Data (BCD) Using Command Prompt</span></div>
+              <p>If Startup Repair couldn&#8217;t fix the problem, the Boot Configuration Data file is likely corrupted. This is one of the most common root causes of the Automatic Repair loop and can be fixed with four command-line instructions from the Windows recovery environment.</p>
+              <div class="warning-box"><strong>&#9888;&#65039; Safety Warning:</strong> The commands in this step modify your system&#8217;s boot configuration. Type each command <strong>exactly as written</strong> &#8212; a typo in commands like <code style="background:var(--gray-100);padding:2px 6px;border-radius:4px;font-size:0.88em;">bootrec</code> or <code style="background:var(--gray-100);padding:2px 6px;border-radius:4px;font-size:0.88em;">diskpart</code> can affect your system&#8217;s ability to find the Windows partition. Keep your laptop plugged into power for the entire duration of this fix.</div>
+              <ol>
+                <li>From <strong>Advanced Options</strong>, click <strong>Command Prompt.</strong> Select your user account and enter your password if prompted.</li>
+                <li>In the black Command Prompt window, type the following commands one at a time, pressing <strong>Enter</strong> after each:</li>
+              </ol>
+              <div style="background:#1a1a2e;border-radius:6px;padding:18px 22px;margin:16px 0;border-left:4px solid var(--blue);">
+                <div style="font-family:'Courier New',monospace;font-size:0.9rem;color:#7ec8e3;line-height:2;">
+                  bootrec /fixmbr<br/>
+                  bootrec /fixboot<br/>
+                  bootrec /scanos<br/>
+                  bootrec /rebuildbcd
+                </div>
+              </div>
+              <ol start="3">
+                <li>After <code style="background:var(--gray-100);padding:2px 6px;border-radius:4px;font-size:0.88em;">bootrec /rebuildbcd</code>, Windows will scan for installations and ask <strong>&#8220;Add installation to boot list? Yes/No/All&#8221;</strong> &#8212; type <strong>Y</strong> and press Enter.</li>
+                <li>Once all four commands have completed, type <code style="background:var(--gray-100);padding:2px 6px;border-radius:4px;font-size:0.88em;">exit</code> and press Enter.</li>
+                <li>Click <strong>Continue</strong> to restart the laptop normally.</li>
+                <li>Observe whether Windows boots successfully. For many users with a corrupted BCD, these four commands resolve the loop completely.</li>
+              </ol>
+            </div>
+
+            <div class="article-img-wrap">
+              <img src="images/lenovo-auto-repair/bcd-rebuild-commands-reference.png" alt="Dark terminal command prompt reference card showing bootrec fixmbr fixboot scanos rebuildbcd and chkdsk sfc commands with descriptions for fixing the Automatic Repair loop" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption">Run these four <code style="background:rgba(255,255,255,0.1);padding:2px 6px;border-radius:4px;color:#fff;">bootrec</code> commands in order from Command Prompt in Advanced Options &#8212; for most users with a corrupted BCD, this sequence alone resolves the Automatic Repair loop without touching any personal files.</div>
+            </div>
+
+            <div class="step-box">
+              <div class="step-box-head"><span class="step-num">5</span><span class="step-title">Run CHKDSK and SFC to Repair Corrupted System Files</span></div>
+              <p>If BCD repair didn&#8217;t fix the boot, the next layer to address is corrupted Windows system files on the drive itself. Two built-in Windows tools &#8212; <strong>CHKDSK</strong> (Check Disk) and <strong>SFC</strong> (System File Checker) &#8212; can scan and repair these without deleting your data.</p>
+              <div class="warning-box"><strong>&#9888;&#65039; Safety Warning:</strong> CHKDSK performs a low-level scan of your storage drive. If you have heard <strong>clicking sounds, grinding noises, or extreme slowness</strong> from the drive in recent days &#8212; stop here and prioritise data backup (Fix 7) before running any disk repair tools. CHKDSK can occasionally stress already-marginal sectors on a physically failing drive.</div>
+              <ol>
+                <li>Return to <strong>Command Prompt</strong> from Advanced Options (same as Fix 4, step 1).</li>
+                <li>First, identify which drive letter Windows is installed on &#8212; in the recovery environment it is often <strong>D:</strong> rather than C:. Type these commands to check:</li>
+              </ol>
+              <div style="background:#1a1a2e;border-radius:6px;padding:18px 22px;margin:16px 0;border-left:4px solid var(--blue);">
+                <div style="font-family:'Courier New',monospace;font-size:0.9rem;color:#7ec8e3;line-height:2;">
+                  dir C:<br/>
+                  dir D:
+                </div>
+              </div>
+              <p>The drive containing folders named <strong>Windows, Users,</strong> and <strong>Program Files</strong> is your Windows installation drive. Use that letter in the commands below.</p>
+              <ol start="3">
+                <li>Run CHKDSK to repair file system errors (substitute <strong>C:</strong> or <strong>D:</strong> as appropriate):</li>
+              </ol>
+              <div style="background:#1a1a2e;border-radius:6px;padding:18px 22px;margin:16px 0;border-left:4px solid var(--blue);">
+                <div style="font-family:'Courier New',monospace;font-size:0.9rem;color:#7ec8e3;">
+                  chkdsk C: /f /r /x
+                </div>
+              </div>
+              <p>This scan can take <strong>20&#8211;45 minutes</strong> on a hard drive or <strong>10&#8211;20 minutes</strong> on an SSD. Do not interrupt it.</p>
+              <ol start="4">
+                <li>Once CHKDSK completes, run the System File Checker:</li>
+              </ol>
+              <div style="background:#1a1a2e;border-radius:6px;padding:18px 22px;margin:16px 0;border-left:4px solid var(--blue);">
+                <div style="font-family:'Courier New',monospace;font-size:0.9rem;color:#7ec8e3;">
+                  sfc /scannow /offbootdir=C:\ /offwindir=C:\Windows
+                </div>
+              </div>
+              <ol start="5">
+                <li>SFC will scan and automatically replace any corrupted protected system files it finds. This takes <strong>10&#8211;20 minutes.</strong></li>
+                <li>Type <code style="background:var(--gray-100);padding:2px 6px;border-radius:4px;font-size:0.88em;">exit</code> when complete and restart the laptop normally.</li>
+              </ol>
+            </div>
+
+            <div class="step-box">
+              <div class="step-box-head"><span class="step-num">6</span><span class="step-title">Use System Restore to Roll Back to a Working State</span></div>
+              <p>If your laptop had System Restore points created before the problem started &#8212; which Lenovo&#8217;s recovery setup typically enables by default &#8212; you can roll Windows back to a point when everything was working, without affecting your personal files.</p>
+              <ol>
+                <li>From <strong>Advanced Options</strong>, click <strong>System Restore.</strong></li>
+                <li>Click <strong>Next</strong> to see a list of available restore points.</li>
+                <li>If restore points are available, select the most recent one dated <strong>before</strong> the loop began.</li>
+                <li>Click <strong>Next</strong>, then <strong>Finish</strong> to begin the restore. The process takes <strong>15&#8211;30 minutes</strong> and will restart the laptop automatically.</li>
+                <li>If restore points are listed as unavailable, System Restore was disabled on this installation &#8212; proceed to Fix 7.</li>
+              </ol>
+            </div>
+
+            <div class="step-box">
+              <div class="step-box-head"><span class="step-num">7</span><span class="step-title">Back Up Your Data Before Attempting a Reset &#8212; Last Resort</span></div>
+              <p>If all software fixes have failed, a Windows reset or clean reinstall is the next step. But <strong>before doing anything that risks your files, back up your data first.</strong> Windows recovery tools include a way to access your files even when Windows won&#8217;t boot.</p>
+              <ol>
+                <li>From <strong>Advanced Options</strong>, open <strong>Command Prompt.</strong></li>
+                <li>Insert a USB flash drive into the laptop.</li>
+                <li>Type <code style="background:var(--gray-100);padding:2px 6px;border-radius:4px;font-size:0.88em;">notepad</code> in Command Prompt and press Enter &#8212; Notepad will open. Go to <strong>File &gt; Open</strong> to browse your file system and confirm your files are visible and intact.</li>
+                <li>Use Command Prompt to copy critical files to the USB drive:</li>
+              </ol>
+              <div style="background:#1a1a2e;border-radius:6px;padding:18px 22px;margin:16px 0;border-left:4px solid var(--blue);">
+                <div style="font-family:'Courier New',monospace;font-size:0.9rem;color:#7ec8e3;">
+                  xcopy D:\Users\YourName\Documents E:\Backup /E /H /C /I
+                </div>
+              </div>
+              <p style="font-size:0.9rem;color:var(--gray-500);">(Replace <strong>D:</strong> with your Windows drive letter, <strong>YourName</strong> with your actual username, and <strong>E:</strong> with your USB drive letter.)</p>
+              <ol start="5">
+                <li>Once your critical files are safely copied, return to <strong>Troubleshoot &gt; Reset this PC</strong> &#8212; choose <strong>&#8220;Keep my files&#8221;</strong> first.</li>
+                <li>If that fails to boot successfully after the reset, repeat with <strong>&#8220;Remove everything&#8221;</strong> for a full clean install.</li>
+              </ol>
+            </div>
+
+            <h2 id="when-to-call">When to Call a Professional</h2>
+            <p>The Automatic Repair loop is one of the more complex laptop problems to resolve at home, and there are clear situations where professional help protects both your data and your hardware:</p>
+            <ul>
+              <li><strong>CHKDSK reports a large number of bad sectors</strong> &#8212; particularly above a few dozen. This is a physical hard drive problem. Stop all repairs, back up your data immediately, and replace the drive.</li>
+              <li><strong>You hear clicking, grinding, or repeated seeking sounds</strong> from the laptop during boot attempts. This is the sound of a physically failing hard drive. Every additional boot attempt risks making data recovery harder. Shut the laptop down and take it to a professional data recovery service immediately.</li>
+              <li><strong>The laptop completes a full Windows reset but immediately enters the Automatic Repair loop again</strong> after the reset. This is a strong indicator of a hardware fault &#8212; either a failing SSD, a RAM problem, or a corrupted BIOS. Requires professional diagnosis.</li>
+              <li><strong>You are not comfortable with Command Prompt.</strong> The BCD rebuild and CHKDSK commands in Fix 4 and Fix 5 are safe when typed correctly but can cause unintended consequences if mistyped. Many computer repair shops will perform these exact fixes for a modest fee.</li>
+              <li><strong>Your Lenovo laptop is under warranty.</strong> Lenovo offers a standard <strong>1-year warranty</strong> on most consumer laptops (ThinkPad models often carry longer coverage). If the laptop is within its warranty period, contact Lenovo support &#8212; software and hardware repairs are covered at no cost.</li>
+            </ul>
+            <p><strong>To reach Lenovo support:</strong></p>
+            <ul>
+              <li>India: <strong>support.lenovo.com/in</strong> &#8212; Customer care: <strong>1800-419-7555</strong> (toll-free)</li>
+              <li>US: <strong>support.lenovo.com</strong> &#8212; Phone: <strong>1-855-253-6686</strong></li>
+            </ul>
+            <p>Have your laptop&#8217;s <strong>serial number</strong> (on the bottom sticker) ready &#8212; Lenovo can instantly look up your exact model, warranty status, and available service options.</p>
+
+            <h2 id="quick-summary">Quick Summary</h2>
+            <table class="summary-table">
+              <thead><tr><th>Fix</th><th>Difficulty</th><th>Time Needed</th></tr></thead>
+              <tbody>
+                <tr><td>Force interrupt boot to access recovery menu</td><td><span class="diff-easy">Very Easy</span></td><td>3 minutes</td></tr>
+                <tr><td>Boot into Safe Mode and remove conflicting drivers</td><td><span class="diff-easy">Easy</span></td><td>15 minutes</td></tr>
+                <tr><td>Run Startup Repair from Advanced Options</td><td><span class="diff-easy">Easy</span></td><td>15 minutes</td></tr>
+                <tr><td>Rebuild Boot Configuration Data via Command Prompt</td><td><span class="diff-mod">Moderate</span></td><td>10 minutes</td></tr>
+                <tr><td>Run CHKDSK and SFC to repair system files</td><td><span class="diff-mod">Moderate</span></td><td>30&#8211;60 minutes</td></tr>
+                <tr><td>System Restore to a previous working point</td><td><span class="diff-easy">Easy</span></td><td>20 minutes</td></tr>
+                <tr><td>Back up files, then reset Windows</td><td><span class="diff-mod">Moderate</span></td><td>45&#8211;90 minutes</td></tr>
+              </tbody>
+            </table>
+            <p>Start at Fix 1 and work forward. The three-interrupted-boot trick to reach the recovery menu is the gateway to everything else &#8212; once you&#8217;re in the Advanced Options environment, every other tool is at your disposal. Safe Mode (Fix 2) and BCD rebuild (Fix 4) resolve this loop for the large majority of users who reach them.</p>
+            <p><em>Still stuck after working through every fix? The single most useful diagnostic at that point is removing the hard drive and connecting it to another laptop via a USB enclosure (available for &#8377;400&#8211;&#8377;800 online). If the drive shows up and your files are readable, the drive is fine and the problem is software-only &#8212; a clean Windows install will fix it. If the drive doesn&#8217;t appear at all, data recovery services are your next call before anything else.</em></p>
+
+          </div><!-- /.article-body -->
+
+          <div class="faq-section" id="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+                <span itemprop="name">Will I lose my files if I fix the Automatic Repair loop?</span>
+                <span class="faq-icon">&#43;</span>
+              </button>
+              <div class="faq-answer" id="faq-1" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">For Fixes 1 through 6 &#8212; no. The BCD rebuild, CHKDSK, SFC, Startup Repair, and System Restore operations do not touch your personal files (Documents, Pictures, Downloads, Desktop, etc.). These tools only modify Windows system files and boot configuration. Fix 7 (Reset this PC) is the only step that could affect your files, and even then the &#8220;Keep my files&#8221; option preserves personal data. Always back up via Command Prompt&#8217;s xcopy before attempting any reset as a precaution.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+                <span itemprop="name">Why does my Lenovo laptop keep going back to the Automatic Repair loop after restarting?</span>
+                <span class="faq-icon">&#43;</span>
+              </button>
+              <div class="faq-answer" id="faq-2" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">If the loop returns after every restart, the root cause hasn&#8217;t been addressed yet. The three most common reasons for a persistent loop are: (1) a corrupted BCD that needs the bootrec commands in Fix 4 &#8212; this is the most common cause; (2) a failing hard drive or SSD that produces errors faster than repair tools can fix them &#8212; CHKDSK in Fix 5 will reveal this; or (3) a RAM fault that is corrupting data during operation &#8212; test this by removing one RAM stick if your laptop has accessible RAM slots. If a clean Windows reset still results in an immediate loop, the problem is hardware.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+                <span itemprop="name">The Command Prompt says &#8220;Access is denied&#8221; when I try to run bootrec. What do I do?</span>
+                <span class="faq-icon">&#43;</span>
+              </button>
+              <div class="faq-answer" id="faq-3" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">&#8220;Access is denied&#8221; on <code>bootrec /fixboot</code> specifically (not the other commands) is a known Windows 10/11 behaviour when the EFI System Partition is locked. To work around it, first run these commands in order: <code>diskpart</code>, then <code>list vol</code> to find the EFI volume (usually 100&#8211;500MB, FAT32 format), then <code>select vol X</code> (replace X with the EFI volume number), then <code>assign letter=Z</code>, then <code>exit</code>. Now run <code>Z:\EFI\Microsoft\Boot\bootsect.exe /nt60 all /force /mbr</code> and retry the bootrec commands.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+                <span itemprop="name">My Lenovo laptop won&#8217;t even show the Lenovo logo &#8212; just a black screen. Is this the same problem?</span>
+                <span class="faq-icon">&#43;</span>
+              </button>
+              <div class="faq-answer" id="faq-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">A completely black screen with no logo is a different and more fundamental problem. It usually indicates a display fault, a RAM seating issue, or a BIOS problem rather than a Windows boot issue. Try these steps first: (1) disconnect all external devices and peripherals; (2) remove the battery if removable, hold the power button for 30 seconds, replace battery and power on; (3) connect an external monitor via HDMI to test whether the internal display is faulty; (4) try pressing <strong>Fn + F5</strong> or <strong>Fn + F6</strong> during startup to cycle the display output. If nothing produces any image, the laptop needs hardware service.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+                <span itemprop="name">How long should bootrec /rebuildbcd and CHKDSK take? When is it safe to assume they&#8217;ve frozen?</span>
+                <span class="faq-icon">&#43;</span>
+              </button>
+              <div class="faq-answer" id="faq-5" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text"><code>bootrec /rebuildbcd</code> typically completes in under 2 minutes &#8212; if it shows no progress for more than 5 minutes, the scan has likely hit an unreadable sector. <code>chkdsk /f /r</code> is much longer: expect <strong>20&#8211;45 minutes on a hard drive</strong> and <strong>10&#8211;20 minutes on an SSD</strong> for a typical 500GB&#8211;1TB drive. The percentage counter can appear to stall at certain points (particularly around 10&#8211;27% on hard drives) &#8212; this is normal. Only consider it frozen if there has been zero progress for more than 45 minutes with no drive activity light. Do not interrupt CHKDSK mid-scan.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
+                <span itemprop="name">Can a Windows update really cause the Automatic Repair loop? Should I avoid updates?</span>
+                <span class="faq-icon">&#43;</span>
+              </button>
+              <div class="faq-answer" id="faq-6" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Yes, a Windows feature update interrupted by a power cut or force shutdown is one of the most common triggers for the Automatic Repair loop. However, avoiding updates is not the solution &#8212; security updates protect against real threats and skipping them creates bigger risks over time. Instead, prevent the problem: always keep your laptop plugged in during updates, never force-shut down when you see &#8220;Configuring Windows updates &#8212; do not turn off your computer,&#8221; and ensure your battery is healthy enough to sustain an uninterrupted session if on battery. If an update causes a loop, Fix 6 (System Restore) will typically roll it back cleanly.</p>
+              </div>
+            </div>
+
+          </div><!-- /.faq-section -->
+
+          <div class="author-box">
+            <div class="author-avatar-wrap">
+              <img src="images/rohit-sharma-author.jpg" alt="Rohit Sharma" width="64" height="64" style="width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:center top;display:block;" />
+            </div>
+            <div class="author-info">
+              <div class="author-name-row">
+                <h4>Rohit Sharma</h4>
+                <span class="author-title">Senior Tech Writer &amp; DIY Repair Specialist</span>
+              </div>
+              <p class="author-bio">Rohit Sharma is a seasoned technology writer with over 8 years of experience covering home appliances, consumer electronics, and DIY repair guides. He has personally tested and documented hundreds of repair procedures, helping thousands of readers resolve error codes without expensive service calls. Rohit writes with engineering accuracy in plain, jargon-free language anyone can follow.</p>
+              <div class="author-social-row">
+                <a href="https://x.com/rohitsharma_ftl" class="author-social-link" target="_blank" rel="noopener">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                  <span>Follow on X</span>
+                </a>
+                <a href="https://www.linkedin.com/in/rohitsharma-fixthelogic" class="author-social-link" target="_blank" rel="noopener">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="contact.html" class="author-social-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span>Contact</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="related-posts">
+            <h3>More PC &amp; Software Guides</h3>
+            <div class="related-grid">
+              <article class="article-card">
+                <a href="dell-monitor-entering-power-save-mode-fix.html" tabindex="-1" aria-hidden="true">
+                  <img src="images/dell-power-save/hero-image.png" alt="Dell monitor power save mode fix" class="card-thumb" width="600" height="338" loading="lazy" />
+                </a>
+                <div class="card-body">
+                  <span class="card-tag">Printers &amp; Office</span>
+                  <h3><a href="dell-monitor-entering-power-save-mode-fix.html">Fix Dell Monitor Entering Power Save Mode Randomly on Windows 11</a></h3>
+                  <p class="card-excerpt">Dell monitor randomly going black with &#8220;Entering Power Save Mode&#8221;? Usually a Windows 11 screen timeout set too short. 6 fixes from power settings to driver rollback.</p>
+                  <div class="card-meta"><time datetime="2026-03-10">Mar 10, 2026</time><a href="dell-monitor-entering-power-save-mode-fix.html" class="read-more">Read More &#8594;</a></div>
+                </div>
+              </article>
+              <article class="article-card">
+                <a href="err-connection-timed-out-chrome-fix.html" tabindex="-1" aria-hidden="true">
+                  <img src="images/err-connection-timed-out/hero-image.png" alt="ERR_CONNECTION_TIMED_OUT Chrome error" class="card-thumb" width="600" height="338" loading="lazy" />
+                </a>
+                <div class="card-body">
+                  <span class="card-tag">Software Errors</span>
+                  <h3><a href="err-connection-timed-out-chrome-fix.html">ERR_CONNECTION_TIMED_OUT in Chrome: How to Fix It</a></h3>
+                  <p class="card-excerpt">Chrome&#8217;s connection timed out error has 6 common causes. This guide walks through DNS flush, proxy settings, and driver fixes from easiest to hardest.</p>
+                  <div class="card-meta"><time datetime="2026-03-04">Mar 4, 2026</time><a href="err-connection-timed-out-chrome-fix.html" class="read-more">Read More &#8594;</a></div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+        </article>
+
+        <aside class="col-sidebar" aria-label="Sidebar">
+          <div class="sidebar-widget">
+            <div class="widget-head">Quick Summary</div>
+            <div class="widget-body">
+              <p style="font-size:0.83rem;color:var(--gray-700);margin-bottom:12px;"><strong style="color:var(--blue);">Auto Repair Loop</strong> = Windows boot files corrupted</p>
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;padding:0;">
+                <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">1.</span><strong>3 power interrupts &#8594; recovery menu</strong></li>
+                <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">2.</span>Safe Mode &#8594; remove bad drivers</li>
+                <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">3.</span>Startup Repair &#8594; Advanced Options</li>
+                <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">4.</span>bootrec /rebuildbcd &#8592; core fix</li>
+                <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">5.</span>chkdsk + sfc for file repair</li>
+                <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">6.</span>System Restore &#8594; roll back</li>
+                <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">7.</span>Backup &#8594; Reset this PC</li>
+              </ul>
+            </div>
+          </div>
+          <div class="sidebar-widget">
+            <div class="widget-head">Search Guides</div>
+            <div class="widget-body">
+              <div class="search-form" role="search">
+                <input type="search" placeholder="e.g. Lenovo loop, bootrec&#8230;" aria-label="Search" />
+                <button type="submit">Go</button>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-widget">
+            <div class="widget-head">About This Site</div>
+            <div class="widget-body">
+              <div class="about-logo">Fix The <span>Logic</span></div>
+              <p>DIY troubleshooting guides in plain English. No jargon, no upsells &#8212; just fixes that work.</p>
+              <p style="margin-top:10px;"><a href="about.html" style="font-size:0.83rem;font-weight:700;color:var(--blue);">Learn more &#8594;</a></p>
+            </div>
+          </div>
+          <div class="ad-placeholder">Advertisement<br/>300 &#215; 250</div>
+          <div class="sidebar-widget">
+            <div class="widget-head">All Categories</div>
+            <div class="widget-body">
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;padding:0;">
+                <li><a href="appliances.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">&#8594; Appliances</a></li>
+                <li><a href="printers-office.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">&#8594; Printers &amp; Office</a></li>
+                <li><a href="smart-home.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">&#8594; Smart Home</a></li>
+                <li><a href="gadgets.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">&#8594; Gadgets</a></li>
+                <li><a href="software-errors.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">&#8594; Software Errors</a></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">Fix The <span>Logic</span></div>
+          <p>Your go-to resource for clear, reliable troubleshooting guides. We help you solve tech problems quickly and safely &#8212; no jargon, no guesswork.</p>
+          <div class="footer-social">
+            <a href="https://x.com/fixthelogic" class="footer-social-link" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://www.linkedin.com/company/fixthelogic" class="footer-social-link" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="https://www.facebook.com/fixthelogic" class="footer-social-link" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="contact.html" class="footer-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+          </div>
+          <p style="font-size:0.78rem;color:rgba(255,255,255,0.3);margin-top:14px;">fixthelogic.in</p>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="appliances.html">Appliances</a></li>
+            <li><a href="printers-office.html">Printers &amp; Office</a></li>
+            <li><a href="smart-home.html">Smart Home</a></li>
+            <li><a href="software-errors.html">Software Errors</a></li>
+            <li><a href="gadgets.html">Gadgets</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="write-for-us.html">Write for Us</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-disclaimer">
+        <strong style="color:rgba(255,255,255,0.55);">Disclaimer:</strong> Fix The Logic provides informational troubleshooting guides only. Always unplug appliances before attempting repairs and follow all manufacturer safety guidelines. We are not responsible for voided warranties or any unintended device changes.
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">&#169; 2026 Fix The Logic. All rights reserved. &#124; <a href="privacy-policy.html" style="color:rgba(255,255,255,0.4);">Privacy Policy</a> &#124; <a href="terms.html" style="color:rgba(255,255,255,0.4);">Terms</a> &#124; <a href="disclaimer.html" style="color:rgba(255,255,255,0.4);">Disclaimer</a></div>
+    </div>
+  </footer>
+  <script src="css/nav.js"></script>
+</body>
+</html>
