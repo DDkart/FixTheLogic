@@ -1,2 +1,3 @@
 # Google AdSense
 google.com, pub-2271796507721856, DIRECT, f08c47fec0942fa0
+google.com, pub-1505492002672299, DIRECT, f08c47fec0942fa0
