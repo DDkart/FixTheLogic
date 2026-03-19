@@ -30,7 +30,7 @@ A DIY tech troubleshooting website providing clear, step-by-step repair guides f
 ## AdSense Setup
 1. Apply at [Google AdSense](https://www.google.com/adsense/)
 2. After approval, update `ads.txt` with your actual publisher ID
-3. Add AdSense ad unit code in place of the `<div class="ad-placeholder">` elements in article sidebars
+
 
 ## Contact
 support@fixthelogic.in
