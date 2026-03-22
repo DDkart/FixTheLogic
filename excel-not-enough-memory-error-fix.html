@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Excel &ldquo;There isn&rsquo;t enough memory to complete this action&rdquo; Error Fix &ndash; Fix The Logic</title>
+  <meta name="description" content="Excel memory error on a powerful PC? It's almost never about RAM. A 32-bit Excel ceiling, phantom formatting, or pivot cache bloat is the real cause. 6 permanent fixes." />
+  <link rel="canonical" href="https://fixthelogic.in/excel-not-enough-memory-error-fix.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Excel 'There isn't enough memory to complete this action' Error Fix" />
+  <meta property="og:image" content="https://fixthelogic.in/images/excel-not-enough-memory/hero-image.png" />
+  <meta property="og:site_name" content="Fix The Logic" />
+  <meta property="article:published_time" content="2026-03-22" />
+  <meta property="article:section" content="Software Errors" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excel 'There isn't enough memory to complete this action' Error Fix","image":"https://fixthelogic.in/images/excel-not-enough-memory/hero-image.png","datePublished":"2026-03-22","author":{"@type":"Organization","name":"Fix The Logic","url":"https://fixthelogic.in"},"publisher":{"@type":"Organization","name":"Fix The Logic","url":"https://fixthelogic.in"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to Fix Excel There Isn't Enough Memory Error","totalTime":"PT30M","step":[{"@type":"HowToStep","position":1,"name":"Close all other apps and clear Excel clipboard"},{"@type":"HowToStep","position":2,"name":"Remove phantom rows, excess formatting and bad named ranges"},{"@type":"HowToStep","position":3,"name":"Optimise pivot tables and remove cache bloat"},{"@type":"HowToStep","position":4,"name":"Disable hardware graphics acceleration"},{"@type":"HowToStep","position":5,"name":"Switch from 32-bit to 64-bit Excel"},{"@type":"HowToStep","position":6,"name":"Increase Windows virtual memory"}]}</script>
+  <link rel="icon" href="css/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://fixthelogic.in/" class="logo">Fix The <span>Logic</span></a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+        <nav class="site-nav" role="navigation" aria-label="Main">
+          <a href="https://fixthelogic.in/">Home</a>
+          <a href="appliances.html">Appliances</a>
+          <a href="printers-office.html">Printers &amp; Office</a>
+          <a href="smart-home.html">Smart Home</a>
+          <a href="gadgets.html">Gadgets</a>
+          <a href="software-errors.html" class="active">Software Errors</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="cat-strip"><div class="container"><div class="cat-strip-inner">
+    <span class="label">Browse:</span>
+    <a href="appliances.html" class="cat-pill">Appliances</a>
+    <a href="printers-office.html" class="cat-pill">Printers &amp; Office</a>
+    <a href="smart-home.html" class="cat-pill">Smart Home</a>
+    <a href="gadgets.html" class="cat-pill">Gadgets</a>
+    <a href="software-errors.html" class="cat-pill">Software Errors</a>
+  </div></div></div>
+
+  <main class="main-section">
+    <div class="container">
+      <div class="content-wrap">
+        <article class="col-main page-article" itemscope itemtype="https://schema.org/Article">
+
+          <nav aria-label="Breadcrumb" style="font-size:0.78rem;color:var(--gray-500);margin-bottom:16px;">
+            <a href="https://fixthelogic.in/" style="color:var(--gray-500);">Home</a>
+            <span style="margin:0 6px;color:var(--gray-300);">&#8250;</span>
+            <a href="software-errors.html" style="color:var(--gray-500);">Software Errors</a>
+            <span style="margin:0 6px;color:var(--gray-300);">&#8250;</span>
+            <span style="color:var(--gray-700);">Excel Not Enough Memory Error Fix</span>
+          </nav>
+
+          <div class="article-meta-bar">
+            <span class="article-cat-tag">Software Errors</span>
+            <span class="meta-sep">|</span>
+            <span>Microsoft Excel / Windows</span>
+            <span class="meta-sep">|</span>
+            <time datetime="2026-03-22" itemprop="datePublished">March 22, 2026</time>
+            <span class="meta-sep">|</span>
+            <span>&#9201; 13 min read</span>
+          </div>
+
+          <nav class="toc-box" aria-label="Table of Contents">
+            <div class="toc-head"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg> Table of Contents</div>
+            <ol class="toc-list">
+              <li><a href="#what-it-means">What the Error Actually Means</a></li>
+              <li><a href="#clean-temp">Bonus: Clear Excel&#8217;s Temp Files (AppData Method)</a></li>
+              <li><a href="#fixes">6 Step-by-Step Fixes</a></li>
+              <li><a href="#when-to-call">When to Contact Microsoft Support</a></li>
+              <li><a href="#summary">Quick Summary</a></li>
+              <li><a href="#faq-section">Frequently Asked Questions</a></li>
+            </ol>
+          </nav>
+
+          <h1 itemprop="headline" style="font-family:var(--font-head);font-size:clamp(1.6rem,3.5vw,2.2rem);color:var(--gray-900);line-height:1.2;margin-bottom:20px;">
+            Excel &#8220;There isn&#8217;t enough memory to complete this action&#8221; Error Fix
+            <span style="display:block;font-size:0.58em;color:var(--blue);margin-top:8px;">Clear Clipboard &#8212; Remove Phantom Rows &#8212; Pivot Cache &#8212; Graphics Acceleration &#8212; 32-bit to 64-bit &#8212; Virtual Memory</span>
+          </h1>
+
+          <img src="images/excel-not-enough-memory/hero-image.png" alt="Laptop on a desk showing Microsoft Excel spreadsheet with the error dialog box saying There isn't enough memory to complete this action with a red RAM module illustration floating beside the screen" class="article-hero-img" width="1280" height="720" itemprop="image" />
+
+          <div class="article-body" itemprop="articleBody">
+
+            <h2 id="what-it-means">Excel Says No Memory. Your PC Has 16 GB. Something Doesn&#8217;t Add Up.</h2>
+            <p>There&#8217;s nothing more infuriating than being deep in a critical spreadsheet &#8212; a financial model, a pivot table report, a data import that took twenty minutes to set up &#8212; and watching Excel suddenly freeze and throw up that dialogue box: <strong>&#8220;There isn&#8217;t enough memory to complete this action.&#8221;</strong></p>
+            <p>You haven&#8217;t opened fifty tabs. Your computer seems fine. You just added a formula, or hit paste, or tried to insert a few rows &#8212; and now Excel has ground to a halt. You click OK. Try again. Same error. You save, close, reopen, and Excel throws the same message the moment you repeat the action.</p>
+            <p>Here&#8217;s the critical thing that Microsoft&#8217;s error message gets completely wrong by omission: <strong>this error almost never means your computer has run out of physical RAM.</strong></p>
+            <p>In plain English, the error means one of three things &#8212; and only one of them is about actual memory:</p>
+            <ul>
+              <li><strong>Excel&#8217;s internal 32-bit architecture has hit a hard 2 GB ceiling.</strong> This is the most common cause and the most misunderstood one. Excel is a 32-bit application on most installations &#8212; even on 64-bit Windows &#8212; and 32-bit applications can only address a maximum of 2 GB of RAM, regardless of how much RAM your computer has. You can have 32 GB of RAM and Excel 32-bit will still crash at 2 GB of spreadsheet data.</li>
+              <li><strong>The spreadsheet has accumulated hidden complexity consuming far more memory than its visible content suggests.</strong> Excel files frequently accumulate phantom formatting, named ranges referencing deleted data, conditional formatting rules that have multiplied silently, or pivot cache data ballooned out of proportion. A spreadsheet with 500 rows of data and 500,000 rows of invisible formatting is enormous.</li>
+              <li><strong>Excel&#8217;s undo history, clipboard, or temporary file cache has consumed its allocated memory pool.</strong> Every action in Excel is stored in the undo stack. Complex paste operations load large data into a clipboard buffer. These background processes can exhaust Excel&#8217;s memory allocation independently of the spreadsheet content.</li>
+            </ul>
+
+            <div class="article-img-wrap">
+              <img src="images/excel-not-enough-memory/excel-error-dialog.png" alt="Microsoft Excel error dialog showing There isn't enough memory to complete this action Try using less data or closing other applications on a white Excel spreadsheet background" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption">The exact error dialog &#8212; and Microsoft&#8217;s suggestion to &#8220;try using less data or closing other applications&#8221; is only partially helpful. Closing other apps addresses case 3. But if the real cause is Excel&#8217;s 32-bit 2 GB ceiling (case 1) or phantom formatting bloat (case 2), no amount of closing Chrome tabs will permanently fix it. Work through the fixes in this guide in order &#8212; Fix 2 (removing hidden bloat) and Fix 5 (upgrading to 64-bit) are the two most impactful permanent solutions.</div>
+            </div>
+
+            <div class="video-embed-wrap">
+              <div class="video-label"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg> Watch: Fix Excel &#8220;Not Enough Memory&#8221; Error &#8212; Clipboard, Phantom Rows, 32-bit to 64-bit Guide</div>
+              <iframe src="https://www.youtube.com/embed/I2X_k8KN7Z0" title="Fix Excel There Isn't Enough Memory to Complete This Action — Complete Step by Step Guide" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="article-img-wrap">
+              <img src="images/excel-not-enough-memory/32bit-vs-64bit-explainer.png" alt="Dark-themed side-by-side comparison showing 32-bit Excel on the left with a red memory bar showing only 2 GB of 16 GB total RAM accessible and a breakdown of how Excel uses that 2 GB until it hits zero versus 64-bit Excel on the right with a full green memory bar showing all 16 GB accessible with no ceiling" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption">The 32-bit Excel memory ceiling visualised: with 16 GB of RAM installed, only 2 GB is accessible to 32-bit Excel &#8212; shared between the Excel application itself, add-ins, workbook data, undo history, and the clipboard buffer. When these fill the 2 GB, the memory error fires regardless of how much RAM remains unused. The 64-bit version (right) removes this ceiling entirely. Check your version now: <strong>File &#8594; Account &#8594; About Excel</strong> &#8212; if it shows 32-bit, Fix 5 is your permanent solution.</div>
+            </div>
+
+            <h2 id="clean-temp">Bonus Fix: Clear Excel&#8217;s Temporary Files via AppData</h2>
+            <p>Before the main fixes, this quick Windows-level cleanup clears Excel&#8217;s accumulated temporary files &#8212; the same files shown in the screenshots below &#8212; which can independently cause the memory error when they grow stale or corrupt.</p>
+
+            <div class="article-img-wrap">
+              <img src="images/excel-not-enough-memory/appdata-search-windows.png" alt="Windows 10 Start menu search showing %appdata% typed in the search bar with search results showing various appdata folder options confirming how to access the AppData Roaming directory" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption"><strong>Step 1:</strong> Press <strong>Windows key + R</strong> (or use the Start search), type <code>%appdata%</code> and press Enter. This opens the AppData &#8594; Roaming directory where Excel&#8217;s profile files are stored. You can also paste this path directly into File Explorer&#8217;s address bar.</div>
+            </div>
+
+            <div class="article-img-wrap">
+              <img src="images/excel-not-enough-memory/appdata-roaming-microsoft-folder.png" alt="Windows File Explorer showing the AppData Roaming directory with the Microsoft folder highlighted among other application folders like Discord GIMP and Mozilla confirming the path to navigate to for Excel cleanup" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption"><strong>Step 2:</strong> Inside the Roaming directory, locate and open the <strong>Microsoft</strong> folder. This contains profile data for all Microsoft Office applications including Excel.</div>
+            </div>
+
+            <div class="article-img-wrap">
+              <img src="images/excel-not-enough-memory/microsoft-excel-folder.png" alt="Windows File Explorer showing the Microsoft folder contents with the Excel folder highlighted in blue among other folders like Access Addins Forms PowerPoint and Teams confirming the Excel profile folder location" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption"><strong>Step 3:</strong> Inside the Microsoft folder, open the <strong>Excel</strong> folder. This contains Excel&#8217;s personalisation files including toolbar customisations, the XLSTART folder, and the Excel15.xlb toolbar file.</div>
+            </div>
+
+            <div class="article-img-wrap">
+              <img src="images/excel-not-enough-memory/excel-folder-delete-contents.png" alt="Windows File Explorer showing the Excel folder contents with XLSTART folder and Excel15 xlb file inside the AppData Roaming Microsoft Excel directory with the delete option accessible from the toolbar" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption"><strong>Step 4:</strong> Select all contents inside the Excel folder and delete them. Excel will regenerate these files cleanly on next launch. <strong>Note:</strong> This removes toolbar customisations but preserves all workbooks, which are stored separately in your Documents folder.</div>
+            </div>
+
+            <div class="article-img-wrap">
+              <img src="images/excel-not-enough-memory/appdata-local-navigate.png" alt="Windows File Explorer showing the now-empty AppData Roaming Microsoft Excel folder confirming the cleanup step is complete with This folder is empty message and the breadcrumb showing the full path" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption"><strong>Step 5:</strong> Navigate back using the breadcrumb to <strong>AppData &#8594; Local</strong> (not Roaming). This is the second AppData location containing Excel&#8217;s local temporary files.</div>
+            </div>
+
+            <div class="article-img-wrap">
+              <img src="images/excel-not-enough-memory/temp-folder-local.png" alt="Windows File Explorer showing the AppData Local directory contents with multiple application folders visible including Microsoft Mozilla NVIDIA and others confirming the navigation to find the Temp folder for Excel temp file cleanup" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption"><strong>Step 6:</strong> Inside AppData &#8594; Local, find and open the <strong>Temp</strong> folder. This contains temporary files created by Windows and all applications including Excel&#8217;s temporary calculation and clipboard buffer files.</div>
+            </div>
+
+            <div class="article-img-wrap">
+              <img src="images/excel-not-enough-memory/aspwebview-folder.png" alt="Windows File Explorer showing the Temp folder contents with hundreds of temporary files and folders including the ASPWebView folder which contains Excel's web view temporary cache files that cause memory errors" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption"><strong>Step 7:</strong> Inside the Temp folder, locate the <strong>ASPWebView</strong> folder. This folder stores Excel&#8217;s web view and rendering cache &#8212; it can accumulate over time and interfere with Excel&#8217;s memory management, contributing to the error on some systems.</div>
+            </div>
+
+            <div class="article-img-wrap">
+              <img src="images/excel-not-enough-memory/aspwebview-empty.png" alt="Windows File Explorer showing the ASPWebView folder completely empty after deleting its contents confirming the temporary file cleanup is complete with This folder is empty message" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption"><strong>Step 8:</strong> Delete all contents inside the ASPWebView folder. The folder should now show &#8220;This folder is empty.&#8221; Close File Explorer, restart Excel, and test whether the memory error recurs. This AppData cleanup resolves the error on some installations independently of the main fixes below.</div>
+            </div>
+
+            <h2 id="fixes">6 Step-by-Step Fixes</h2>
+            <p>Work through these in order. The memory error clears at Fix 1 or Fix 2 for a large proportion of users.</p>
+
+            <div class="step-box">
+              <div class="step-box-head"><span class="step-num">1</span><span class="step-title">Close All Other Applications and Clear Excel&#8217;s Clipboard</span></div>
+              <p>Before changing a single Excel setting, free up every byte of memory available by closing competing applications and clearing the internal clipboard buffer &#8212; which can consume hundreds of megabytes after copy-paste operations.</p>
+              <ol>
+                <li>Save your Excel workbook: press <strong>Ctrl + S.</strong></li>
+                <li>Close every other application &#8212; browser, email, Teams, Slack, other Office documents &#8212; everything.</li>
+                <li>Inside Excel, go to the <strong>Home</strong> tab and click the small arrow at the bottom right of the <strong>Clipboard</strong> group to open the Clipboard pane.</li>
+                <li>Click <strong>Clear All</strong> to empty the clipboard buffer.</li>
+                <li>Press <strong>Esc</strong> to cancel any pending operations.</li>
+                <li>Go to <strong>File &#8594; Options &#8594; Advanced</strong> &#8594; find <strong>&#8220;Cut, Copy, and Paste&#8221;</strong> section &#8594; turn off <strong>&#8220;Show Paste Options button when content is pasted.&#8221;</strong></li>
+                <li>Retry the action that triggered the error.</li>
+              </ol>
+            </div>
+
+            <div class="step-box">
+              <div class="step-box-head"><span class="step-num">2</span><span class="step-title">Remove Hidden File Bloat (Phantom Rows, Excess Formatting, Bad Named Ranges)</span></div>
+              <p>This fix addresses the most common hidden cause of the memory error in files that &#8220;shouldn&#8217;t&#8221; be causing problems. Excel files accumulate invisible overhead that consumes memory many times over what the visible data requires.</p>
+              <div class="warning-box"><strong>&#9888;&#65039; Back up first:</strong> Before making any changes, save a backup copy of the original file: <strong>File &#8594; Save As</strong> with a clearly labelled backup name. Some cleanup steps cannot be undone if applied incorrectly.</div>
+
+              <p><strong>Check and remove phantom rows/columns:</strong></p>
+              <ol>
+                <li>Press <strong>Ctrl + End</strong> in your spreadsheet. This jumps to the last cell Excel considers &#8220;used.&#8221; If this cell is far beyond your actual data &#8212; row 500,000 when your data ends at row 500 &#8212; Excel is formatting millions of empty cells.</li>
+                <li>Select every row below your last real data row: click the row number below your last row, then press <strong>Ctrl + Shift + End.</strong></li>
+                <li>Right-click and choose <strong>Delete</strong> &#8212; not just Clear Contents, but full row deletion.</li>
+                <li>Do the same for columns to the right of your last data column.</li>
+                <li>Press <strong>Ctrl + S.</strong> Check the file size before and after &#8212; a reduction of several megabytes confirms the phantom rows were consuming significant space.</li>
+              </ol>
+
+              <p><strong>Fix conditional formatting applied to full columns:</strong></p>
+              <ol start="6">
+                <li>Go to <strong>Home &#8594; Conditional Formatting &#8594; Manage Rules &#8594; Show formatting rules for: This Worksheet.</strong></li>
+                <li>Look for rules applied to entire columns (e.g., <code>$A:$A</code>) rather than specific ranges. Change them to apply only to the specific data range (e.g., <code>$A$1:$A$500</code>). Delete any unused rules.</li>
+              </ol>
+
+              <p><strong>Remove named ranges with errors:</strong></p>
+              <ol start="8">
+                <li>Go to <strong>Formulas &#8594; Name Manager.</strong> Sort by &#8220;Refers To&#8221; and look for named ranges showing <code>#REF!</code> errors. Select all error-showing ranges and delete them.</li>
+              </ol>
+            </div>
+
+            <div class="article-img-wrap">
+              <img src="images/excel-not-enough-memory/hidden-bloat-ctrlend-explainer.png" alt="Light-themed comparison showing on the left what you see in a 500-row Excel spreadsheet versus on the right what Ctrl plus End reveals which is Excel tracking data all the way to row 1048576 with three bloat source cards at the bottom showing phantom formatting conditional format applied to full columns and named ranges with ref errors" width="1140" height="641" loading="lazy" />
+              <div class="article-img-caption">The most shocking Excel discovery: pressing <strong>Ctrl + End</strong> on a 500-row spreadsheet and landing on row 1,048,576. Excel has been formatting and tracking every cell to the end of the sheet, consuming the memory equivalent of a million-row file. This is by far the most common cause of the memory error on files that appear small. Fix 2 addresses this directly &#8212; and the file size reduction after deleting the phantom rows is often dramatic.</div>
+            </div>
+
+            <div class="step-box">
+              <div class="step-box-head"><span class="step-num">3</span><span class="step-title">Optimise Pivot Tables and Remove Pivot Cache Bloat</span></div>
+              <p>Pivot tables maintain a hidden cache &#8212; a stored copy of all source data &#8212; that can consume two to three times the memory of the visible pivot table. Multiple pivot tables with independent caches can easily consume gigabytes.</p>
+              <ol>
+                <li>Right-click any pivot table and select <strong>PivotTable Options.</strong></li>
+                <li>Click the <strong>Data</strong> tab.</li>
+                <li>Uncheck <strong>&#8220;Save source data with file&#8221;</strong> &#8212; this stops Excel saving a redundant copy of all pivot source data inside the file.</li>
+                <li>Check <strong>&#8220;Refresh data when opening the file.&#8221;</strong></li>
+                <li>Click OK and repeat for every pivot table in the workbook.</li>
+                <li>For workbooks with multiple pivot tables using the same source data, configure them to share the same cache rather than creating independent copies &#8212; each independent cache is a full copy of the source data in memory.</li>
+                <li>Save the file and check the file size &#8212; removing pivot cache bloat often reduces file size by 40&#8211;70%.</li>
+              </ol>
+            </div>
+
+            <div class="step-box">
+              <div class="step-box-head"><span class="step-num">4</span><span class="step-title">Disable Hardware Graphics Acceleration in Excel</span></div>
+              <p>Excel uses your computer&#8217;s GPU for rendering charts, pivot tables, and large formatted ranges. When GPU memory conflicts with system memory management, Excel can throw the memory error even when system RAM is ample. Disabling hardware acceleration forces Excel to use software rendering, which often resolves the conflict.</p>
+              <ol>
+                <li>Open Excel and go to <strong>File &#8594; Options</strong> (Windows) or <strong>Excel &#8594; Preferences</strong> (Mac).</li>
+                <li>Click <strong>Advanced.</strong></li>
+                <li>Scroll to the <strong>Display</strong> section.</li>
+                <li>Check the box labelled <strong>&#8220;Disable hardware graphics acceleration.&#8221;</strong></li>
+                <li>Click OK and restart Excel completely.</li>
+                <li>Retry the action that was producing the memory error.</li>
+              </ol>
+              <p>This fix resolves the error for a notable proportion of users &#8212; particularly on machines with integrated graphics or where both integrated and dedicated GPUs are active simultaneously.</p>
+            </div>
+
+            <div class="step-box">
+              <div class="step-box-head"><span class="step-num">5</span><span class="step-title">Switch from 32-bit Excel to 64-bit Excel (The Permanent Architectural Fix)</span></div>
+              <p>This is the most impactful fix for users who regularly work with large data sets, complex models, or files over 100 MB. Microsoft installs the 32-bit version of Office by default &#8212; even on 64-bit Windows &#8212; imposing a hard 2 GB ceiling on Excel&#8217;s addressable memory.</p>
+              <p><strong>Check which version you currently have:</strong></p>
+              <ol>
+                <li>Open Excel and go to <strong>File &#8594; Account &#8594; About Excel.</strong></li>
+                <li>Look at the top of the dialog &#8212; it will specify either <strong>32-bit</strong> or <strong>64-bit.</strong></li>
+                <li>If it says 32-bit and you regularly encounter memory errors, this is almost certainly the root cause.</li>
+              </ol>
+              <div class="warning-box"><strong>&#9888;&#65039; Before upgrading:</strong> Switching from 32-bit to 64-bit Office requires completely uninstalling your current Office installation and reinstalling. This takes 20&#8211;40 minutes. Some older Excel add-ins and COM add-ins are incompatible with 64-bit Office &#8212; make a list of any Excel add-ins you use and verify 64-bit compatibility for each before proceeding.</div>
+              <p><strong>Upgrade to 64-bit Excel:</strong></p>
+              <ol>
+                <li>Sign in to <strong>office.com</strong> with your Microsoft account.</li>
+                <li>Go to <strong>My Account &#8594; Install Office &#8594; Other install options.</strong></li>
+                <li>Select the <strong>64-bit</strong> version before downloading.</li>
+                <li>Uninstall your current 32-bit Office via <strong>Control Panel &#8594; Programs &#8594; Uninstall a program.</strong></li>
+                <li>Install the downloaded 64-bit Office package.</li>
+                <li>After installation, verify in Excel: <strong>File &#8594; Account &#8594; About Excel</strong> &#8212; it should now show 64-bit.</li>
+              </ol>
+              <p>After switching to 64-bit, the 2 GB memory ceiling is removed and Excel can address as much RAM as your system has.</p>
+            </div>
+
+            <div class="step-box">
+              <div class="step-box-head"><span class="step-num">6</span><span class="step-title">Increase Windows Virtual Memory (Page File)</span></div>
+              <p>When physical RAM is genuinely constrained &#8212; particularly on computers with 4 GB or 8 GB of RAM &#8212; increasing Windows&#8217; virtual memory allocation gives Excel additional headroom by using a portion of the hard drive as overflow memory.</p>
+              <div class="warning-box"><strong>&#9888;&#65039; Admin access required:</strong> Modifying virtual memory requires administrator access. Set the minimum to 1.5x your physical RAM and the maximum to 3x. Never set the maximum smaller than the minimum, and always restart the computer after making changes before testing.</div>
+              <ol>
+                <li>Press <strong>Windows key + R</strong>, type <code>sysdm.cpl</code>, press Enter.</li>
+                <li>Click the <strong>Advanced</strong> tab &#8594; <strong>Performance &#8594; Settings.</strong></li>
+                <li>Click <strong>Advanced</strong> tab &#8594; under <strong>Virtual memory</strong>, click <strong>Change.</strong></li>
+                <li>Uncheck <strong>&#8220;Automatically manage paging file size for all drives.&#8221;</strong></li>
+                <li>Select your <strong>C: drive</strong>, choose <strong>Custom size</strong>, and enter:
+                  <ul style="margin-top:8px;">
+                    <li><strong>Initial size:</strong> 1.5x your RAM in MB (e.g., 12288 for 8 GB RAM)</li>
+                    <li><strong>Maximum size:</strong> 3x your RAM in MB (e.g., 24576 for 8 GB RAM)</li>
+                  </ul>
+                </li>
+                <li>Click <strong>Set</strong>, then OK through all windows.</li>
+                <li><strong>Restart your computer</strong> &#8212; virtual memory changes do not take effect until restart.</li>
+              </ol>
+            </div>
+
+            <h2 id="when-to-call">When to Contact Microsoft Support</h2>
+            <p>The Excel memory error is almost always a software and configuration issue. But there are situations where escalating makes sense:</p>
+            <ul>
+              <li><strong>The error appears on a small, simple file</strong> (under 1 MB, under 1,000 rows, no pivot tables) that has never caused problems before. A memory error on a trivially small file points to a corrupted Excel installation or a deeper Windows memory management problem &#8212; not a spreadsheet issue.</li>
+              <li><strong>You&#8217;ve switched to 64-bit Excel but the error persists on files under 2 GB.</strong> This indicates either a corrupt workbook or a conflicting add-in leaking memory. Run Windows Memory Diagnostic (<strong>Windows key + R &#8594; mdsched.exe</strong>) to rule out physical RAM issues.</li>
+              <li><strong>You need to work with tens of millions of rows.</strong> At this scale, Excel is not the right tool regardless of how much RAM you add. Microsoft Power BI, SQL Server, or Python/Pandas are designed for this scale.</li>
+            </ul>
+            <p><strong>For Microsoft Excel support:</strong></p>
+            <ul>
+              <li>Microsoft 365 subscribers: <strong>support.microsoft.com</strong> &#8212; Live chat available with subscription</li>
+              <li>Community support: <strong>answers.microsoft.com</strong> &#8212; Excel section with active Microsoft MVPs</li>
+              <li>India enterprise support: <strong>1800-102-1100</strong> (Microsoft India toll-free)</li>
+            </ul>
+
+            <h2 id="summary">Quick Summary</h2>
+            <table class="summary-table">
+              <thead><tr><th>Fix</th><th>Difficulty</th><th>Time Needed</th></tr></thead>
+              <tbody>
+                <tr><td>Clear AppData temp files (bonus fix above)</td><td><span class="diff-easy">Easy</span></td><td>5 minutes</td></tr>
+                <tr><td>Close all apps and clear Excel clipboard</td><td><span class="diff-easy">Very Easy</span></td><td>3 minutes</td></tr>
+                <tr><td>Remove phantom rows, excess formatting, bad named ranges</td><td><span class="diff-easy">Easy</span></td><td>15 minutes</td></tr>
+                <tr><td>Optimise pivot tables and remove cache bloat</td><td><span class="diff-easy">Easy</span></td><td>10 minutes</td></tr>
+                <tr><td>Disable hardware graphics acceleration</td><td><span class="diff-easy">Very Easy</span></td><td>2 minutes</td></tr>
+                <tr><td>Switch from 32-bit to 64-bit Excel</td><td><span class="diff-mod">Moderate</span></td><td>30 minutes</td></tr>
+                <tr><td>Increase Windows virtual memory</td><td><span class="diff-mod">Moderate</span></td><td>10 min + restart</td></tr>
+              </tbody>
+            </table>
+            <p>Start at Fix 1. For most users whose files have grown organically over months or years, Fix 2 and Fix 3 together will reduce file size dramatically and eliminate the memory error entirely. If you routinely work with large data and the error keeps recurring, Fix 5 (switching to 64-bit Excel) is the permanent architectural solution &#8212; a one-time change that removes the 2 GB ceiling for good.</p>
+
+          </div><!-- /.article-body -->
+
+          <div class="faq-section" id="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-1"><span itemprop="name">Why does Excel say &#8220;not enough memory&#8221; when my computer has 16 GB of RAM?</span><span class="faq-icon">&#43;</span></button>
+              <div class="faq-answer" id="faq-1" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Because 32-bit Excel cannot access more than 2 GB of RAM &#8212; a hard architectural limit built into all 32-bit applications &#8212; regardless of how much physical RAM your computer has. Microsoft installs the 32-bit version of Office by default, even on 64-bit Windows, which means most users are running a version of Excel that has a 2 GB ceiling even on machines with 16, 32, or 64 GB of RAM. The remaining 14+ GB of RAM is completely inaccessible to the 32-bit Excel process. Check your version: File &#8594; Account &#8594; About Excel. If it says &#8220;32-bit,&#8221; upgrading to 64-bit Excel (Fix 5) will permanently resolve memory errors caused by the ceiling. The 64-bit version can address all available RAM on your system.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-2"><span itemprop="name">My Excel file is only 2 MB but I still get the memory error. How is that possible?</span><span class="faq-icon">&#43;</span></button>
+              <div class="faq-answer" id="faq-2" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">File size on disk is completely different from the amount of memory Excel needs to operate on the file. A 2 MB file can expand to 200 MB or more in memory during processing because Excel unpacks compressed data, loads all cell formatting (including phantom formatting on millions of empty cells), loads the undo history, copies data into the clipboard buffer, and expands all formula references. The single most common cause of this mismatch is phantom formatting &#8212; where a user has formatted or accidentally touched cells far beyond their actual data range, causing Excel to track millions of &#8220;empty&#8221; cells. Press Ctrl + End on the affected spreadsheet: if Excel jumps to row 500,000 when your data only goes to row 500, your in-memory size is thousands of times larger than the on-disk file size suggests. Fix 2 in this guide addresses this directly.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-3"><span itemprop="name">Is it safe to switch from 32-bit to 64-bit Office? Will my files still work?</span><span class="faq-icon">&#43;</span></button>
+              <div class="faq-answer" id="faq-3" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Yes &#8212; all Excel workbook files (.xlsx, .xlsm, .xlsb, .xls) are fully compatible between 32-bit and 64-bit Excel. Your spreadsheet data, formulas, formatting, and pivot tables will all open and function identically in 64-bit Excel. The upgrade risk is not about files &#8212; it is about add-ins. Third-party Excel add-ins and COM add-ins (installed separately from Excel) need to have 64-bit compatible versions available. Most major commercial add-ins (Bloomberg, FactSet, financial modelling tools) have 64-bit versions. Very old, obscure, or custom-built VBA add-ins from legacy workflows may not have 64-bit versions. Before upgrading, go to File &#8594; Options &#8594; Add-ins and make a list of every add-in you use, then verify 64-bit compatibility for each before proceeding with the upgrade. For most home and business users with standard Excel functionality and no specialist add-ins, the upgrade is completely safe.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-4"><span itemprop="name">The error only happens when I paste or insert rows. What&#8217;s causing it specifically?</span><span class="faq-icon">&#43;</span></button>
+              <div class="faq-answer" id="faq-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Paste and insert-row operations are two of the most memory-intensive actions in Excel because they trigger a full recalculation of all formula references across the spreadsheet. If you have a spreadsheet with conditional formatting applied to entire columns (e.g., the rule applies to $A:$A rather than $A$1:$A$500), inserting a single row forces Excel to recalculate the conditional formatting across over a million cells &#8212; which can exhaust the memory pool in seconds. Paste operations additionally load the clipboard contents into a working buffer, which adds another memory spike on top of the recalculation. The fix sequence for this specific symptom is: (1) Fix conditional formatting rules to apply to specific ranges rather than full columns (Fix 2), (2) Clear the clipboard before pasting (Fix 1), (3) Set Excel to manual calculation (File &#8594; Options &#8594; Formulas &#8594; Manual) before performing the paste, then recalculate with F9 afterward.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-5"><span itemprop="name">Can saving the Excel file as .xlsb instead of .xlsx help with the memory error?</span><span class="faq-icon">&#43;</span></button>
+              <div class="faq-answer" id="faq-5" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Yes &#8212; in some cases significantly. The .xlsb (Excel Binary Workbook) format stores spreadsheet data in a binary format rather than the XML-based .xlsx format. Binary format files are typically 25&#8211;75% smaller than the equivalent .xlsx file, load faster, and consume less memory during processing because Excel doesn&#8217;t need to parse and decompress the XML during file loading. To save as .xlsb: File &#8594; Save As &#8594; select &#8220;Excel Binary Workbook (*.xlsb)&#8221; from the format dropdown. The trade-offs: .xlsb files are slightly less compatible with non-Microsoft tools (Google Sheets cannot open them), and they cannot be opened in very old Excel versions. For large files used exclusively in modern Excel on Windows, .xlsb is almost always the better format choice for performance and memory management.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-6"><span itemprop="name">Will disabling Excel add-ins help with the memory error?</span><span class="faq-icon">&#43;</span></button>
+              <div class="faq-answer" id="faq-6" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Yes &#8212; add-ins consume memory from the same 2 GB pool as the Excel application and workbook data in 32-bit Excel. In 32-bit Excel, a typical installation might allocate: Excel core ~200 MB, workbook data ~800 MB, leaving ~1 GB for add-ins and operations. If you have multiple add-ins installed (Power Query, Solver, Analysis ToolPak, third-party tools), they can collectively consume several hundred megabytes and leave very little headroom for large operations. To test: go to File &#8594; Options &#8594; Add-ins &#8594; at the bottom, change &#8220;Manage&#8221; to &#8220;COM Add-ins&#8221; &#8594; click Go &#8594; uncheck all add-ins &#8594; restart Excel and test the memory error. If the error disappears, re-enable add-ins one at a time to identify the culprit. For users on 64-bit Excel, add-in memory consumption still matters but rarely triggers the memory error unless an individual add-in has a memory leak bug.</p>
+              </div>
+            </div>
+
+          </div><!-- /.faq-section -->
+
+          <div class="author-box">
+            <div class="author-avatar-wrap"><img src="images/rohit-sharma-author.jpg" alt="Rohit Sharma" width="64" height="64" style="width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:center top;display:block;" /></div>
+            <div class="author-info">
+              <div class="author-name-row"><h4>Rohit Sharma</h4><span class="author-title">Senior Tech Writer &amp; DIY Repair Specialist</span></div>
+              <p class="author-bio">Rohit Sharma is a seasoned technology writer with over 8 years of experience covering home appliances, consumer electronics, and DIY repair guides. He has personally tested and documented hundreds of repair procedures, helping thousands of readers resolve error codes without expensive service calls. Rohit writes with engineering accuracy in plain, jargon-free language anyone can follow.</p>
+              <div class="author-social-row">
+                <a href="https://x.com/rohitsharma_ftl" class="author-social-link" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>Follow on X</span></a>
+                <a href="https://www.linkedin.com/in/rohitsharma-fixthelogic" class="author-social-link" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span>LinkedIn</span></a>
+                <a href="contact.html" class="author-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>Contact</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="related-posts">
+            <h3>More Software Error Guides</h3>
+            <div class="related-grid">
+              <article class="article-card">
+                <a href="whatsapp-waiting-for-this-message-fix.html" tabindex="-1" aria-hidden="true"><img src="images/whatsapp-waiting-message/hero-image.png" alt="WhatsApp waiting for this message fix" class="card-thumb" width="600" height="338" loading="lazy" /></a>
+                <div class="card-body">
+                  <span class="card-tag">Software Errors</span>
+                  <h3><a href="whatsapp-waiting-for-this-message-fix.html">WhatsApp &#8220;Waiting for this message&#8221; &#8212; Explained &amp; Fixed</a></h3>
+                  <p class="card-excerpt">Your device can&#8217;t decrypt this message. 7 fixes from app update to reinstall &#8212; most resolve in under 3 minutes.</p>
+                  <div class="card-meta"><time datetime="2026-03-22">Mar 22, 2026</time><a href="whatsapp-waiting-for-this-message-fix.html" class="read-more">Read More &#8594;</a></div>
+                </div>
+              </article>
+              <article class="article-card">
+                <a href="dns-probe-finished-nxdomain-fix.html" tabindex="-1" aria-hidden="true"><img src="images/dns-probe-finished/hero-image.png" alt="DNS_PROBE_FINISHED_NXDOMAIN Chrome error" class="card-thumb" width="600" height="338" loading="lazy" /></a>
+                <div class="card-body">
+                  <span class="card-tag">Software Errors</span>
+                  <h3><a href="dns-probe-finished-nxdomain-fix.html">DNS_PROBE_FINISHED_NXDOMAIN in Chrome: Fix It in 5 Steps</a></h3>
+                  <p class="card-excerpt">NXDOMAIN means DNS lookup failed. Switch to Google DNS (8.8.8.8) or flush your cache &#8212; cleared in under 3 minutes.</p>
+                  <div class="card-meta"><time datetime="2026-03-13">Mar 13, 2026</time><a href="dns-probe-finished-nxdomain-fix.html" class="read-more">Read More &#8594;</a></div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+        </article>
+
+        <aside class="col-sidebar" aria-label="Sidebar">
+          <div class="sidebar-widget"><div class="widget-head">Quick Summary</div><div class="widget-body">
+            <p style="font-size:0.83rem;color:var(--gray-700);margin-bottom:10px;"><strong>Excel memory error? Try in order:</strong></p>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;padding:0;">
+              <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">0.</span><strong>Delete AppData &#8594; Roaming &#8594; Microsoft &#8594; Excel contents</strong></li>
+              <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">1.</span>Close all apps + Home &#8594; Clipboard &#8594; Clear All</li>
+              <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">2.</span><strong>Ctrl+End → delete phantom rows below data</strong></li>
+              <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">3.</span>Pivot Tables &#8594; uncheck &#8220;Save source data&#8221;</li>
+              <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">4.</span>Options &#8594; Advanced &#8594; Disable GPU acceleration</li>
+              <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">5.</span><strong>Upgrade 32-bit Excel &#8594; 64-bit (permanent fix)</strong></li>
+              <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">6.</span>Increase Windows virtual memory (sysdm.cpl)</li>
+            </ul>
+          </div></div>
+          <div class="sidebar-widget"><div class="widget-head">Search Guides</div><div class="widget-body"><div class="search-form" role="search"><input type="search" placeholder="e.g. Excel memory, error&#8230;" aria-label="Search" /><button type="submit">Go</button></div></div></div>
+          <div class="sidebar-widget"><div class="widget-head">About This Site</div><div class="widget-body"><div class="about-logo">Fix The <span>Logic</span></div><p>DIY troubleshooting guides in plain English. No jargon, no upsells &#8212; just fixes that work.</p><p style="margin-top:10px;"><a href="about.html" style="font-size:0.83rem;font-weight:700;color:var(--blue);">Learn more &#8594;</a></p></div></div>
+          <div class="ad-placeholder">Advertisement<br/>300 &#215; 250</div>
+          <div class="sidebar-widget"><div class="widget-head">All Categories</div><div class="widget-body"><ul style="list-style:none;display:flex;flex-direction:column;gap:10px;padding:0;">
+            <li><a href="appliances.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">&#8594; Appliances</a></li>
+            <li><a href="printers-office.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">&#8594; Printers &amp; Office</a></li>
+            <li><a href="smart-home.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">&#8594; Smart Home</a></li>
+            <li><a href="gadgets.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">&#8594; Gadgets</a></li>
+            <li><a href="software-errors.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">&#8594; Software Errors</a></li>
+          </ul></div></div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">Fix The <span>Logic</span></div>
+          <p>Your go-to resource for clear, reliable troubleshooting guides. We help you solve tech problems quickly and safely &#8212; no jargon, no guesswork.</p>
+          <div class="footer-social">
+            <a href="https://x.com/fixthelogic" class="footer-social-link" target="_blank" rel="noopener" aria-label="X"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://www.linkedin.com/company/fixthelogic" class="footer-social-link" target="_blank" rel="noopener" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="https://www.facebook.com/fixthelogic" class="footer-social-link" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          </div>
+          <p style="font-size:0.78rem;color:rgba(255,255,255,0.3);margin-top:14px;">fixthelogic.in</p>
+        </div>
+        <div class="footer-col"><h4>Categories</h4><ul><li><a href="appliances.html">Appliances</a></li><li><a href="printers-office.html">Printers &amp; Office</a></li><li><a href="smart-home.html">Smart Home</a></li><li><a href="software-errors.html">Software Errors</a></li><li><a href="gadgets.html">Gadgets</a></li></ul></div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="write-for-us.html">Write for Us</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="cookie-policy.html">Cookie Policy</a></li></ul></div>
+      </div>
+      <div class="footer-disclaimer"><strong style="color:rgba(255,255,255,0.55);">Disclaimer:</strong> Fix The Logic provides informational troubleshooting guides only. Always follow manufacturer safety guidelines. We are not responsible for voided warranties or any unintended device changes.</div>
+    </div>
+    <div class="footer-bottom"><div class="container">&#169; 2026 Fix The Logic. All rights reserved. &#124; <a href="privacy-policy.html" style="color:rgba(255,255,255,0.4);">Privacy Policy</a> &#124; <a href="terms.html" style="color:rgba(255,255,255,0.4);">Terms</a> &#124; <a href="disclaimer.html" style="color:rgba(255,255,255,0.4);">Disclaimer</a></div></div>
+  </footer>
+  <script src="css/nav.js"></script>
+</body>
+</html>
