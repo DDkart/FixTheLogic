@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     banner.id = 'cookie-banner';
     banner.setAttribute('role', 'region');
     banner.setAttribute('aria-label', 'Cookie consent');
-    banner.innerHTML = '<div class="cookie-inner"><p>&#x1F36A; We use <strong>essential, analytics (Google Analytics)</strong> and <strong>advertising cookies (Google AdSense)</strong> to improve your experience and serve relevant ads. See our <a href="/cookie-policy.html">Cookie Policy</a> and <a href="/privacy-policy.html">Privacy Policy</a> for details.</p><div class="cookie-btns"><button id="cookie-accept" class="cookie-btn cookie-btn-accept">&#10003;&nbsp; Accept All Cookies</button><button id="cookie-decline" class="cookie-btn cookie-btn-decline">Essential Only</button></div></div>';
+    banner.innerHTML = '<div class="cookie-inner"><p>&#x1F36A; We use <strong>essential, analytics (Google Analytics)</strong> and <strong>advertising cookies</strong> to improve your experience and serve relevant ads. See our <a href="/cookie-policy.html">Cookie Policy</a> and <a href="/privacy-policy.html">Privacy Policy</a> for details.</p><div class="cookie-btns"><button id="cookie-accept" class="cookie-btn cookie-btn-accept">&#10003;&nbsp; Accept All Cookies</button><button id="cookie-decline" class="cookie-btn cookie-btn-decline">Essential Only</button></div></div>';
     document.body.appendChild(banner);
     setTimeout(function(){ banner.classList.add('cookie-visible'); }, 300);
     document.getElementById('cookie-accept').addEventListener('click', function () {
