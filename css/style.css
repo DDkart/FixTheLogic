@@ -296,11 +296,28 @@ img { display: block; max-width: 100%; height: auto; }
   white-space: nowrap;
 }
 .cookie-btn:hover { opacity: 0.88; }
-.cookie-btn-accept { background: var(--blue); color: #fff; border: 2px solid var(--blue); }
-.cookie-btn-accept:hover { background: var(--blue-dark); border-color: var(--blue-dark); opacity: 1; }
+.cookie-btn-accept { background: var(--blue); color: #fff; }
 .cookie-btn-decline { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.8); }
 @media (max-width: 640px) {
   .cookie-inner { flex-direction: column; align-items: flex-start; gap: 14px; padding: 14px 16px; }
   .cookie-btns { width: 100%; }
   .cookie-btn { flex: 1; text-align: center; }
+}
+
+/* ── AdSense Ad Units ─────────────────────────────────── */
+.adsense-wrap {
+  clear: both;
+  text-align: center;
+  margin: 28px auto;
+  overflow: hidden;
+  max-width: 100%;
+}
+.adsense-wrap ins {
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 640px) {
+  .adsense-wrap {
+    margin: 16px auto;
+  }
 }
