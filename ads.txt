@@ -1,5 +1,3 @@
-# Google AdSense - Primary Publisher ID
-# IMPORTANT: Keep only YOUR publisher ID. Remove the others if they don't belong to you.
+# Google AdSense - Authorized Seller
+# Only your verified publisher ID should appear here.
 google.com, pub-2271796507721856, DIRECT, f08c47fec0942fa0
-google.com, pub-1505492002672299, DIRECT, f08c47fec0942fa0
-google.com, pub-8272572134711309, DIRECT, f08c47fec0942fa0
