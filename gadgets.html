@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2271796507721856" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9666660563566889" crossorigin="anonymous"></script>
 </head>
 <body>
   <header class="site-header">
@@ -71,8 +71,8 @@
           <div class="adsense-wrap" style="text-align:center;margin:24px 0;overflow:hidden;">
             <ins class="adsbygoogle"
                  style="display:block"
-                 data-ad-client="ca-pub-2271796507721856"
-                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-client="ca-pub-9666660563566889"
+                 data-ad-slot="auto"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
@@ -222,9 +222,31 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="container">&#169; 2026 Fix The Logic. All rights reserved. &#124; <a href="privacy-policy.html" style="color:rgba(255,255,255,0.4);">Privacy Policy</a> &#124; <a href="terms.html" style="color:rgba(255,255,255,0.4);">Terms</a> &#124; <a href="disclaimer.html" style="color:rgba(255,255,255,0.4);">Disclaimer</a></div>
+      <div class="container">&#169; 2026 Fix The Logic. All rights reserved. &#124; <a href="privacy-policy.html" style="color:rgba(255,255,255,0.4);">Privacy Policy</a> &#124; <a href="terms.html" style="color:rgba(255,255,255,0.4);">Terms</a> &#124; <a href="disclaimer.html" style="color:rgba(255,255,255,0.4);">Disclaimer</a> &#124; <a href="dmca.html" style="color:rgba(255,255,255,0.4);">DMCA</a></div>
     </div>
   </footer>
   <script src="css/nav.js"></script>
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#1a2340;color:#fff;padding:16px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 -4px 24px rgba(0,0,0,0.25);">
+  <p style="margin:0;font-size:0.88rem;line-height:1.6;max-width:700px;">We use cookies to analyse traffic and serve personalised ads via Google AdSense &amp; Analytics. By clicking <strong>Accept All</strong> you consent to our use of cookies as described in our <a href="/cookie-policy.html" style="color:#60aaff;text-decoration:underline;">Cookie Policy</a>.</p>
+  <div style="display:flex;gap:10px;flex-shrink:0;">
+    <button onclick="ftlCookieReject()" style="background:transparent;border:1px solid rgba(255,255,255,0.35);color:#fff;padding:8px 18px;border-radius:6px;cursor:pointer;font-size:0.84rem;">Reject Non-Essential</button>
+    <button onclick="ftlCookieAccept()" style="background:#0056b3;border:none;color:#fff;padding:8px 20px;border-radius:6px;cursor:pointer;font-size:0.84rem;font-weight:600;">Accept All</button>
+  </div>
+</div>
+<script>
+(function(){
+  var CONSENT_KEY='ftl_cookie_consent';
+  function setCookie(n,v,d){var e=new Date();e.setTime(e.getTime()+d*864e5);document.cookie=n+'='+v+';expires='+e.toUTCString()+';path=/;SameSite=Lax';}
+  function getCookie(n){var c=document.cookie.split(';');for(var i=0;i<c.length;i++){var p=c[i].trim();if(p.indexOf(n+'=')===0)return p.substring(n.length+1);}return null;}
+  window.ftlCookieAccept=function(){setCookie(CONSENT_KEY,'accepted',365);document.getElementById('cookie-banner').style.display='none';};
+  window.ftlCookieReject=function(){setCookie(CONSENT_KEY,'rejected',365);document.getElementById('cookie-banner').style.display='none';};
+  document.addEventListener('DOMContentLoaded',function(){
+    if(!getCookie(CONSENT_KEY)){document.getElementById('cookie-banner').style.display='flex';}
+  });
+})();
+</script>
+<!-- End Cookie Consent Banner -->
 </body>
 </html>

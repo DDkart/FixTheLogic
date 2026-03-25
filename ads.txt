@@ -1,3 +1,1 @@
-# Google AdSense - Authorized Seller
-# Only your verified publisher ID should appear here.
 google.com, pub-9666660563566889, DIRECT, f08c47fec0942fa0

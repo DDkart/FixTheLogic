@@ -1,528 +1,499 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Google Nest Thermostat E73 Error (No Power to RC Wire) Troubleshooting &ndash; Fix The Logic</title>
-  <meta name="description" content="Google Nest showing E73 error? No power to RC wire is usually a loose connection, tripped breaker, or blown HVAC fuse. 5 step-by-step fixes with multimeter testing guide." />
-  <link rel="canonical" href="https://fixthelogic.in/google-nest-thermostat-e73-error-fix.html" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Google Nest Thermostat E73 Error (No Power to RC Wire) Troubleshooting" />
-  <meta property="og:image" content="https://fixthelogic.in/images/nest-e73-error/hero-image.png" />
-  <meta property="og:site_name" content="Fix The Logic" />
-  <meta property="article:published_time" content="2026-03-13" />
-  <meta property="article:section" content="Smart Home" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Google Nest Thermostat E73 Error (No Power to RC Wire) Troubleshooting","image":"https://fixthelogic.in/images/nest-e73-error/hero-image.png","datePublished":"2026-03-13","author":{"@type":"Organization","name":"Fix The Logic","url":"https://fixthelogic.in"},"publisher":{"@type":"Organization","name":"Fix The Logic","url":"https://fixthelogic.in"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to Fix Google Nest Thermostat E73 Error","totalTime":"PT30M","step":[{"@type":"HowToStep","position":1,"name":"Restart the Nest thermostat"},{"@type":"HowToStep","position":2,"name":"Check and reset the HVAC circuit breaker"},{"@type":"HowToStep","position":3,"name":"Inspect and reseat the RC wire at the Nest terminal"},{"@type":"HowToStep","position":4,"name":"Inspect and replace the fuse on the HVAC control board"},{"@type":"HowToStep","position":5,"name":"Test RC wire voltage with a multimeter"}]}</script>
-    <link rel="apple-touch-icon" sizes="180x180" href="css/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="css/favicon-32x32.png" />
-  <link rel="icon" href="css/favicon.ico" type="image/x-icon" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2271796507721856" crossorigin="anonymous"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Google Nest Thermostat E73 Error (No Power to RC Wire) Troubleshooting – Fix The Logic</title>
+<meta content="Google Nest showing E73 error? No power to RC wire is usually a loose connection, tripped breaker, or blown HVAC fuse. 5 step-by-step fixes with multimeter testing guide." name="description"/>
+<link href="https://fixthelogic.in/google-nest-thermostat-e73-error-fix.html" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="Google Nest Thermostat E73 Error (No Power to RC Wire) Troubleshooting" property="og:title"/>
+<meta content="https://fixthelogic.in/images/nest-e73-error/hero-image.png" property="og:image"/>
+<meta content="Fix The Logic" property="og:site_name"/>
+<meta content="2026-03-13" property="article:published_time"/>
+<meta content="Smart Home" property="article:section"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Google Nest Thermostat E73 Error (No Power to RC Wire) Troubleshooting","image":"https://fixthelogic.in/images/nest-e73-error/hero-image.png","datePublished":"2026-03-13","author":{"@type":"Organization","name":"Fix The Logic","url":"https://fixthelogic.in"},"publisher":{"@type":"Organization","name":"Fix The Logic","url":"https://fixthelogic.in"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to Fix Google Nest Thermostat E73 Error","totalTime":"PT30M","step":[{"@type":"HowToStep","position":1,"name":"Restart the Nest thermostat"},{"@type":"HowToStep","position":2,"name":"Check and reset the HVAC circuit breaker"},{"@type":"HowToStep","position":3,"name":"Inspect and reseat the RC wire at the Nest terminal"},{"@type":"HowToStep","position":4,"name":"Inspect and replace the fuse on the HVAC control board"},{"@type":"HowToStep","position":5,"name":"Test RC wire voltage with a multimeter"}]}</script>
+<link href="css/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="css/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="css/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=DM+Serif+Display&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<!-- Google AdSense -->
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9666660563566889"></script>
 </head>
 <body>
-
-  <header class="site-header">
-    <div class="container">
-      <div class="header-inner">
-        <a href="https://fixthelogic.in/" class="logo">Fix The <span>Logic</span></a>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="site-nav" role="navigation" aria-label="Main">
-          <a href="https://fixthelogic.in/">Home</a>
-          <a href="appliances.html">Appliances</a>
-          <a href="printers-office.html">Printers &amp; Office</a>
-          <a href="smart-home.html" class="active">Smart Home</a>
-          <a href="gadgets.html">Gadgets</a>
-          <a href="software-errors.html">Software Errors</a>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <div class="cat-strip">
-    <div class="container">
-      <div class="cat-strip-inner">
-        <span class="label">Browse:</span>
-        <a href="appliances.html" class="cat-pill">Appliances</a>
-        <a href="printers-office.html" class="cat-pill">Printers &amp; Office</a>
-        <a href="smart-home.html" class="cat-pill">Smart Home</a>
-        <a href="gadgets.html" class="cat-pill">Gadgets</a>
-        <a href="software-errors.html" class="cat-pill">Software Errors</a>
-      </div>
-    </div>
-  </div>
-
-  <main class="main-section">
-    <div class="container">
-      <div class="content-wrap">
-        <article class="col-main page-article" itemscope itemtype="https://schema.org/Article">
-
-          <nav aria-label="Breadcrumb" style="font-size:0.78rem;color:var(--gray-500);margin-bottom:16px;">
-            <a href="https://fixthelogic.in/" style="color:var(--gray-500);">Home</a>
-            <span style="margin:0 6px;color:var(--gray-300);">&#8250;</span>
-            <a href="smart-home.html" style="color:var(--gray-500);">Smart Home</a>
-            <span style="margin:0 6px;color:var(--gray-300);">&#8250;</span>
-            <span style="color:var(--gray-700);">Google Nest E73 Error Fix</span>
-          </nav>
-
-          <div class="article-meta-bar">
-            <span class="article-cat-tag">Smart Home</span>
-            <span class="meta-sep">|</span>
-            <span>Google Nest Thermostat</span>
-            <span class="meta-sep">|</span>
-            <time datetime="2026-03-13" itemprop="datePublished">March 13, 2026</time>
-            <span class="meta-sep">|</span>
-            <span>&#9201; 12 min read</span>
-          </div>
-
-          <nav class="toc-box" aria-label="Table of Contents">
-            <div class="toc-head">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+<header class="site-header">
+<div class="container">
+<div class="header-inner">
+<a class="logo" href="https://fixthelogic.in/">Fix The <span>Logic</span></a>
+<button aria-expanded="false" aria-label="Toggle navigation" class="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+<nav aria-label="Main" class="site-nav" role="navigation">
+<a href="https://fixthelogic.in/">Home</a>
+<a href="appliances.html">Appliances</a>
+<a href="printers-office.html">Printers &amp; Office</a>
+<a class="active" href="smart-home.html">Smart Home</a>
+<a href="gadgets.html">Gadgets</a>
+<a href="software-errors.html">Software Errors</a>
+</nav>
+</div>
+</div>
+</header>
+<div class="cat-strip">
+<div class="container">
+<div class="cat-strip-inner">
+<span class="label">Browse:</span>
+<a class="cat-pill" href="appliances.html">Appliances</a>
+<a class="cat-pill" href="printers-office.html">Printers &amp; Office</a>
+<a class="cat-pill" href="smart-home.html">Smart Home</a>
+<a class="cat-pill" href="gadgets.html">Gadgets</a>
+<a class="cat-pill" href="software-errors.html">Software Errors</a>
+</div>
+</div>
+</div>
+<main class="main-section">
+<div class="container">
+<div class="content-wrap">
+<article class="col-main page-article" itemscope="" itemtype="https://schema.org/Article">
+<nav aria-label="Breadcrumb" style="font-size:0.78rem;color:var(--gray-500);margin-bottom:16px;">
+<a href="https://fixthelogic.in/" style="color:var(--gray-500);">Home</a>
+<span style="margin:0 6px;color:var(--gray-300);">›</span>
+<a href="smart-home.html" style="color:var(--gray-500);">Smart Home</a>
+<span style="margin:0 6px;color:var(--gray-300);">›</span>
+<span style="color:var(--gray-700);">Google Nest E73 Error Fix</span>
+</nav>
+<div class="article-meta-bar">
+<span class="article-cat-tag">Smart Home</span>
+<span class="meta-sep">|</span>
+<span>Google Nest Thermostat</span>
+<span class="meta-sep">|</span>
+<time datetime="2026-03-13" itemprop="datePublished">March 13, 2026</time>
+<span class="meta-sep">|</span>
+<span>⏱ 12 min read</span>
+</div>
+<nav aria-label="Table of Contents" class="toc-box">
+<div class="toc-head">
+<svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><line x1="8" x2="21" y1="6" y2="6"></line><line x1="8" x2="21" y1="12" y2="12"></line><line x1="8" x2="21" y1="18" y2="18"></line><line x1="3" x2="3.01" y1="6" y2="6"></line><line x1="3" x2="3.01" y1="12" y2="12"></line><line x1="3" x2="3.01" y1="18" y2="18"></line></svg>
               Table of Contents
             </div>
-            <ol class="toc-list">
-              <li><a href="#intro">Introduction</a></li>
-              <li><a href="#what-does-it-mean">What Does Error E73 Mean?</a></li>
-              <li><a href="#tools-required">Tools Required</a></li>
-              <li><a href="#step-by-step-fixes">5 Fixes &#8212; Easiest to Most Technical</a></li>
-              <li><a href="#when-to-call">When to Call a Professional</a></li>
-              <li><a href="#quick-summary">Quick Summary</a></li>
-              <li><a href="#faq-section">Frequently Asked Questions</a></li>
-            </ol>
-          </nav>
-
-          <h1 itemprop="headline" style="font-family:var(--font-head);font-size:clamp(1.6rem,3.5vw,2.2rem);color:var(--gray-900);line-height:1.2;margin-bottom:20px;">
+<ol class="toc-list">
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#what-does-it-mean">What Does Error E73 Mean?</a></li>
+<li><a href="#tools-required">Tools Required</a></li>
+<li><a href="#step-by-step-fixes">5 Fixes — Start Here and Work Down</a></li>
+<li><a href="#when-to-call">When to Call a Professional</a></li>
+<li><a href="#quick-summary">Quick Summary</a></li>
+<li><a href="#faq-section">Frequently Asked Questions</a></li>
+</ol>
+</nav>
+<h1 itemprop="headline" style="font-family:var(--font-head);font-size:clamp(1.6rem,3.5vw,2.2rem);color:var(--gray-900);line-height:1.2;margin-bottom:20px;">
             Google Nest Thermostat E73 Error (No Power to RC Wire) Troubleshooting
-            <span style="display:block;font-size:0.58em;color:var(--blue);margin-top:8px;">Breaker Reset &#8212; RC Wire Reseat &#8212; HVAC Fuse Check &#8212; Multimeter Voltage Test</span>
-          </h1>
+            <span style="display:block;font-size:0.58em;color:var(--blue);margin-top:8px;">Breaker Reset — RC Wire Reseat — HVAC Fuse Check — Multimeter Voltage Test</span>
+</h1>
+<img alt="Google Nest thermostat mounted on wall showing E73 error code No Power to RC Wire on the display with a step-by-step repair guide label" class="article-hero-img" fetchpriority="high" height="720" itemprop="image" loading="eager" src="images/nest-e73-error/hero-image.png" width="1280"/>
+<div class="article-body" itemprop="articleBody">
+<!-- AdSense Ad: Below Hero - Above Fold Content -->
+<div class="adsense-wrap" style="text-align:center;margin:24px 0;overflow:hidden;">
+<ins class="adsbygoogle" data-ad-client="ca-pub-9666660563566889" data-ad-format="auto" data-ad-slot="auto" data-full-width-responsive="true" style="display:block"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<h2 id="intro">Google Nest Thermostat E73 Error: Cause, Diagnosis, and Fix</h2><p>E73 on a Nest thermostat means the RC wire — the 24V power feed from the furnace control board — isn't providing sufficient voltage. The thermostat has lost its power source. This is most commonly caused by a blown 3A fuse on the furnace control board, a loose wire at the thermostat base, or a wiring issue introduced during installation. The fuse costs under ₹50 and takes five minutes to replace.</p><div class="author-note-box" style="background:linear-gradient(135deg,#f0f7ff 0%,#e8f4fd 100%);border-left:4px solid #2563eb;border-radius:0 8px 8px 0;padding:14px 18px;margin:20px 0;font-size:0.92em;color:#1e3a5f;line-height:1.65;"><strong style="display:block;margin-bottom:4px;font-size:0.85em;text-transform:uppercase;letter-spacing:0.05em;color:#2563eb;">💬 From experience</strong>E73 is one of the more satisfying fixes once you find it — a blown control board fuse is about the cheapest possible cause of a 'dead' thermostat. Check the furnace control board before doing anything else. The fuse is usually labeled 'FUSE' or 'F1' and is a small automotive-style blade fuse rated 3A.</div>
 
-          <img src="images/nest-e73-error/hero-image.png" loading="eager" fetchpriority="high" alt="Google Nest thermostat mounted on wall showing E73 error code No Power to RC Wire on the display with a step-by-step repair guide label" class="article-hero-img" width="1280" height="720" itemprop="image" />
 
-          <div class="article-body" itemprop="articleBody">
-          <!-- AdSense Ad: Below Hero - Above Fold Content -->
-          <div class="adsense-wrap" style="text-align:center;margin:24px 0;overflow:hidden;">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-2271796507721856"
-                 data-ad-slot="YOUR_AD_SLOT_ID"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-          </div>
 
-            <h2 id="intro">E73. Your Thermostat Has Gone Silent.</h2>
-            <p>There&#8217;s nothing worse than your heating or cooling system going completely unresponsive in the middle of extreme weather &#8212; and walking up to your Google Nest thermostat to find it flashing <strong>E73</strong> at you instead of the familiar temperature display. The house is too hot, or too cold, and your smart thermostat has chosen this exact moment to throw an error code and shut everything down.</p>
-            <p>You tap the screen. E73. You restart it. E73. You check every setting you can find in the Google Home app. Nothing gives you any hint about what RC wire means or why it suddenly has no power.</p>
-            <p>Here&#8217;s the reassuring part: <strong>E73 is one of the most common Google Nest thermostat errors &#8212; and in the majority of cases, it is caused by something as simple as a loose wire connection or a tripped circuit breaker.</strong> You do not need an HVAC technician for most E73 situations. You need a screwdriver, fifteen minutes, and this guide.</p>
-
-            <div class="video-embed-wrap">
-              <div class="video-label">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-                Watch: Fix Google Nest E73 Error &#8212; RC Wire, Breaker &amp; HVAC Fuse Solutions
+<div class="video-embed-wrap">
+<div class="video-label">
+<svg fill="white" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg>
+                Watch: Fix Google Nest E73 Error — RC Wire, Breaker &amp; HVAC Fuse Solutions
               </div>
-              <iframe src="https://www.youtube.com/embed/_WO7IV1dt9w?si=TaIEorCOOmWrwkWZ" title="Google Nest Thermostat E73 Error Fix — No Power to RC Wire Step by Step" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-            </div>
-
-            <h2 id="what-does-it-mean">What Does Error E73 Mean?</h2>
-            <p>In plain English, <strong>E73 means your Google Nest thermostat is not detecting any voltage on the RC wire terminal &#8212; the wire responsible for powering the cooling side of your HVAC system.</strong></p>
-            <p>HVAC systems communicate with thermostats through a set of low-voltage wires, each assigned a specific letter designation. The <strong>RC wire</strong> (also called the R-Cool wire or simply &#8220;RC&#8221;) carries <strong>24 volts AC</strong> from your air conditioning or heat pump system&#8217;s control board to the thermostat. This 24V signal is what tells the Nest that the cooling system is connected and available to receive commands. When the Nest cannot detect this 24V signal on the RC terminal, it throws E73.</p>
-            <p>The four most common causes:</p>
-            <ul>
-              <li><strong>The RC wire has come loose from its terminal</strong> on the Nest thermostat itself, or from the corresponding terminal on the air handler control board. A wire that is not fully inserted will not make electrical contact even if it looks connected from the outside.</li>
-              <li><strong>A circuit breaker for the HVAC system has tripped.</strong> If that breaker tripped &#8212; from a power surge, brief overload, or electrical fault &#8212; the 24V signal disappears entirely and E73 follows immediately.</li>
-              <li><strong>A fuse on the HVAC control board has blown.</strong> Most residential air handlers have a small 3A or 5A fuse on their control board that protects the low-voltage thermostat wiring circuit. This fuse blows when there is a wiring short &#8212; sometimes caused by the Nest installation itself if wires briefly touched during the setup process.</li>
-              <li><strong>The RC wire itself is damaged</strong> &#8212; cut, corroded, or broken inside its insulation &#8212; preventing the 24V signal from reaching the thermostat regardless of how well the connections are made.</li>
-            </ul>
-
-            <div class="article-img-wrap">
-              <img src="images/nest-e73-error/hvac-wiring-diagram-rc-wire.png" alt="Dark-themed HVAC wiring diagram showing the RC wire connection from HVAC control board transformer through colour-coded wires to Google Nest thermostat terminals with E73 break point highlighted in red at the RC terminal" width="1140" height="641" loading="lazy" />
-              <div class="article-img-caption">The RC wire is the critical link between your HVAC control board&#8217;s 24V transformer and the Nest&#8217;s RC terminal. E73 fires the instant this voltage drops to zero &#8212; whether from a loose terminal, a blown board fuse, a tripped breaker, or a damaged wire somewhere in the run between the two devices. Fixes 1&#8211;5 check each break point in order of likelihood.</div>
-            </div>
-
-            <h2 id="tools-required">Tools Required</h2>
-            <p>Gather these before you start &#8212; you may need all of them depending on how far into the fixes you need to go:</p>
-            <ul>
-              <li>A <strong>Phillips head screwdriver</strong> (small, for the Nest&#8217;s mounting plate and HVAC access panel)</li>
-              <li>A <strong>flathead screwdriver</strong> (small, for the Nest&#8217;s wire terminals)</li>
-              <li>A <strong>multimeter</strong> (strongly recommended &#8212; essential for Fix 5; a basic model costs &#8377;300&#8211;600 in India or $10&#8211;20 in the US)</li>
-              <li>A torch or flashlight</li>
-              <li><strong>Replacement 3A or 5A mini blade fuses</strong> (widely available for &#8377;20&#8211;50 at any electronics shop &#8212; keep a few handy before you start Fix 4)</li>
-              <li>About <strong>20&#8211;30 minutes</strong> of your time</li>
-            </ul>
-
-            <h2 id="step-by-step-fixes">5 Fixes &#8212; Easiest to Most Technical</h2>
-            <p>Work through these in order without skipping. E73 is resolved at Fix 1 or Fix 2 for the majority of Nest users &#8212; but if it isn&#8217;t, the subsequent steps pinpoint the exact fault methodically.</p>
-
-            <div class="step-box">
-              <div class="step-box-head"><span class="step-num">1</span><span class="step-title">Restart the Nest Thermostat</span></div>
-              <p>Before touching a single wire, a clean restart is always the correct first move. A Nest that experienced a brief power fluctuation &#8212; from a utility voltage dip, a momentary brownout, or a brief HVAC system shutdown &#8212; can latch into an E73 fault state even after normal power has been restored. A restart clears the error log and forces the thermostat to re-read all its wire terminals fresh.</p>
-              <ol>
-                <li>Press and hold the thermostat&#8217;s display (the circular face) for <strong>10 seconds</strong> until the screen goes dark.</li>
-                <li>Release and wait 5 seconds.</li>
-                <li>Press the display once to power it back on.</li>
-                <li>Allow the Nest <strong>60&#8211;90 seconds</strong> to fully reinitialise &#8212; it runs a system check and reads all wire terminals during this process.</li>
-                <li>If E73 does not reappear and the thermostat returns to its normal temperature display, a temporary power event was the cause.</li>
-                <li>Turn on the cooling system from the thermostat and confirm it responds normally.</li>
-              </ol>
-              <p>If E73 comes back within a minute of restart, move to Fix 2.</p>
-            </div>
-
-            <div class="step-box">
-              <div class="step-box-head"><span class="step-num">2</span><span class="step-title">Check Your Home&#8217;s HVAC Circuit Breaker Panel</span></div>
-              <p>The fastest external check you can do &#8212; and the one most people overlook because it seems too simple &#8212; is verifying that the circuit breaker powering your air conditioning system hasn&#8217;t tripped. A tripped breaker kills the 24V control power to the system and produces E73 immediately and consistently.</p>
-              <ol>
-                <li>Locate your home&#8217;s main electrical panel &#8212; typically in a utility room, garage, hallway cupboard, or on an external wall.</li>
-                <li>Open the panel and scan the breakers. Look specifically for:
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" src="https://www.youtube.com/embed/_WO7IV1dt9w?si=TaIEorCOOmWrwkWZ" title="Google Nest Thermostat E73 Error Fix — No Power to RC Wire Step by Step"></iframe>
+</div>
+<h2 id="what-does-it-mean">What Does Error E73 Mean?</h2>
+<p>Simply put, <strong>E73 means your Google Nest thermostat is not detecting any voltage on the RC wire terminal — the wire responsible for powering the cooling side of your HVAC system.</strong></p>
+<p>HVAC systems communicate with thermostats through a set of low-voltage wires, each assigned a specific letter designation. The <strong>RC wire</strong> (also called the R-Cool wire or simply “RC”) carries <strong>24 volts AC</strong> from your air conditioning or heat pump system’s control board to the thermostat. This 24V signal is what tells the Nest that the cooling system is connected and available to receive commands. When the Nest cannot detect this 24V signal on the RC terminal, it throws E73.</p>
+<p>The four most common causes:</p>
+<ul>
+<li><strong>The RC wire has come loose from its terminal</strong> on the Nest thermostat itself, or from the corresponding terminal on the air handler control board. A wire that is not fully inserted will not make electrical contact even if it looks connected from the outside.</li>
+<li><strong>A circuit breaker for the HVAC system has tripped.</strong> If that breaker tripped — from a power surge, brief overload, or electrical fault — the 24V signal disappears entirely and E73 follows immediately.</li>
+<li><strong>A fuse on the HVAC control board has blown.</strong> Most residential air handlers have a small 3A or 5A fuse on their control board that protects the low-voltage thermostat wiring circuit. This fuse blows when there is a wiring short — sometimes caused by the Nest installation itself if wires briefly touched during the setup process.</li>
+<li><strong>The RC wire itself is damaged</strong> — cut, corroded, or broken inside its insulation — preventing the 24V signal from reaching the thermostat regardless of how well the connections are made.</li>
+</ul>
+<div class="article-img-wrap">
+<img alt="Dark-themed HVAC wiring diagram showing the RC wire connection from HVAC control board transformer through colour-coded wires to Google Nest thermostat terminals with E73 break point highlighted in red at the RC terminal" height="641" loading="lazy" src="images/nest-e73-error/hvac-wiring-diagram-rc-wire.png" width="1140"/>
+<div class="article-img-caption">The RC wire is the critical link between your HVAC control board’s 24V transformer and the Nest’s RC terminal. E73 fires the instant this voltage drops to zero — whether from a loose terminal, a blown board fuse, a tripped breaker, or a damaged wire somewhere in the run between the two devices. Fixes 1–5 check each break point in order of likelihood.</div>
+</div>
+<h2 id="tools-required">Tools Required</h2>
+<p>Gather these before you start — you may need all of them depending on how far into the fixes you need to go:</p>
+<ul>
+<li>A <strong>Phillips head screwdriver</strong> (small, for the Nest’s mounting plate and HVAC access panel)</li>
+<li>A <strong>flathead screwdriver</strong> (small, for the Nest’s wire terminals)</li>
+<li>A <strong>multimeter</strong> (strongly recommended — essential for Fix 5; a basic model costs ₹300–600 in India or $10–20 in the US)</li>
+<li>A torch or flashlight</li>
+<li><strong>Replacement 3A or 5A mini blade fuses</strong> (widely available for ₹20–50 at any electronics shop — keep a few handy before you start Fix 4)</li>
+<li>About <strong>20–30 minutes</strong> of your time</li>
+</ul>
+<h2 id="step-by-step-fixes">5 Fixes — Start Here and Work Down</h2>
+<p>Go through these in order. Most people stop at Fix 1 or 2. Fix 1 or Fix 2 resolves this for most people.</p>
+<div class="step-box">
+<div class="step-box-head"><span class="step-num">1</span><span class="step-title">Restart the Nest Thermostat</span></div>
+<p>Before touching a single wire, a clean restart is always the correct first move. A Nest that experienced a brief power fluctuation — from a utility voltage dip, a momentary brownout, or a brief HVAC system shutdown — can latch into an E73 fault state even after normal power has been restored. A restart clears the error log and forces the thermostat to re-read all its wire terminals fresh.</p>
+<ol>
+<li>Press and hold the thermostat’s display (the circular face) for <strong>10 seconds</strong> until the screen goes dark.</li>
+<li>Release and wait 5 seconds.</li>
+<li>Press the display once to power it back on.</li>
+<li>Allow the Nest <strong>60–90 seconds</strong> to fully reinitialise — it runs a system check and reads all wire terminals during this process.</li>
+<li>If E73 does not reappear and the thermostat returns to its normal temperature display, a temporary power event was the cause.</li>
+<li>Turn on the cooling system from the thermostat and confirm it responds normally.</li>
+</ol>
+<p>If E73 comes back within a minute of restart, move to Fix 2.</p>
+</div>
+<div class="step-box">
+<div class="step-box-head"><span class="step-num">2</span><span class="step-title">Check Your Home’s HVAC Circuit Breaker Panel</span></div>
+<p>The fastest external check you can do — and the one most people overlook because it seems too simple — is verifying that the circuit breaker powering your air conditioning system hasn’t tripped. A tripped breaker kills the 24V control power to the system and produces E73 immediately and consistently.</p>
+<ol>
+<li>Locate your home’s main electrical panel — typically in a utility room, garage, hallway cupboard, or on an external wall.</li>
+<li>Open the panel and scan the breakers. Look specifically for:
                   <ul style="margin-top:8px;">
-                    <li>A breaker in the <strong>middle position</strong> (neither fully on nor fully off) &#8212; this is a tripped breaker and is easy to miss if you&#8217;re scanning quickly</li>
-                    <li>A breaker labelled <strong>&#8220;AC,&#8221; &#8220;Air Handler,&#8221; &#8220;Furnace,&#8221; &#8220;HVAC,&#8221;</strong> or <strong>&#8220;Cooling&#8221;</strong> that is in the off or middle position</li>
-                  </ul>
-                </li>
-                <li>If you find a tripped breaker, reset it: push it <strong>firmly to the OFF position first</strong>, then push it <strong>firmly back to ON.</strong> A breaker that is only in the middle position is not reset until it has been pushed fully off first.</li>
-                <li>Return to the Nest thermostat and wait 60 seconds for the system to reinitialise.</li>
-                <li>If E73 clears and the thermostat shows normal operation, the tripped breaker was the cause.</li>
-              </ol>
-              <div class="warning-box"><strong>&#9888;&#65039; Monitor after resetting:</strong> A breaker that trips repeatedly is signalling an electrical fault inside the HVAC system that requires a professional to investigate. <strong>Do not keep resetting a repeatedly tripping breaker</strong> &#8212; each repeated trip indicates a worsening electrical fault, not a fluke.</div>
-            </div>
-
-            <div class="article-img-wrap">
-              <img src="images/nest-e73-error/nest-wiring-report-error.png" alt="Google Nest thermostat mounted on white wall showing Wiring Report screen with No power to Rh wire detected error message and links to nest.com/e74 Tech Info and Diagram" width="1140" height="641" loading="lazy" />
-              <div class="article-img-caption">The Nest Wiring Report screen &#8212; similar to E73 &#8212; appears when the thermostat detects missing or insufficient voltage on a power wire terminal. The &#8220;No power to Rh/Rc wire detected&#8221; message confirms the 24V AC is not reaching the relevant terminal. Fix 3 (reseating the wire) and Fix 4 (replacing the HVAC fuse) are the two most effective solutions after the breaker check.</div>
-            </div>
-
-            <div class="step-box">
-              <div class="step-box-head"><span class="step-num">3</span><span class="step-title">Inspect and Reseat the RC Wire at the Nest Thermostat Terminal</span></div>
-              <p>If the breaker is fine, the next most common cause is a loose or improperly seated RC wire at the thermostat&#8217;s own terminal block. This happens more often than people expect &#8212; particularly on recent Nest installations where wires were trimmed and inserted for the first time, or after the thermostat has been removed and reinstalled.</p>
-              <div class="warning-box"><strong>&#9888;&#65039; Turn off the HVAC breaker first:</strong> Before removing the Nest display or accessing its wiring terminals, switch off the circuit breaker for your HVAC system at the electrical panel. Although thermostat wiring carries only 24 volts AC, short-circuiting the 24V wiring while it is live can blow the fuse on your HVAC control board &#8212; creating a more complex problem than the one you started with. Always switch off the HVAC breaker before touching any thermostat wiring.</div>
-              <ol>
-                <li>Switch off the HVAC circuit breaker at the electrical panel.</li>
-                <li>At the Nest thermostat, grip the display face and <strong>pull it straight away from the wall</strong> &#8212; it detaches magnetically from the mounting base with a gentle but firm pull.</li>
-                <li>With the display removed, you will see the mounting base with labelled wire terminals around its perimeter. Locate the terminal labelled <strong>&#8220;RC.&#8221;</strong></li>
-                <li>Look at the wire inserted into the RC terminal &#8212; it should be a <strong>red wire</strong> inserted all the way into the port with no exposed copper visible between the insulation and the terminal entry point.</li>
-                <li>Press the release tab (a small button beside the RC terminal) and gently tug the wire. If it pulls out easily without pressing the tab, it was not fully locked in.</li>
-                <li>Strip approximately <strong>10&#8211;12 mm of insulation</strong> from the end of the RC wire if the end appears oxidised, frayed, or has a poor connection.</li>
-                <li>Reinsert the RC wire firmly into the RC terminal &#8212; push until you feel the locking mechanism click.</li>
-                <li>Visually confirm that <strong>no bare copper wire is touching any adjacent terminal</strong> &#8212; bare wires touching other terminals cause short circuits that blow the HVAC control board fuse.</li>
-                <li>Reattach the Nest display, restore the HVAC breaker, and observe whether E73 clears.</li>
-              </ol>
-            </div>
-
-            <div class="step-box">
-              <div class="step-box-head"><span class="step-num">4</span><span class="step-title">Inspect and Replace the Fuse on the HVAC Control Board</span></div>
-              <p>If the RC wire is securely connected at the thermostat but E73 persists, a blown fuse on your HVAC system&#8217;s control board is the next most likely culprit. This is an extremely common consequence of thermostat wiring work &#8212; a brief wire touch during installation creates a momentary short that blows the small protective fuse on the board.</p>
-              <div class="warning-box"><strong>&#9888;&#65039; High-voltage safety &#8212; essential reading:</strong> Your HVAC air handler or furnace contains both 24V low-voltage control wiring AND 120V/240V high-voltage power wiring in the same cabinet. Switch off the HVAC circuit breaker at the main panel <strong>AND</strong> the power switch on the air handler unit itself (a small toggle or rocker switch, usually on the side of the unit) before opening the access panel. Even with the breaker off, treat all wiring inside the HVAC cabinet as potentially live until you have personally confirmed both the breaker and the unit switch are off.</div>
-              <ol>
-                <li>Switch off both the HVAC circuit breaker and the air handler&#8217;s own power switch.</li>
-                <li>Locate your HVAC air handler or furnace &#8212; typically in a utility closet, basement, attic, or dedicated HVAC room.</li>
-                <li>Remove the access panel &#8212; usually held by one or two screws or a simple lift-and-pull mechanism.</li>
-                <li>Locate the <strong>control board</strong> inside &#8212; the green or grey circuit board mounted to the interior wall of the unit.</li>
-                <li>Look for a small <strong>blade-style fuse</strong> on the control board &#8212; a rectangular fuse in a fuse holder, typically rated <strong>3A or 5A</strong>, usually labelled &#8220;FUSE&#8221; or &#8220;F1&#8221; on the board.</li>
-                <li>Pull the fuse out of its holder using your fingers or needle-nose pliers.</li>
-                <li>Hold the fuse up to a light source &#8212; a blown fuse will show a <strong>visibly broken filament</strong> inside the glass or plastic body, often with black scoring.</li>
-                <li>Alternatively, set your multimeter to <strong>continuity mode</strong> and touch the probes to each end of the fuse. A good fuse beeps (continuity present). A blown fuse shows no continuity.</li>
-                <li>Replace the fuse with a new one of <strong>identical rating</strong> &#8212; do not substitute a higher-rated fuse.</li>
-                <li>Restore power, restart the Nest, and check whether E73 has cleared.</li>
-              </ol>
-              <div class="warning-box"><strong>&#9432; Important:</strong> If the replacement fuse blows again quickly, there is a short circuit somewhere in the wiring between the thermostat and the control board. Stop replacing fuses and proceed to Fix 5 &#8212; or call an HVAC professional.</div>
-            </div>
-
-            <div class="article-img-wrap">
-              <img src="images/nest-e73-error/hvac-control-board-fuse-guide.png" alt="Light-themed guide showing HVAC control board fuse quick reference facts on the left and side-by-side comparison of good fuse with intact filament versus blown fuse with broken filament and scorch marks on the right with multimeter continuity test instructions" width="1140" height="641" loading="lazy" />
-              <div class="article-img-caption">A blown HVAC control board fuse is the most common consequence of a DIY Nest installation. Always replace with the <strong>identical rating</strong> (3A or 5A) &#8212; never a higher-rated fuse. A fuse that blows again immediately after replacement indicates a wiring short that must be traced and cleared before replacing the fuse again.</div>
-            </div>
-
-            <div class="step-box">
-              <div class="step-box-head"><span class="step-num">5</span><span class="step-title">Test the RC Wire&#8217;s Voltage with a Multimeter</span></div>
-              <p>If the fuse is intact, connections look correct, and E73 persists, use a multimeter to directly confirm whether 24V AC is actually present at the RC terminal &#8212; which determines whether the fault is in the wiring itself or in the HVAC control board.</p>
-              <ol>
-                <li>Restore power to the HVAC system (breaker and unit switch back on).</li>
-                <li>Set your multimeter to <strong>AC voltage mode (VAC)</strong> and select the 200V range.</li>
-                <li>At the Nest mounting base, touch one probe to the wire in the <strong>RC terminal</strong> and the other probe to the wire in the <strong>C terminal</strong> (the common wire &#8212; blue or black). If you don&#8217;t have a C wire, touch the second probe to the <strong>RH terminal</strong> instead.</li>
-                <li>Read the voltage display:
+<li>A breaker in the <strong>middle position</strong> (neither fully on nor fully off) — this is a tripped breaker and is easy to miss if you’re scanning quickly</li>
+<li>A breaker labelled <strong>“AC,” “Air Handler,” “Furnace,” “HVAC,”</strong> or <strong>“Cooling”</strong> that is in the off or middle position</li>
+</ul>
+</li>
+<li>If you find a tripped breaker, reset it: push it <strong>firmly to the OFF position first</strong>, then push it <strong>firmly back to ON.</strong> A breaker that is only in the middle position is not reset until it has been pushed fully off first.</li>
+<li>Return to the Nest thermostat and wait 60 seconds for the system to reinitialise.</li>
+<li>If E73 clears and the thermostat shows normal operation, the tripped breaker was the cause.</li>
+</ol>
+<div class="warning-box"><strong>⚠️ Monitor after resetting:</strong> A breaker that trips repeatedly is signalling an electrical fault inside the HVAC system that requires a professional to investigate. <strong>Do not keep resetting a repeatedly tripping breaker</strong> — each repeated trip indicates a worsening electrical fault, not a fluke.</div>
+</div>
+<div class="article-img-wrap">
+<img alt="Google Nest thermostat mounted on white wall showing Wiring Report screen with No power to Rh wire detected error message and links to nest.com/e74 Tech Info and Diagram" height="641" loading="lazy" src="images/nest-e73-error/nest-wiring-report-error.png" width="1140"/>
+<div class="article-img-caption">The Nest Wiring Report screen — similar to E73 — appears when the thermostat detects missing or insufficient voltage on a power wire terminal. The “No power to Rh/Rc wire detected” message confirms the 24V AC is not reaching the relevant terminal. Fix 3 (reseating the wire) and Fix 4 (replacing the HVAC fuse) are the two most effective solutions after the breaker check.</div>
+</div>
+<div class="step-box">
+<div class="step-box-head"><span class="step-num">3</span><span class="step-title">Inspect and Reseat the RC Wire at the Nest Thermostat Terminal</span></div>
+<p>If the breaker is fine, the next most common cause is a loose or improperly seated RC wire at the thermostat’s own terminal block. This happens more often than people expect — particularly on recent Nest installations where wires were trimmed and inserted for the first time, or after the thermostat has been removed and reinstalled.</p>
+<div class="warning-box"><strong>⚠️ Turn off the HVAC breaker first:</strong> Before removing the Nest display or accessing its wiring terminals, switch off the circuit breaker for your HVAC system at the electrical panel. Although thermostat wiring carries only 24 volts AC, short-circuiting the 24V wiring while it is live can blow the fuse on your HVAC control board — creating a more complex problem than the one you started with. Always switch off the HVAC breaker before touching any thermostat wiring.</div>
+<ol>
+<li>Switch off the HVAC circuit breaker at the electrical panel.</li>
+<li>At the Nest thermostat, grip the display face and <strong>pull it straight away from the wall</strong> — it detaches magnetically from the mounting base with a gentle but firm pull.</li>
+<li>With the display removed, you will see the mounting base with labelled wire terminals around its perimeter. Locate the terminal labelled <strong>“RC.”</strong></li>
+<li>Look at the wire inserted into the RC terminal — it should be a <strong>red wire</strong> inserted all the way into the port with no exposed copper visible between the insulation and the terminal entry point.</li>
+<li>Press the release tab (a small button beside the RC terminal) and gently tug the wire. If it pulls out easily without pressing the tab, it was not fully locked in.</li>
+<li>Strip approximately <strong>10–12 mm of insulation</strong> from the end of the RC wire if the end appears oxidised, frayed, or has a poor connection.</li>
+<li>Reinsert the RC wire firmly into the RC terminal — push until you feel the locking mechanism click.</li>
+<li>Visually confirm that <strong>no bare copper wire is touching any adjacent terminal</strong> — bare wires touching other terminals cause short circuits that blow the HVAC control board fuse.</li>
+<li>Reattach the Nest display, restore the HVAC breaker, and observe whether E73 clears.</li>
+</ol>
+</div>
+<div class="step-box">
+<div class="step-box-head"><span class="step-num">4</span><span class="step-title">Inspect and Replace the Fuse on the HVAC Control Board</span></div>
+<p>If the RC wire is securely connected at the thermostat but E73 persists, a blown fuse on your HVAC system’s control board is the next most likely culprit. This is an extremely common consequence of thermostat wiring work — a brief wire touch during installation creates a momentary short that blows the small protective fuse on the board.</p>
+<div class="warning-box"><strong>⚠️ High-voltage safety — essential reading:</strong> Your HVAC air handler or furnace contains both 24V low-voltage control wiring AND 120V/240V high-voltage power wiring in the same cabinet. Switch off the HVAC circuit breaker at the main panel <strong>AND</strong> the power switch on the air handler unit itself (a small toggle or rocker switch, usually on the side of the unit) before opening the access panel. Even with the breaker off, treat all wiring inside the HVAC cabinet as potentially live until you have personally confirmed both the breaker and the unit switch are off.</div>
+<ol>
+<li>Switch off both the HVAC circuit breaker and the air handler’s own power switch.</li>
+<li>Locate your HVAC air handler or furnace — typically in a utility closet, basement, attic, or dedicated HVAC room.</li>
+<li>Remove the access panel — usually held by one or two screws or a simple lift-and-pull mechanism.</li>
+<li>Locate the <strong>control board</strong> inside — the green or grey circuit board mounted to the interior wall of the unit.</li>
+<li>Look for a small <strong>blade-style fuse</strong> on the control board — a rectangular fuse in a fuse holder, typically rated <strong>3A or 5A</strong>, usually labelled “FUSE” or “F1” on the board.</li>
+<li>Pull the fuse out of its holder using your fingers or needle-nose pliers.</li>
+<li>Hold the fuse up to a light source — a blown fuse will show a <strong>visibly broken filament</strong> inside the glass or plastic body, often with black scoring.</li>
+<li>Alternatively, set your multimeter to <strong>continuity mode</strong> and touch the probes to each end of the fuse. A good fuse beeps (continuity present). A blown fuse shows no continuity.</li>
+<li>Replace the fuse with a new one of <strong>identical rating</strong> — do not substitute a higher-rated fuse.</li>
+<li>Restore power, restart the Nest, and check whether E73 has cleared.</li>
+</ol>
+<div class="warning-box"><strong>ⓘ Important:</strong> If the replacement fuse blows again quickly, there is a short circuit somewhere in the wiring between the thermostat and the control board. Stop replacing fuses and proceed to Fix 5 — or call an HVAC professional.</div>
+</div>
+<div class="article-img-wrap">
+<img alt="Light-themed guide showing HVAC control board fuse quick reference facts on the left and side-by-side comparison of good fuse with intact filament versus blown fuse with broken filament and scorch marks on the right with multimeter continuity test instructions" height="641" loading="lazy" src="images/nest-e73-error/hvac-control-board-fuse-guide.png" width="1140"/>
+<div class="article-img-caption">A blown HVAC control board fuse is the most common consequence of a DIY Nest installation. Always replace with the <strong>identical rating</strong> (3A or 5A) — never a higher-rated fuse. A fuse that blows again immediately after replacement indicates a wiring short that must be traced and cleared before replacing the fuse again.</div>
+</div>
+<div class="step-box">
+<div class="step-box-head"><span class="step-num">5</span><span class="step-title">Test the RC Wire’s Voltage with a Multimeter</span></div>
+<p>If the fuse is intact, connections look correct, and E73 persists, use a multimeter to directly confirm whether 24V AC is actually present at the RC terminal — which determines whether the fault is in the wiring itself or in the HVAC control board.</p>
+<ol>
+<li>Restore power to the HVAC system (breaker and unit switch back on).</li>
+<li>Set your multimeter to <strong>AC voltage mode (VAC)</strong> and select the 200V range.</li>
+<li>At the Nest mounting base, touch one probe to the wire in the <strong>RC terminal</strong> and the other probe to the wire in the <strong>C terminal</strong> (the common wire — blue or black). If you don’t have a C wire, touch the second probe to the <strong>RH terminal</strong> instead.</li>
+<li>Read the voltage display:
                   <ul style="margin-top:8px;">
-                    <li><strong>22&#8211;26V AC:</strong> Voltage is present and normal. The problem is with the Nest itself &#8212; contact Google support.</li>
-                    <li><strong>0V:</strong> No voltage reaching the thermostat. The fault is in the wiring between the control board and the thermostat, or the control board is not outputting 24V.</li>
-                    <li><strong>Below 18V:</strong> Insufficient voltage &#8212; possible transformer failure on the control board.</li>
-                  </ul>
-                </li>
-                <li>If voltage is absent at the thermostat but the fuse on the control board is intact, trace the RC wire physically from the thermostat back to the air handler &#8212; look for any point where it may be stapled too tightly, pinched in a door frame, or visibly damaged.</li>
-                <li>A wire that tests at 0V despite a good fuse and correct connections at both ends has an internal break and needs to be replaced &#8212; a straightforward task of running a new wire through the same path.</li>
-              </ol>
-            </div>
-
-            <div class="article-img-wrap">
-              <img src="images/nest-e73-error/nest-cooling-working.png" alt="Google Nest thermostat mounted on wall showing blue Cooling active display with temperature set to 73 degrees indicating successful E73 fix and cooling system working normally" width="1140" height="641" loading="lazy" />
-              <div class="article-img-caption">This is the target state after resolving E73 &#8212; a Nest thermostat showing the blue &#8220;Cooling&#8221; ring with the active temperature setpoint. The blue glow confirms the RC wire has 24V, the cooling system is responding to the Nest&#8217;s commands, and the E73 error has been fully cleared.</div>
-            </div>
-
-            <h2 id="when-to-call">When to Call a Professional</h2>
-            <p>E73 is one of the more approachable Nest error codes for a careful homeowner to resolve. But there are clear situations where the problem needs a licensed HVAC technician or electrician:</p>
-            <ul>
-              <li><strong>The circuit breaker trips repeatedly</strong> &#8212; resetting once and monitoring is fine. A breaker that trips more than twice in a short period is signalling a failing capacitor, a seized motor, or a wiring fault inside the HVAC system.</li>
-              <li><strong>The control board fuse blows again immediately</strong> after replacement. A fuse that blows within seconds indicates a direct short circuit in the low-voltage wiring that requires proper test equipment and HVAC wiring diagram familiarity to trace and clear.</li>
-              <li><strong>The multimeter test shows 0V at the control board&#8217;s RC output terminal</strong> &#8212; meaning the board itself is not generating the 24V signal. HVAC control board replacement is a professional job requiring compatibility verification with your specific system model.</li>
-              <li><strong>You are not comfortable working near the HVAC cabinet&#8217;s high-voltage wiring.</strong> The distinction between the 24V thermostat wiring and the 240V compressor wiring inside the same cabinet is not always visually obvious. This is a completely reasonable boundary to draw.</li>
-              <li><strong>Your Nest thermostat is within its warranty period.</strong> Google offers a <strong>2-year limited warranty</strong> on Nest thermostat hardware. Contact Google Nest support before purchasing any replacement parts if the device is under two years old.</li>
-            </ul>
-            <p><strong>To reach Google Nest support:</strong></p>
-            <ul>
-              <li>Visit <strong>support.google.com/googlenest</strong> and select your thermostat model</li>
-              <li>Live chat and phone support are available through the support portal</li>
-              <li>Have your Nest&#8217;s serial number ready &#8212; visible in the Nest app under <strong>Settings &gt; select your thermostat &gt; Technical Info</strong></li>
-            </ul>
-            <p><strong>For HVAC technician assistance in India:</strong> Search for Daikin, Voltas, or Blue Star authorised service centres in your area for split AC systems. For central HVAC, contact the original installation company or a licensed HVAC contractor.</p>
-
-            <h2 id="quick-summary">Quick Summary</h2>
-            <table class="summary-table">
-              <thead><tr><th>Fix</th><th>Difficulty</th><th>Time Needed</th></tr></thead>
-              <tbody>
-                <tr><td>Restart the Nest thermostat</td><td><span class="diff-easy">Very Easy</span></td><td>2 minutes</td></tr>
-                <tr><td>Check and reset the HVAC circuit breaker</td><td><span class="diff-easy">Very Easy</span></td><td>3 minutes</td></tr>
-                <tr><td>Inspect and reseat the RC wire at Nest terminal</td><td><span class="diff-easy">Easy</span></td><td>10 minutes</td></tr>
-                <tr><td>Inspect and replace the HVAC control board fuse</td><td><span class="diff-mod">Moderate</span></td><td>15 minutes</td></tr>
-                <tr><td>Test RC wire voltage with a multimeter</td><td><span class="diff-mod">Moderate</span></td><td>10 minutes</td></tr>
-              </tbody>
-            </table>
-            <p>Start at the top and work downward. A tripped circuit breaker or a loose RC wire terminal resolves E73 for the majority of Nest users &#8212; and both take under five minutes to check. Only pick up the multimeter if the simple mechanical fixes haven&#8217;t cleared the error.</p>
-            <p><em>Fixed your Nest E73 with one of these steps? Fix 4 &#8212; the blown control board fuse &#8212; is the one that surprises most people the most. It is also the most common consequence of a DIY thermostat installation where wires briefly touched during the swap. Always switch off the HVAC breaker before handling thermostat wiring, and you&#8217;ll never need to deal with a blown control board fuse again.</em></p>
-
-          </div><!-- /.article-body -->
-
-          
-          <!-- AdSense Ad: Mid-Article / Before FAQ -->
-          <div class="adsense-wrap" style="text-align:center;margin:24px 0;overflow:hidden;">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-2271796507721856"
-                 data-ad-slot="YOUR_AD_SLOT_ID"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-          </div>
-            <div class="faq-section" id="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-            <h2 class="faq-title">Frequently Asked Questions</h2>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
-                <span itemprop="name">What is the RC wire on a Nest thermostat and why does it cause E73?</span>
-                <span class="faq-icon">&#43;</span>
-              </button>
-              <div class="faq-answer" id="faq-1" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text">The RC wire (R-Cool) is the power supply wire for the cooling side of your HVAC system. It carries <strong>24 volts AC</strong> from your air conditioner&#8217;s or heat pump&#8217;s control board transformer to the Nest thermostat&#8217;s RC terminal. The Nest requires this voltage to confirm the cooling system is present and functional before it will issue any cooling commands. E73 fires the moment the voltage on the RC terminal drops below the Nest&#8217;s detection threshold &#8212; typically when the wire comes loose, the circuit breaker trips, the HVAC control board fuse blows, or the wire has an internal break. The RC wire is almost always red in colour, though HVAC wiring can vary. On systems that use a single R wire for both heating and cooling (no separate RC terminal), the wire is typically inserted into the RC terminal and a jumper bridges it to RH.</p>
-              </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
-                <span itemprop="name">I replaced the HVAC control board fuse but it blew again immediately. What should I do?</span>
-                <span class="faq-icon">&#43;</span>
-              </button>
-              <div class="faq-answer" id="faq-2" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text">A fuse that blows within seconds of replacement almost always indicates a <strong>direct short circuit</strong> in the 24V thermostat wiring &#8212; two wires touching somewhere in the run between the thermostat and the control board. The most common location is at the Nest&#8217;s terminal block, where bare wire ends from adjacent terminals are touching. Remove the Nest display and inspect each terminal carefully: no bare copper should be touching any adjacent terminal, and wire insulation should reach right up to the terminal entry point. Also inspect the wiring at the control board end for any wires that have slipped their insulation or are contacting each other. Do not install a higher-rated fuse to &#8220;get past&#8221; the short &#8212; a higher fuse will not blow but can damage or destroy the control board when the short occurs. If you cannot locate the short visually, this is a situation that requires an HVAC technician with a current clamp meter to trace precisely.</p>
-              </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
-                <span itemprop="name">Can E73 appear after a power outage even if nothing is damaged?</span>
-                <span class="faq-icon">&#43;</span>
-              </button>
-              <div class="faq-answer" id="faq-3" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text">Yes &#8212; this is actually quite common. During a power restoration after an outage, the returning utility voltage can arrive in a non-standard pattern (voltage surges, brief under-voltage periods) that causes the Nest to register E73 as it comes back online. In these cases, E73 is a transient fault state that persists until the thermostat is manually restarted even though the underlying wiring and power supply are completely fine. <strong>Fix 1 (the 10-second restart)</strong> is the correct first step specifically for this scenario, and it resolves post-outage E73 errors in the majority of cases. If E73 persists after the restart with no reported wiring issues, check the circuit breaker &#8212; power restoration surges occasionally trip HVAC breakers as a protective response to the voltage irregularity.</p>
-              </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
-                <span itemprop="name">My Nest shows E73 but my heating still works. Is that possible?</span>
-                <span class="faq-icon">&#43;</span>
-              </button>
-              <div class="faq-answer" id="faq-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text">Yes, and it is actually a helpful diagnostic clue. In dual-transformer HVAC systems, the <strong>RC wire powers the cooling side</strong> and the <strong>RH wire powers the heating side</strong> &#8212; they are separate circuits with separate transformers. If your heating still works but E73 appears and cooling doesn&#8217;t respond, the RH circuit is intact but the RC circuit has lost voltage. This points directly at the RC wire connection specifically, the cooling system&#8217;s dedicated circuit breaker (not the heating breaker), or the fuse on the cooling side&#8217;s control board. Conversely, if you have a single-transformer system where one wire is inserted at RC and jumpered to RH, an E73 error on that setup would affect both heating and cooling simultaneously.</p>
-              </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
-                <span itemprop="name">What size fuse does the HVAC control board take and where can I buy one?</span>
-                <span class="faq-icon">&#43;</span>
-              </button>
-              <div class="faq-answer" id="faq-5" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text">Most residential HVAC control boards in India and the US use a <strong>mini blade (ATM) fuse</strong> &#8212; the same rectangular blade-style fuse used in automotive applications. The most common ratings are <strong>3A (violet body)</strong> and <strong>5A (orange body)</strong>. The specific rating for your system is printed on the fuse body itself and is also usually labelled on the control board near the fuse holder (look for &#8220;3A&#8221;, &#8220;5A&#8221;, or &#8220;F1: 3A&#8221;). Always replace with the identical rating. You can buy these at any automotive parts shop (they&#8217;re identical to car fuses), electronics component stores, hardware stores, or online. In India they are available for &#8377;10&#8211;50 per fuse from Croma, electronics stores, or Amazon. Buy a pack of 5&#8211;10 so you have spares if the first replacement reveals a recurring short.</p>
-              </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
-                <span itemprop="name">How do I prevent E73 from happening again after fixing it?</span>
-                <span class="faq-icon">&#43;</span>
-              </button>
-              <div class="faq-answer" id="faq-6" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text">The most effective single prevention step is always <strong>turning off the HVAC circuit breaker before touching any thermostat wiring</strong> &#8212; this prevents the short circuits that blow control board fuses. For ongoing prevention: (1) ensure the RC wire is fully seated and locked in the Nest terminal with no exposed bare copper touching adjacent terminals; (2) do not remove or reinsert the Nest display frequently without turning off the breaker first; (3) install a <strong>C wire (common wire)</strong> if your system doesn&#8217;t have one &#8212; a C wire provides the return path that stabilises the 24V circuit and reduces the voltage fluctuations that can trigger intermittent E73; (4) if you have voltage spikes during power restoration events in your area, a small UPS on the HVAC control circuit will protect against transient E73 faults. If E73 returns regularly after proper wiring fixes, an HVAC technician inspection is warranted &#8212; intermittent 24V failures can signal a degrading transformer on the control board that is producing borderline voltage.</p>
-              </div>
-            </div>
-
-          </div><!-- /.faq-section -->
-
-          <div class="author-box">
-            <div class="author-avatar-wrap">
-              <img src="images/rohit-sharma-author.jpg" loading="lazy" alt="Rohit Sharma" width="64" height="64" style="width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:center top;display:block;" />
-            </div>
-            <div class="author-info">
-              <div class="author-name-row">
-                <h4>Rohit Sharma</h4>
-                <span class="author-title">Senior Tech Writer &amp; DIY Repair Specialist</span>
-              </div>
-              <p class="author-bio">Rohit Sharma is a seasoned technology writer with over 8 years of experience covering home appliances, consumer electronics, and DIY repair guides. He has personally tested and documented hundreds of repair procedures, helping thousands of readers resolve error codes without expensive service calls. Rohit writes with engineering accuracy in plain, jargon-free language anyone can follow.</p>
-              <div class="author-social-row">
-                <a href="https://x.com/rohitsharma_ftl" class="author-social-link" target="_blank" rel="noopener">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                  <span>Follow on X</span>
-                </a>
-                <a href="https://www.linkedin.com/in/rohitsharma-fixthelogic" class="author-social-link" target="_blank" rel="noopener">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                  <span>LinkedIn</span>
-                </a>
-                <a href="contact.html" class="author-social-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                  <span>Contact</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="related-posts">
-            <h3>More Smart Home Guides</h3>
-            <div class="related-grid">
-              <article class="article-card">
-                <a href="jiofiber-red-light-blinking-los-fix.html" tabindex="-1" aria-hidden="true">
-                  <img src="images/jiofiber-red-light/hero-image.png" alt="JioFiber router red light LOS fix" class="card-thumb" width="600" height="338" loading="lazy" />
-                </a>
-                <div class="card-body">
-                  <span class="card-tag">Smart Home</span>
-                  <h3><a href="jiofiber-red-light-blinking-los-fix.html">JioFiber Red Light Blinking on Router (LOS Issue Solutions)</a></h3>
-                  <p class="card-excerpt">JioFiber ONT blinking red LOS light and no internet? A 60-second restart and reseating the green SC/APC fibre connector fixes it for most users.</p>
-                  <div class="card-meta"><time datetime="2026-03-13">Mar 13, 2026</time><a href="jiofiber-red-light-blinking-los-fix.html" class="read-more">Read More &#8594;</a></div>
-                </div>
-              </article>
-              <article class="article-card">
-                <a href="tplink-router-orange-light-fix.html" tabindex="-1" aria-hidden="true">
-                  <img src="images/tplink-orange-light/hero-image.png" alt="TP-Link router orange light fix" class="card-thumb" width="600" height="338" loading="lazy" />
-                </a>
-                <div class="card-body">
-                  <span class="card-tag">Smart Home</span>
-                  <h3><a href="tplink-router-orange-light-fix.html">TP-Link Router Orange Light: 4 Ways to Restore Your Internet Connection</a></h3>
-                  <p class="card-excerpt">Orange light on your TP-Link router? A correct power cycle &#8212; modem first &#8212; fixes it for most users in under 3 minutes. 4 fixes covered in full.</p>
-                  <div class="card-meta"><time datetime="2026-03-11">Mar 11, 2026</time><a href="tplink-router-orange-light-fix.html" class="read-more">Read More &#8594;</a></div>
-                </div>
-              </article>
-            </div>
-          </div>
-
-        </article>
-
-        <aside class="col-sidebar" aria-label="Sidebar">
-          <div class="sidebar-widget">
-            <div class="widget-head">Quick Summary</div>
-            <div class="widget-body">
-              <p style="font-size:0.83rem;color:var(--gray-700);margin-bottom:12px;"><strong style="color:#c62828;">E73</strong> = No 24V on RC wire at Nest terminal</p>
-              <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;padding:0;">
-                <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">1.</span><strong>10-second Nest restart (hold display)</strong></li>
-                <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">2.</span>Reset tripped HVAC circuit breaker</li>
-                <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">3.</span>Reseat RC wire at Nest terminal block</li>
-                <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">4.</span>Replace 3A/5A fuse on HVAC control board</li>
-                <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">5.</span>Multimeter test: 22&#8211;26V AC at RC terminal</li>
-                <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">&#9888;</span>Always off HVAC breaker before touching wires</li>
-              </ul>
-            </div>
-          </div>
-          <div class="sidebar-widget">
-            <div class="widget-head">Search Guides</div>
-            <div class="widget-body">
-              <div class="search-form" role="search">
-                <input type="search" placeholder="e.g. Nest E73, RC wire&#8230;" aria-label="Search" />
-                <button type="submit">Go</button>
-              </div>
-            </div>
-          </div>
-          <div class="sidebar-widget">
-            <div class="widget-head">About This Site</div>
-            <div class="widget-body">
-              <div class="about-logo">Fix The <span>Logic</span></div>
-              <p>DIY troubleshooting guides in plain English. No jargon, no upsells &#8212; just fixes that work.</p>
-              <p style="margin-top:10px;"><a href="about.html" style="font-size:0.83rem;font-weight:700;color:var(--blue);">Learn more &#8594;</a></p>
-            </div>
-          </div>
-         
-          <div class="sidebar-widget">
-            <div class="widget-head">All Categories</div>
-            <div class="widget-body">
-              <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;padding:0;">
-                <li><a href="appliances.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">&#8594; Appliances</a></li>
-                <li><a href="printers-office.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">&#8594; Printers &amp; Office</a></li>
-                <li><a href="smart-home.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">&#8594; Smart Home</a></li>
-                <li><a href="gadgets.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">&#8594; Gadgets</a></li>
-                <li><a href="software-errors.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">&#8594; Software Errors</a></li>
-              </ul>
-            </div>
-          </div>
-        </aside>
+<li><strong>22–26V AC:</strong> Voltage is present and normal. The problem is with the Nest itself — contact Google support.</li>
+<li><strong>0V:</strong> No voltage reaching the thermostat. The fault is in the wiring between the control board and the thermostat, or the control board is not outputting 24V.</li>
+<li><strong>Below 18V:</strong> Insufficient voltage — possible transformer failure on the control board.</li>
+</ul>
+</li>
+<li>If voltage is absent at the thermostat but the fuse on the control board is intact, trace the RC wire physically from the thermostat back to the air handler — look for any point where it may be stapled too tightly, pinched in a door frame, or visibly damaged.</li>
+<li>A wire that tests at 0V despite a good fuse and correct connections at both ends has an internal break and needs to be replaced — a straightforward task of running a new wire through the same path.</li>
+</ol>
+</div>
+<div class="article-img-wrap">
+<img alt="Google Nest thermostat mounted on wall showing blue Cooling active display with temperature set to 73 degrees indicating successful E73 fix and cooling system working normally" height="641" loading="lazy" src="images/nest-e73-error/nest-cooling-working.png" width="1140"/>
+<div class="article-img-caption">This is the target state after resolving E73 — a Nest thermostat showing the blue “Cooling” ring with the active temperature setpoint. The blue glow confirms the RC wire has 24V, the cooling system is responding to the Nest’s commands, and the E73 error has been fully cleared.</div>
+</div>
+<h2 id="when-to-call">When to Call a Professional</h2>
+<p>E73 is one of the more approachable Nest error codes for a careful homeowner to resolve. But there are clear situations where the problem needs a licensed HVAC technician or electrician:</p>
+<ul>
+<li><strong>The circuit breaker trips repeatedly</strong> — resetting once and monitoring is fine. A breaker that trips more than twice in a short period is signalling a failing capacitor, a seized motor, or a wiring fault inside the HVAC system.</li>
+<li><strong>The control board fuse blows again immediately</strong> after replacement. A fuse that blows within seconds indicates a direct short circuit in the low-voltage wiring that requires proper test equipment and HVAC wiring diagram familiarity to trace and clear.</li>
+<li><strong>The multimeter test shows 0V at the control board’s RC output terminal</strong> — meaning the board itself is not generating the 24V signal. HVAC control board replacement is a professional job requiring compatibility verification with your specific system model.</li>
+<li><strong>You are not comfortable working near the HVAC cabinet’s high-voltage wiring.</strong> The distinction between the 24V thermostat wiring and the 240V compressor wiring inside the same cabinet is not always visually obvious. This is a completely reasonable boundary to draw.</li>
+<li><strong>Your Nest thermostat is within its warranty period.</strong> Google offers a <strong>2-year limited warranty</strong> on Nest thermostat hardware. Contact Google Nest support before purchasing any replacement parts if the device is under two years old.</li>
+</ul>
+<p><strong>To reach Google Nest support:</strong></p>
+<ul>
+<li>Visit <strong>support.google.com/googlenest</strong> and select your thermostat model</li>
+<li>Live chat and phone support are available through the support portal</li>
+<li>Have your Nest’s serial number ready — visible in the Nest app under <strong>Settings &gt; select your thermostat &gt; Technical Info</strong></li>
+</ul>
+<p><strong>For HVAC technician assistance in India:</strong> Search for Daikin, Voltas, or Blue Star authorised service centres in your area for split AC systems. For central HVAC, contact the original installation company or a licensed HVAC contractor.</p>
+<h2 id="quick-summary">Quick Summary</h2>
+<table class="summary-table">
+<thead><tr><th>Fix</th><th>Difficulty</th><th>Time Needed</th></tr></thead>
+<tbody>
+<tr><td>Restart the Nest thermostat</td><td><span class="diff-easy">Very Easy</span></td><td>2 minutes</td></tr>
+<tr><td>Check and reset the HVAC circuit breaker</td><td><span class="diff-easy">Very Easy</span></td><td>3 minutes</td></tr>
+<tr><td>Inspect and reseat the RC wire at Nest terminal</td><td><span class="diff-easy">Easy</span></td><td>10 minutes</td></tr>
+<tr><td>Inspect and replace the HVAC control board fuse</td><td><span class="diff-mod">Moderate</span></td><td>15 minutes</td></tr>
+<tr><td>Test RC wire voltage with a multimeter</td><td><span class="diff-mod">Moderate</span></td><td>10 minutes</td></tr>
+</tbody>
+</table>
+<p>Start at the top and work downward. A tripped circuit breaker or a loose RC wire terminal resolves E73 for the majority of Nest users — and both take under five minutes to check. Only pick up the multimeter if the simple mechanical fixes haven’t cleared the error.</p>
+<p><em>Fixed your Nest E73 with one of these steps? Fix 4 — the blown control board fuse — is the one that surprises most people the most. It is also the most common consequence of a DIY thermostat installation where wires briefly touched during the swap. Always switch off the HVAC breaker before handling thermostat wiring, and you’ll never need to deal with a blown control board fuse again.</em></p>
+</div><!-- /.article-body -->
+<!-- AdSense Ad: Mid-Article / Before FAQ -->
+<div class="adsense-wrap" style="text-align:center;margin:24px 0;overflow:hidden;">
+<ins class="adsbygoogle" data-ad-client="ca-pub-9666660563566889" data-ad-format="auto" data-ad-slot="auto" data-full-width-responsive="true" style="display:block"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="faq-section" id="faq-section" itemscope="" itemtype="https://schema.org/FAQPage">
+<h2 class="faq-title">Frequently Asked Questions</h2>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<button aria-controls="faq-1" aria-expanded="false" class="faq-question">
+<span itemprop="name">What is the RC wire on a Nest thermostat and why does it cause E73?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-answer" id="faq-1" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<p itemprop="text">The RC wire (R-Cool) is the power supply wire for the cooling side of your HVAC system. It carries <strong>24 volts AC</strong> from your air conditioner’s or heat pump’s control board transformer to the Nest thermostat’s RC terminal. The Nest requires this voltage to confirm the cooling system is present and functional before it will issue any cooling commands. E73 fires the moment the voltage on the RC terminal drops below the Nest’s detection threshold — typically when the wire comes loose, the circuit breaker trips, the HVAC control board fuse blows, or the wire has an internal break. The RC wire is in most scenarios red in colour, though HVAC wiring can vary. On systems that use a single R wire for both heating and cooling (no separate RC terminal), the wire is typically inserted into the RC terminal and a jumper bridges it to RH.</p>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<button aria-controls="faq-2" aria-expanded="false" class="faq-question">
+<span itemprop="name">I replaced the HVAC control board fuse but it blew again immediately. What should I do?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-answer" id="faq-2" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<p itemprop="text">A fuse that blows within seconds of replacement nearly always indicates a <strong>direct short circuit</strong> in the 24V thermostat wiring — two wires touching somewhere in the run between the thermostat and the control board. The most common location is at the Nest’s terminal block, where bare wire ends from adjacent terminals are touching. Remove the Nest display and inspect each terminal carefully: no bare copper should be touching any adjacent terminal, and wire insulation should reach right up to the terminal entry point. Also inspect the wiring at the control board end for any wires that have slipped their insulation or are contacting each other. Do not install a higher-rated fuse to “get past” the short — a higher fuse will not blow but can damage or destroy the control board when the short occurs. If you cannot locate the short visually, this is a situation that requires an HVAC technician with a current clamp meter to trace precisely.</p>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<button aria-controls="faq-3" aria-expanded="false" class="faq-question">
+<span itemprop="name">Can E73 appear after a power outage even if nothing is damaged?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-answer" id="faq-3" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<p itemprop="text">Yes — this is actually quite common. During a power restoration after an outage, the returning utility voltage can arrive in a non-standard pattern (voltage surges, brief under-voltage periods) that causes the Nest to register E73 as it comes back online. In these cases, E73 is a transient fault state that persists until the thermostat is manually restarted even though the underlying wiring and power supply are completely fine. <strong>Fix 1 (the 10-second restart)</strong> is the correct first step specifically for this scenario, and it resolves post-outage E73 errors in the majority of cases. If E73 persists after the restart with no reported wiring issues, check the circuit breaker — power restoration surges occasionally trip HVAC breakers as a protective response to the voltage irregularity.</p>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<button aria-controls="faq-4" aria-expanded="false" class="faq-question">
+<span itemprop="name">My Nest shows E73 but my heating still works. Is that possible?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-answer" id="faq-4" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<p itemprop="text">Yes, and it is actually a helpful diagnostic clue. In dual-transformer HVAC systems, the <strong>RC wire powers the cooling side</strong> and the <strong>RH wire powers the heating side</strong> — they are separate circuits with separate transformers. If your heating still works but E73 appears and cooling doesn’t respond, the RH circuit is intact but the RC circuit has lost voltage. This points directly at the RC wire connection specifically, the cooling system’s dedicated circuit breaker (not the heating breaker), or the fuse on the cooling side’s control board. Conversely, if you have a single-transformer system where one wire is inserted at RC and jumpered to RH, an E73 error on that setup would affect both heating and cooling simultaneously.</p>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<button aria-controls="faq-5" aria-expanded="false" class="faq-question">
+<span itemprop="name">What size fuse does the HVAC control board take and where can I buy one?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-answer" id="faq-5" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<p itemprop="text">Most residential HVAC control boards in India and the US use a <strong>mini blade (ATM) fuse</strong> — the same rectangular blade-style fuse used in automotive applications. The most common ratings are <strong>3A (violet body)</strong> and <strong>5A (orange body)</strong>. The specific rating for your system is printed on the fuse body itself and is also usually labelled on the control board near the fuse holder (look for “3A”, “5A”, or “F1: 3A”). Always replace with the identical rating. You can buy these at any automotive parts shop (they’re identical to car fuses), electronics component stores, hardware stores, or online. In India they are available for ₹10–50 per fuse from Croma, electronics stores, or Amazon. Buy a pack of 5–10 so you have spares if the first replacement reveals a recurring short.</p>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<button aria-controls="faq-6" aria-expanded="false" class="faq-question">
+<span itemprop="name">How do I prevent E73 from happening again after fixing it?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-answer" id="faq-6" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<p itemprop="text">The most effective single prevention step is always <strong>turning off the HVAC circuit breaker before touching any thermostat wiring</strong> — this prevents the short circuits that blow control board fuses. For ongoing prevention: (1) ensure the RC wire is fully seated and locked in the Nest terminal with no exposed bare copper touching adjacent terminals; (2) do not remove or reinsert the Nest display frequently without turning off the breaker first; (3) install a <strong>C wire (common wire)</strong> if your system doesn’t have one — a C wire provides the return path that stabilises the 24V circuit and reduces the voltage fluctuations that can trigger intermittent E73; (4) if you have voltage spikes during power restoration events in your area, a small UPS on the HVAC control circuit will protect against transient E73 faults. If E73 returns regularly after proper wiring fixes, an HVAC technician inspection is warranted — intermittent 24V failures can signal a degrading transformer on the control board that is producing borderline voltage.</p>
+</div>
+</div>
+</div><!-- /.faq-section -->
+<div class="author-box">
+<div class="author-avatar-wrap">
+<img alt="Rohit Sharma" height="64" loading="lazy" src="images/rohit-sharma-author.jpg" style="width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:center top;display:block;" width="64"/>
+</div>
+<div class="author-info">
+<div class="author-name-row">
+<h4>Rohit Sharma</h4>
+<span class="author-title">Senior Tech Writer &amp; DIY Repair Specialist</span>
+</div>
+<p class="author-bio">Rohit Sharma is a seasoned technology writer with over 8 years of experience covering home appliances, consumer electronics, and DIY repair guides. He has personally tested and documented hundreds of repair procedures, helping thousands of readers resolve error codes without expensive service calls. Rohit writes with engineering accuracy in plain, jargon-free language anyone can follow.</p>
+<div class="author-social-row">
+<a class="author-social-link" href="https://x.com/rohitsharma_ftl" rel="noopener" target="_blank">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+<span>Follow on X</span>
+</a>
+<a class="author-social-link" href="https://www.linkedin.com/in/rohitsharma-fixthelogic" rel="noopener" target="_blank">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+<span>LinkedIn</span>
+</a>
+<a class="author-social-link" href="contact.html">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+<span>Contact</span>
+</a>
+</div>
+</div>
+</div>
+<div class="related-posts">
+<h3>More Smart Home Guides</h3>
+<div class="related-grid">
+<article class="article-card">
+<a aria-hidden="true" href="jiofiber-red-light-blinking-los-fix.html" tabindex="-1">
+<img alt="JioFiber router red light LOS fix" class="card-thumb" height="338" loading="lazy" src="images/jiofiber-red-light/hero-image.png" width="600"/>
+</a>
+<div class="card-body">
+<span class="card-tag">Smart Home</span>
+<h3><a href="jiofiber-red-light-blinking-los-fix.html">JioFiber Red Light Blinking on Router (LOS Issue Solutions)</a></h3>
+<p class="card-excerpt">JioFiber ONT blinking red LOS light and no internet? A 60-second restart and reseating the green SC/APC fibre connector fixes it for most users.</p>
+<div class="card-meta"><time datetime="2026-03-13">Mar 13, 2026</time><a class="read-more" href="jiofiber-red-light-blinking-los-fix.html">Read More →</a></div>
+</div>
+</article>
+<article class="article-card">
+<a aria-hidden="true" href="tplink-router-orange-light-fix.html" tabindex="-1">
+<img alt="TP-Link router orange light fix" class="card-thumb" height="338" loading="lazy" src="images/tplink-orange-light/hero-image.png" width="600"/>
+</a>
+<div class="card-body">
+<span class="card-tag">Smart Home</span>
+<h3><a href="tplink-router-orange-light-fix.html">TP-Link Router Orange Light: 4 Ways to Restore Your Internet Connection</a></h3>
+<p class="card-excerpt">Orange light on your TP-Link router? A correct power cycle — modem first — fixes it for most users in under 3 minutes. 4 fixes covered in full.</p>
+<div class="card-meta"><time datetime="2026-03-11">Mar 11, 2026</time><a class="read-more" href="tplink-router-orange-light-fix.html">Read More →</a></div>
+</div>
+</article>
+</div>
+</div>
+</article>
+<aside aria-label="Sidebar" class="col-sidebar">
+<div class="sidebar-widget">
+<div class="widget-head">Quick Summary</div>
+<div class="widget-body">
+<p style="font-size:0.83rem;color:var(--gray-700);margin-bottom:12px;"><strong style="color:#c62828;">E73</strong> = No 24V on RC wire at Nest terminal</p>
+<ul style="list-style:none;display:flex;flex-direction:column;gap:8px;padding:0;">
+<li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">1.</span><strong>10-second Nest restart (hold display)</strong></li>
+<li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">2.</span>Reset tripped HVAC circuit breaker</li>
+<li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">3.</span>Reseat RC wire at Nest terminal block</li>
+<li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">4.</span>Replace 3A/5A fuse on HVAC control board</li>
+<li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">5.</span>Multimeter test: 22–26V AC at RC terminal</li>
+<li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">⚠</span>Always off HVAC breaker before touching wires</li>
+</ul>
+</div>
+</div>
+<div class="sidebar-widget">
+<div class="widget-head">Search Guides</div>
+<div class="widget-body">
+<div class="search-form" role="search">
+<input aria-label="Search" placeholder="e.g. Nest E73, RC wire…" type="search"/>
+<button type="submit">Go</button>
+</div>
+</div>
+</div>
+<div class="sidebar-widget">
+<div class="widget-head">About This Site</div>
+<div class="widget-body">
+<div class="about-logo">Fix The <span>Logic</span></div>
+<p>DIY troubleshooting guides To put it simply. No jargon, no upsells — just fixes that work.</p>
+<p style="margin-top:10px;"><a href="about.html" style="font-size:0.83rem;font-weight:700;color:var(--blue);">Learn more →</a></p>
+</div>
+</div>
+<div class="sidebar-widget">
+<div class="widget-head">All Categories</div>
+<div class="widget-body">
+<ul style="list-style:none;display:flex;flex-direction:column;gap:10px;padding:0;">
+<li><a href="appliances.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">→ Appliances</a></li>
+<li><a href="printers-office.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">→ Printers &amp; Office</a></li>
+<li><a href="smart-home.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">→ Smart Home</a></li>
+<li><a href="gadgets.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">→ Gadgets</a></li>
+<li><a href="software-errors.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">→ Software Errors</a></li>
+</ul>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</main>
+<footer class="site-footer" role="contentinfo">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-col">
+<div class="footer-logo">Fix The <span>Logic</span></div>
+<p>Your go-to resource for clear, reliable troubleshooting guides. We help you solve tech problems quickly and safely — no jargon, no guesswork.</p>
+<div class="footer-social">
+<a class="footer-social-link" href="https://x.com/fixthelogic" rel="noopener" target="_blank"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a>
+<a class="footer-social-link" href="https://www.linkedin.com/company/fixthelogic" rel="noopener" target="_blank"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a>
+<a class="footer-social-link" href="https://www.facebook.com/fixthelogic" rel="noopener" target="_blank"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></a>
+<a class="footer-social-link" href="contact.html"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></a>
+</div>
+<p style="font-size:0.78rem;color:rgba(255,255,255,0.3);margin-top:14px;">fixthelogic.in</p>
+</div>
+<div class="footer-col">
+<h4>Categories</h4>
+<ul>
+<li><a href="appliances.html">Appliances</a></li>
+<li><a href="printers-office.html">Printers &amp; Office</a></li>
+<li><a href="smart-home.html">Smart Home</a></li>
+<li><a href="software-errors.html">Software Errors</a></li>
+<li><a href="gadgets.html">Gadgets</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="about.html">About Us</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="write-for-us.html">Write for Us</a></li>
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+<li><a href="terms.html">Terms &amp; Conditions</a></li>
+<li><a href="disclaimer.html">Disclaimer</a></li>
+<li><a href="cookie-policy.html">Cookie Policy</a></li>
+<li><a href="dmca.html">DMCA</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-disclaimer">
+<strong style="color:rgba(255,255,255,0.55);">Disclaimer:</strong> Fix The Logic provides informational troubleshooting guides only. Always follow manufacturer safety guidelines. We are not responsible for voided warranties or any unintended device changes.
       </div>
-    </div>
-  </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <div class="footer-logo">Fix The <span>Logic</span></div>
-          <p>Your go-to resource for clear, reliable troubleshooting guides. We help you solve tech problems quickly and safely &#8212; no jargon, no guesswork.</p>
-          <div class="footer-social">
-            <a href="https://x.com/fixthelogic" class="footer-social-link" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-            <a href="https://www.linkedin.com/company/fixthelogic" class="footer-social-link" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-            <a href="https://www.facebook.com/fixthelogic" class="footer-social-link" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-            <a href="contact.html" class="footer-social-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
-          </div>
-          <p style="font-size:0.78rem;color:rgba(255,255,255,0.3);margin-top:14px;">fixthelogic.in</p>
-        </div>
-        <div class="footer-col">
-          <h4>Categories</h4>
-          <ul>
-            <li><a href="appliances.html">Appliances</a></li>
-            <li><a href="printers-office.html">Printers &amp; Office</a></li>
-            <li><a href="smart-home.html">Smart Home</a></li>
-            <li><a href="software-errors.html">Software Errors</a></li>
-            <li><a href="gadgets.html">Gadgets</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="write-for-us.html">Write for Us</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms &amp; Conditions</a></li>
-            <li><a href="disclaimer.html">Disclaimer</a></li>
-            <li><a href="cookie-policy.html">Cookie Policy</a></li>
-            <li><a href="dmca.html">DMCA</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-disclaimer">
-        <strong style="color:rgba(255,255,255,0.55);">Disclaimer:</strong> Fix The Logic provides informational troubleshooting guides only. Always follow manufacturer safety guidelines. We are not responsible for voided warranties or any unintended device changes.
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">&#169; 2026 Fix The Logic. All rights reserved. &#124; <a href="privacy-policy.html" style="color:rgba(255,255,255,0.4);">Privacy Policy</a> &#124; <a href="terms.html" style="color:rgba(255,255,255,0.4);">Terms</a> &#124; <a href="disclaimer.html" style="color:rgba(255,255,255,0.4);">Disclaimer</a></div>
-    </div>
-  </footer>
-  <script src="css/nav.js"></script>
+</div>
+<div class="footer-bottom">
+<div class="container">© 2026 Fix The Logic. All rights reserved. | <a href="privacy-policy.html" style="color:rgba(255,255,255,0.4);">Privacy Policy</a> | <a href="terms.html" style="color:rgba(255,255,255,0.4);">Terms</a> | <a href="disclaimer.html" style="color:rgba(255,255,255,0.4);">Disclaimer</a> | <a href="dmca.html" style="color:rgba(255,255,255,0.4);">DMCA</a></div>
+</div>
+</footer>
+<script src="css/nav.js"></script>
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#1a2340;color:#fff;padding:16px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 -4px 24px rgba(0,0,0,0.25);">
+<p style="margin:0;font-size:0.88rem;line-height:1.6;max-width:700px;">We use cookies to analyse traffic and serve personalised ads via Google AdSense &amp; Analytics. By clicking <strong>Accept All</strong> you consent to our use of cookies as described in our <a href="/cookie-policy.html" style="color:#60aaff;text-decoration:underline;">Cookie Policy</a>.</p>
+<div style="display:flex;gap:10px;flex-shrink:0;">
+<button onclick="ftlCookieReject()" style="background:transparent;border:1px solid rgba(255,255,255,0.35);color:#fff;padding:8px 18px;border-radius:6px;cursor:pointer;font-size:0.84rem;">Reject Non-Essential</button>
+<button onclick="ftlCookieAccept()" style="background:#0056b3;border:none;color:#fff;padding:8px 20px;border-radius:6px;cursor:pointer;font-size:0.84rem;font-weight:600;">Accept All</button>
+</div>
+</div>
+<script>
+(function(){
+  var CONSENT_KEY='ftl_cookie_consent';
+  function setCookie(n,v,d){var e=new Date();e.setTime(e.getTime()+d*864e5);document.cookie=n+'='+v+';expires='+e.toUTCString()+';path=/;SameSite=Lax';}
+  function getCookie(n){var c=document.cookie.split(';');for(var i=0;i<c.length;i++){var p=c[i].trim();if(p.indexOf(n+'=')===0)return p.substring(n.length+1);}return null;}
+  window.ftlCookieAccept=function(){setCookie(CONSENT_KEY,'accepted',365);document.getElementById('cookie-banner').style.display='none';};
+  window.ftlCookieReject=function(){setCookie(CONSENT_KEY,'rejected',365);document.getElementById('cookie-banner').style.display='none';};
+  document.addEventListener('DOMContentLoaded',function(){
+    if(!getCookie(CONSENT_KEY)){document.getElementById('cookie-banner').style.display='flex';}
+  });
+})();
+</script>
+<!-- End Cookie Consent Banner -->
 </body>
 </html>
