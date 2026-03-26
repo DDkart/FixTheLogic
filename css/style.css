@@ -31,7 +31,45 @@ img { display: block; max-width: 100%; height: auto; }
 .container { width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
 
 /* ── HEADER ─────────────────────────── */
-.site-header { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--gray-300); box-shadow: 0 1px 6px rgba(0,0,0,.06); }
+/* ── TOP BAR ─────────────────────────── */
+.top-bar {
+  background: var(--blue-dark);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.top-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 34px;
+  gap: 0;
+}
+.top-bar-nav {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.top-bar-nav a {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.78);
+  text-decoration: none;
+  padding: 0 13px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s, background 0.15s;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  white-space: nowrap;
+}
+.top-bar-nav a:first-child { border-left: 1px solid rgba(255,255,255,0.1); }
+.top-bar-nav a:hover {
+  color: #ffffff;
+  background: rgba(255,255,255,0.08);
+  text-decoration: none;
+}
+.site-header { background: var(--white); border-bottom: 1px solid var(--gray-300); box-shadow: 0 1px 6px rgba(0,0,0,.06); }
+.site-header-wrap { position: sticky; top: 0; z-index: 100; }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 66px; }
 .logo { font-family: var(--font-head); font-size: 1.5rem; color: var(--gray-900); letter-spacing: -0.3px; text-decoration: none; flex-shrink: 0; }
 .logo:hover { text-decoration: none; }
@@ -237,6 +275,7 @@ img { display: block; max-width: 100%; height: auto; }
 }
 @media (max-width: 640px) {
   body { font-size: 16px; }
+  .top-bar-nav a { font-size: 0.62rem; padding: 0 8px; }
   .site-nav { display: none; flex-direction: column; position: absolute; top: 66px; left: 0; right: 0; background: var(--white); border-top: 1px solid var(--gray-300); box-shadow: 0 8px 24px rgba(0,0,0,.1); padding: 12px 16px; gap: 2px; }
   .site-nav.open { display: flex; }
   .site-nav a { width: 100%; }
