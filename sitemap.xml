@@ -19,25 +19,25 @@
   </url>
   <url>
     <loc>https://fixthelogic.in/printers-office.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://fixthelogic.in/smart-home.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://fixthelogic.in/gadgets.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://fixthelogic.in/software-errors.html</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -401,4 +401,16 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://fixthelogic.in/bsnl-fiber-ont-blinking-red-light-fix.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fixthelogic.in/mi-tv-remote-not-working-fix.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
