@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Valorant Error Code VAN 1067: TPM 2.0 &amp; Secure Boot Fix (Windows 11) – Fix The Logic</title>
+<meta content="Valorant showing VAN 1067? This guide explains what it means and walks through enabling TPM 2.0 and Secure Boot in BIOS — for ASUS, MSI, Gigabyte, ASRock, Intel and AMD systems." name="description"/>
+<link href="https://fixthelogic.in/valorant-van-1067-tpm-secure-boot-fix.html" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="Valorant Error Code VAN 1067: TPM 2.0 &amp; Secure Boot Fix (Windows 11)" property="og:title"/>
+<meta content="Valorant showing VAN 1067? This guide explains what it means and walks through enabling TPM 2.0 and Secure Boot in BIOS — for ASUS, MSI, Gigabyte, ASRock, Intel and AMD systems." property="og:description"/>
+<meta content="https://fixthelogic.in/images/valorant-van-1067/hero-image.png" property="og:image"/>
+<meta content="https://fixthelogic.in/valorant-van-1067-tpm-secure-boot-fix.html" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Valorant Error Code VAN 1067: TPM 2.0 &amp; Secure Boot Fix (Windows 11)" name="twitter:title"/>
+<meta content="Valorant showing VAN 1067? This guide explains what it means and walks through enabling TPM 2.0 and Secure Boot in BIOS — for ASUS, MSI, Gigabyte, ASRock, Intel and AMD systems." name="twitter:description"/>
+<meta content="https://fixthelogic.in/images/valorant-van-1067/hero-image.png" name="twitter:image"/>
+<meta content="Fix The Logic" property="og:site_name"/>
+<meta content="2026-03-28" property="article:published_time"/>
+<meta content="Software Errors" property="article:section"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Valorant Error Code VAN 1067: TPM 2.0 & Secure Boot Fix (Windows 11)","image":"https://fixthelogic.in/images/valorant-van-1067/hero-image.png","datePublished":"2026-03-28","author":{"@type":"Organization","name":"Fix The Logic","url":"https://fixthelogic.in"},"publisher":{"@type":"Organization","name":"Fix The Logic","url":"https://fixthelogic.in"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to Fix Valorant VAN 1067 Error","totalTime":"PT40M","step":[{"@type":"HowToStep","position":1,"name":"Check TPM and Boot Mode in Windows"},{"@type":"HowToStep","position":2,"name":"Enter your BIOS"},{"@type":"HowToStep","position":3,"name":"Enable TPM 2.0 (fTPM on AMD / PTT on Intel)"},{"@type":"HowToStep","position":4,"name":"Enable Secure Boot and set mode to Standard"},{"@type":"HowToStep","position":5,"name":"Save, restart and verify in tpm.msc and System Information"}]}</script>
+<link href="css/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="css/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="css/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=DM+Serif+Display&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<!-- Google AdSense -->
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9666660563566889"></script>
+</head>
+<body>
+<div class="site-header-wrap">
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-inner">
+        <nav class="top-bar-nav" aria-label="Secondary">
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="disclaimer.html">Disclaimer</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a class="logo" href="https://fixthelogic.in/">Fix The <span>Logic</span></a>
+        <button aria-expanded="false" aria-label="Toggle navigation" class="nav-toggle">
+          <span></span><span></span><span></span>
+        </button>
+        <nav aria-label="Main" class="site-nav" role="navigation">
+          <a href="https://fixthelogic.in/">Home</a>
+          <a href="appliances.html">Appliances</a>
+          <a href="printers-office.html">Printers &amp; Office</a>
+          <a href="smart-home.html">Smart Home</a>
+          <a href="gadgets.html">Gadgets</a>
+          <a class="active" href="software-errors.html">Software Errors</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+</div><!-- /.site-header-wrap -->
+
+<div class="cat-strip">
+  <div class="container">
+    <div class="cat-strip-inner">
+      <span class="label">Browse:</span>
+      <a class="cat-pill" href="appliances.html">Appliances</a>
+      <a class="cat-pill" href="printers-office.html">Printers &amp; Office</a>
+      <a class="cat-pill" href="smart-home.html">Smart Home</a>
+      <a class="cat-pill" href="gadgets.html">Gadgets</a>
+      <a class="cat-pill" href="software-errors.html">Software Errors</a>
+    </div>
+  </div>
+</div>
+
+<main class="main-section">
+  <div class="container">
+    <div class="content-wrap">
+      <article class="col-main page-article" itemscope="" itemtype="https://schema.org/Article">
+
+        <nav aria-label="Breadcrumb" style="font-size:0.78rem;color:var(--gray-500);margin-bottom:16px;">
+          <a href="https://fixthelogic.in/" style="color:var(--gray-500);">Home</a>
+          <span style="margin:0 6px;color:var(--gray-300);">›</span>
+          <a href="software-errors.html" style="color:var(--gray-500);">Software Errors</a>
+          <span style="margin:0 6px;color:var(--gray-300);">›</span>
+          <span style="color:var(--gray-700);">Valorant VAN 1067 Fix</span>
+        </nav>
+
+        <div class="article-meta-bar">
+          <span class="article-cat-tag">Software Errors</span>
+          <span class="meta-sep">|</span>
+          <span>Valorant / Vanguard</span>
+          <span class="meta-sep">|</span>
+          <time datetime="2026-03-28" itemprop="datePublished">March 28, 2026</time>
+          <span class="meta-sep">|</span>
+          <span>⏱ 11 min read</span>
+        </div>
+
+        <nav aria-label="Table of Contents" class="toc-box">
+          <div class="toc-head">
+            <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><line x1="8" x2="21" y1="6" y2="6"></line><line x1="8" x2="21" y1="12" y2="12"></line><line x1="8" x2="21" y1="18" y2="18"></line><line x1="3" x2="3.01" y1="6" y2="6"></line><line x1="3" x2="3.01" y1="12" y2="12"></line><line x1="3" x2="3.01" y1="18" y2="18"></line></svg>
+            Table of Contents
+          </div>
+          <ol class="toc-list">
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#what-is-van-1067">What VAN 1067 Actually Is</a></li>
+            <li><a href="#check-first">Before Going Into BIOS — Check What You're Working With</a></li>
+            <li><a href="#enter-bios">Getting Into Your BIOS</a></li>
+            <li><a href="#enable-tpm">Enabling TPM 2.0</a></li>
+            <li><a href="#enable-secure-boot">Enabling Secure Boot</a></li>
+            <li><a href="#save-restart">Save and Restart</a></li>
+            <li><a href="#still-broken">If VAN 1067 Still Appears After Enabling Both</a></li>
+            <li><a href="#no-tpm">If Your System Doesn't Have TPM 2.0</a></li>
+            <li><a href="#quick-summary">Quick Summary</a></li>
+            <li><a href="#faq-section">Frequently Asked Questions</a></li>
+          </ol>
+        </nav>
+
+        <h1 itemprop="headline" style="font-family:var(--font-head);font-size:clamp(1.6rem,3.5vw,2.2rem);color:var(--gray-900);line-height:1.2;margin-bottom:20px;">
+          Valorant Error Code VAN 1067: TPM 2.0 &amp; Secure Boot Fix (Windows 11)
+          <span style="display:block;font-size:0.58em;color:var(--blue);margin-top:8px;">Enable fTPM / PTT in BIOS — Set Secure Boot to Standard — Works on ASUS, MSI, Gigabyte, ASRock</span>
+        </h1>
+
+        <img alt="Gamer frustrated at desk with Valorant VAN 1067 error on screen showing TPM 2.0 and Secure Boot requirement" class="article-hero-img" fetchpriority="high" height="720" itemprop="image" loading="eager" src="images/valorant-van-1067/hero-image.png" width="1280"/>
+
+        <div class="article-body" itemprop="articleBody">
+
+          <!-- AdSense Ad: Below Hero - Above Fold Content -->
+          <div class="adsense-wrap" style="text-align:center;margin:24px 0;overflow:hidden;">
+            <ins class="adsbygoogle" data-ad-client="ca-pub-9666660563566889" data-ad-format="auto" data-ad-slot="auto" data-full-width-responsive="true" style="display:block"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+          </div>
+
+          <h2 id="intro">Valorant VAN 1067: What Happened and How to Clear It</h2>
+          <p>My cousin upgraded his PC to Windows 11 last year — fresh install, everything working fine — fired up Valorant the next evening and got hit with VAN 1067. Game wouldn't launch. Just a grey screen, the error, and a link to a support page that told him his system didn't meet requirements he'd never heard of before. He plays ranked. He was not calm about this.</p>
+          <p>We fixed it in about 40 minutes, mostly because we had to figure out where exactly in his BIOS these settings were hiding. His motherboard manufacturer had labelled everything slightly differently from what every guide online was describing. So this guide assumes you're in a similar situation — you understand roughly what needs to happen but the exact steps in your BIOS look nothing like the screenshots you've been following.</p>
+
+          <div class="author-note-box" style="background:linear-gradient(135deg,#f0f7ff 0%,#e8f4fd 100%);border-left:4px solid #2563eb;border-radius:0 8px 8px 0;padding:14px 18px;margin:20px 0;font-size:0.92em;color:#1e3a5f;line-height:1.65;">
+            <strong style="display:block;margin-bottom:4px;font-size:0.85em;text-transform:uppercase;letter-spacing:0.05em;color:#2563eb;">💬 From experience</strong>
+            The BIOS navigation is genuinely the hardest part of this fix because every manufacturer does things differently. On AMD systems, look for <strong>fTPM</strong> — not "TPM." On Intel, it's called <strong>PTT</strong>. Once you know the right label for your platform, you'll find it quickly. My cousin found his settings under a submenu he'd dismissed as irrelevant the first time through. Fourth time lucky.
+          </div>
+
+          <div class="article-img-wrap">
+            <img alt="Valorant VAN 1067 error screen showing connection error and TPM Secure Boot requirement message" height="480" loading="lazy" src="images/valorant-van-1067/van-1067-error-screen.png" width="854"/>
+            <div class="article-img-caption">The VAN 1067 error appears at launch — Vanguard anti-cheat has detected that TPM 2.0 or Secure Boot (or both) are disabled on your system.</div>
+          </div>
+
+          <div class="video-embed-wrap">
+            <div class="video-label">
+              <svg fill="white" height="16" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg>
+              Watch: How to Fix Valorant VAN 1067 — Enable TPM 2.0 &amp; Secure Boot in BIOS
+            </div>
+            <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/JNnuGEhnlMU?si=Iy2u1D7dA7v1WFjk" title="How to Fix Valorant VAN 1067 Error — TPM 2.0 and Secure Boot BIOS Fix Guide"></iframe>
+          </div>
+
+          <h2 id="what-is-van-1067">What VAN 1067 Actually Is</h2>
+          <p>Valorant runs on Riot's Vanguard anti-cheat system, and Vanguard has required TPM 2.0 and Secure Boot to be enabled since mid-2022 — the same requirements Microsoft introduced for Windows 11 itself. The logic is that these two features make it significantly harder for cheat software to tamper with the system at a low level before the OS even loads.</p>
+          <p><strong>VAN 1067 specifically means Vanguard detected that one or both of these features are either disabled or not available on your system.</strong> It won't let the game run until both are active.</p>
+          <p>The three situations that produce this error are:</p>
+          <ul>
+            <li><strong>TPM 2.0 is disabled in BIOS.</strong> The chip is present — most motherboards made after 2017 have it — but it's been switched off in firmware, either because it was off by default or because someone turned it off during a Windows 10 installation to avoid compatibility issues.</li>
+            <li><strong>Secure Boot is disabled in BIOS.</strong> Very commonly disabled because people turn it off when dual-booting Linux, installing unsigned drivers, or doing a clean Windows install from certain USB tools that require legacy boot mode. It stays off after Windows is installed and you forget about it.</li>
+            <li><strong>Your motherboard genuinely doesn't have TPM 2.0.</strong> Older boards, some budget boards, and certain OEM machines don't have it. If this is you, the options are limited — covered at the end of this guide.</li>
+          </ul>
+
+          <div class="warning-box"><strong>⚠️ Important:</strong> Enabling Secure Boot after Windows is already installed can sometimes cause boot issues if your Windows installation was set up in Legacy/MBR mode rather than UEFI/GPT mode. Check your BIOS Mode first before proceeding — details below.</div>
+
+          <h2 id="check-first">Before Going Into BIOS — Check What You're Working With</h2>
+          <p>Two quick checks before you touch anything in BIOS:</p>
+          <p>Open the Start menu, search for <strong>"tpm.msc"</strong> and press Enter. The TPM Management window opens. If it shows <strong>"The TPM is ready for use"</strong> with a specification version of 2.0 — your TPM is present and enabled. If it says <strong>"Compatible TPM cannot be found"</strong> — it's either disabled in BIOS or genuinely absent.</p>
+          <p>Then check your boot mode: open Start, search for <strong>"System Information"</strong>, open it, and look for <strong>BIOS Mode</strong> in the right panel. If it says <strong>UEFI</strong> — good, Secure Boot can be enabled safely. If it says <strong>Legacy</strong> — enabling Secure Boot may stop Windows from booting and you'll need to convert your disk first.</p>
+          <p>Screenshot or photograph both of these before going into your BIOS. Useful reference.</p>
+
+          <h2 id="enter-bios">Getting Into Your BIOS</h2>
+          <p>Restart your PC. The moment the screen goes black and before Windows starts loading, repeatedly press the BIOS key for your motherboard. The common ones:</p>
+          <ul>
+            <li><strong>ASUS:</strong> Delete or F2</li>
+            <li><strong>MSI:</strong> Delete</li>
+            <li><strong>Gigabyte:</strong> Delete or F12</li>
+            <li><strong>ASRock:</strong> F2 or Delete</li>
+            <li><strong>HP prebuilts:</strong> F10 or Esc</li>
+            <li><strong>Dell prebuilts:</strong> F2 or F12</li>
+            <li><strong>Lenovo prebuilts:</strong> F1, F2, or the tiny Novo button near the power port</li>
+          </ul>
+          <p>If you miss the window and Windows starts loading, just restart and try again. You usually have about 2–3 seconds. On fast SSDs the window is short — press the key repeatedly from the moment you hit restart, don't wait to see the logo.</p>
+          <p>Once you're in, the BIOS will look different depending on your motherboard manufacturer. Some have a slick graphical interface, some look like they're from 2003. The settings you need exist in all of them — they're just named and located differently.</p>
+
+          <h2 id="enable-tpm">Enabling TPM 2.0</h2>
+          <p>TPM settings in BIOS are hidden in different places depending on your board. Here's where to look for each major manufacturer:</p>
+
+          <div class="step-box">
+            <div class="step-box-head"><span class="step-num">1</span><span class="step-title">ASUS Boards</span></div>
+            <p>Go to <strong>Advanced → Trusted Computing</strong>. Look for <strong>"Security Device Support"</strong> — set it to Enable. Then look for <strong>"TPM State"</strong> — set it to Enable.</p>
+            <p>On ASUS boards running <strong>AMD CPUs</strong>, look for AMD fTPM instead: <strong>Advanced → AMD fTPM configuration → TPM Device Selection</strong> → set to <strong>Firmware TPM</strong>.</p>
+          </div>
+
+          <div class="step-box">
+            <div class="step-box-head"><span class="step-num">2</span><span class="step-title">MSI Boards</span></div>
+            <p>Go to <strong>Settings → Security → Trusted Computing</strong>. Enable <strong>"Security Device Support."</strong></p>
+            <p>On AMD MSI boards: <strong>Settings → Security → AMD fTPM</strong> → set to <strong>AMD CPU fTPM</strong>.</p>
+          </div>
+
+          <div class="step-box">
+            <div class="step-box-head"><span class="step-num">3</span><span class="step-title">Gigabyte Boards</span></div>
+            <p>Go to <strong>Settings → Miscellaneous → Trusted Computing</strong>. Enable the TPM.</p>
+            <p>On AMD Gigabyte boards: <strong>Peripherals → AMD CPU fTPM</strong>.</p>
+          </div>
+
+          <div class="step-box">
+            <div class="step-box-head"><span class="step-num">4</span><span class="step-title">ASRock Boards</span></div>
+            <p>Go to <strong>Security → Intel Platform Trust Technology</strong> or <strong>AMD fTPM Configuration</strong> depending on your CPU.</p>
+          </div>
+
+          <div class="author-note-box" style="background:linear-gradient(135deg,#fff8e1 0%,#fffde7 100%);border-left:4px solid #f57c00;border-radius:0 8px 8px 0;padding:14px 18px;margin:20px 0;font-size:0.92em;color:#4e3a00;line-height:1.65;">
+            <strong style="display:block;margin-bottom:4px;font-size:0.85em;text-transform:uppercase;letter-spacing:0.05em;color:#f57c00;">⚡ AMD vs Intel Naming</strong>
+            AMD processors use a firmware-based TPM called <strong>fTPM</strong> that lives within the CPU itself. If you have a Ryzen processor and your BIOS shows nothing under Trusted Computing, look specifically for <strong>"AMD fTPM"</strong> or <strong>"fTPM switch"</strong> in the Advanced or Security menus. On Intel 8th gen or newer, look for <strong>PTT (Platform Trust Technology)</strong> — that's Intel's equivalent of fTPM. Same idea, different name.
+          </div>
+
+          <p>After enabling TPM, <strong>don't save and exit yet</strong> — do Secure Boot next in the same BIOS session.</p>
+
+          <h2 id="enable-secure-boot">Enabling Secure Boot</h2>
+          <p>This is generally in one of two places: <strong>Security → Secure Boot</strong> or <strong>Boot → Secure Boot</strong>. Every major BIOS has it in one of those two menus.</p>
+          <p>Find <strong>"Secure Boot"</strong> and set it to <strong>Enabled</strong>.</p>
+          <p>On many boards you'll also see a setting called <strong>Secure Boot Mode</strong> which might be set to <strong>"Custom."</strong> Change this to <strong>Standard</strong>. Custom mode with user-added keys can sometimes not satisfy Vanguard's check even when Secure Boot technically shows as enabled.</p>
+
+          <div class="warning-box"><strong>⚠️ Legacy/MBR Warning:</strong> If tpm.msc showed your BIOS Mode as <strong>Legacy</strong>, do not enable Secure Boot yet. Secure Boot requires UEFI mode. Enabling it on a Legacy/MBR Windows installation will prevent Windows from booting. You'll need to convert your disk from MBR to GPT first using Windows' MBR2GPT tool (run from Command Prompt as administrator: <code style="background:rgba(0,0,0,0.07);padding:2px 6px;border-radius:3px;font-size:0.9em;">mbr2gpt /convert /allowFullOS</code>) and then switch your BIOS from Legacy/CSM to UEFI mode before enabling Secure Boot.</div>
+
+          <p>Also: if you have a <strong>dual boot setup with Linux</strong>, enabling Secure Boot may break your Linux boot entry depending on your distro. Ubuntu and Fedora handle it fine; Arch and some others need additional setup.</p>
+
+          <div class="article-img-wrap">
+            <img alt="Windows Defender Firewall allowed apps settings panel showing app list relevant to Vanguard configuration" height="480" loading="lazy" src="images/valorant-van-1067/windows-firewall-allowed-apps.png" width="854"/>
+            <div class="article-img-caption">If Secure Boot is enabled but VAN 1067 persists, check Windows Defender Firewall to ensure Valorant and Vanguard are not blocked from running.</div>
+          </div>
+
+          <h2 id="save-restart">Save and Restart</h2>
+          <p>Once both TPM and Secure Boot are configured, look for <strong>Save &amp; Exit</strong> or press <strong>F10</strong> on most boards. Confirm the save. Your PC will restart.</p>
+          <p>Windows will load normally. Open <strong>tpm.msc</strong> again and confirm it now shows <strong>"The TPM is ready for use"</strong> with specification version 2.0. Then open <strong>System Information</strong> and confirm Secure Boot State now shows <strong>"On."</strong></p>
+          <p>If both show correct, launch Valorant. Vanguard will do its check on startup and VAN 1067 should be gone.</p>
+
+          <h2 id="still-broken">If VAN 1067 Still Appears After Enabling Both</h2>
+          <p>This happens, and it's frustrating. A few things to check:</p>
+
+          <div class="step-box">
+            <div class="step-box-head"><span class="step-num">1</span><span class="step-title">Do a Full Shutdown — Not a Restart</span></div>
+            <p>Fully shut down your PC — not restart, <strong>full shutdown</strong>. Power it back on. Try launching Valorant again. Vanguard does its check at system boot, and sometimes it needs one full shutdown-and-cold-boot cycle after the BIOS changes to detect the new state correctly.</p>
+          </div>
+
+          <div class="step-box">
+            <div class="step-box-head"><span class="step-num">2</span><span class="step-title">Confirm It's Actually TPM 2.0, Not 1.2</span></div>
+            <p>Check that TPM 2.0 actually shows <strong>spec version 2.0</strong> in tpm.msc. Some systems have a TPM 1.2 chip rather than 2.0 — enabling it doesn't help because Vanguard specifically requires 2.0. If tpm.msc shows specification version 1.2, see the section below.</p>
+          </div>
+
+          <div class="step-box">
+            <div class="step-box-head"><span class="step-num">3</span><span class="step-title">Check Windows Security → Device Security</span></div>
+            <p>Open <strong>Windows Security</strong>, go to <strong>Device Security</strong>. Under Security Processor, click <strong>"Security processor details."</strong> This will confirm TPM version and whether it's functioning correctly from Windows' perspective. If there's a warning here, Windows itself has a problem with the TPM configuration, not just Valorant.</p>
+          </div>
+
+          <div class="step-box">
+            <div class="step-box-head"><span class="step-num">4</span><span class="step-title">Make Sure Secure Boot Is Actually Active</span></div>
+            <p>In System Information, the Secure Boot State line should say <strong>"On"</strong> — not "Unsupported" or "Off." If you enabled it in BIOS but it still shows Off in Windows, the UEFI/Legacy situation may be the issue even if you thought you were in UEFI mode.</p>
+          </div>
+
+          <div class="article-img-wrap">
+            <img alt="Windows file browser showing Local Disk C drive with Riot Games folder visible — navigating to Vanguard installation" height="480" loading="lazy" src="images/valorant-van-1067/windows-file-browser.png" width="854"/>
+            <div class="article-img-caption">If reinstalling Vanguard is needed, navigate to C:\Riot Games and remove the Riot Vanguard folder before relaunching Valorant to trigger a clean reinstall.</div>
+          </div>
+
+          <div class="article-img-wrap">
+            <img alt="Windows Run dialog showing services.msc command — used to check and restart Vanguard service after BIOS changes" height="480" loading="lazy" src="images/valorant-van-1067/windows-run-services.png" width="854"/>
+            <div class="article-img-caption">Press Win + R and type services.msc to check if the Vanguard User Mode Service is running. If it's stopped, right-click and select Start to restart it manually.</div>
+          </div>
+
+          <h2 id="no-tpm">If Your System Doesn't Have TPM 2.0</h2>
+          <p>If tpm.msc says "Compatible TPM cannot be found" and your BIOS has no fTPM or PTT option anywhere, you're either on a very old motherboard or a budget board that doesn't include it.</p>
+          <ul>
+            <li><strong>Discrete TPM module:</strong> Some motherboards have a TPM header — a small connector on the board — where you can install a separate TPM 2.0 module. These cost ₹500–1,500 online. Check your motherboard manual for whether a TPM header exists and what pin configuration it uses. This is the cleanest solution if the header is there.</li>
+            <li><strong>Upgrade the motherboard:</strong> If it's not there at all and there's no header, a motherboard upgrade is the only hardware path. Realistically, if your board is old enough to lack TPM 2.0 entirely, the CPU may also be aging and an upgrade might make sense anyway.</li>
+            <li><strong>There is no workaround:</strong> There is no officially supported way to run current Valorant without meeting these requirements. Riot has been firm about this since 2022 and shows no signs of changing the policy.</li>
+          </ul>
+
+          <h2 id="quick-summary">Quick Summary</h2>
+          <table class="summary-table">
+            <thead><tr><th>Step</th><th>What to Do</th><th>Difficulty</th></tr></thead>
+            <tbody>
+              <tr><td>Check tpm.msc and System Information</td><td>Verify TPM status and BIOS Mode before going in</td><td><span class="diff-easy">Very Easy</span></td></tr>
+              <tr><td>Enter BIOS</td><td>Restart and press Delete, F2, or F10 repeatedly</td><td><span class="diff-easy">Easy</span></td></tr>
+              <tr><td>Enable TPM 2.0 (fTPM/PTT)</td><td>Advanced/Security menu — naming varies by board</td><td><span class="diff-mod">Moderate</span></td></tr>
+              <tr><td>Enable Secure Boot</td><td>Security or Boot menu → set Mode to Standard</td><td><span class="diff-mod">Moderate</span></td></tr>
+              <tr><td>Save, restart, verify</td><td>Confirm tpm.msc shows 2.0, Secure Boot State shows On</td><td><span class="diff-easy">Easy</span></td></tr>
+              <tr><td>Cold boot if still showing VAN 1067</td><td>Full shutdown, not restart — Vanguard needs a cold boot</td><td><span class="diff-easy">Very Easy</span></td></tr>
+            </tbody>
+          </table>
+
+          <p>Start with the pre-checks — tpm.msc and System Information. They tell you exactly what you're dealing with before you even restart. The BIOS navigation is the only genuinely tricky part, and the trickiness is entirely about knowing what your specific manufacturer calls the setting. Find the right label and the rest is just toggling switches.</p>
+          <p><em>Got your cousin — or yourself — back into ranked? The BIOS label hunt (fTPM vs TPM vs PTT) is what trips most people. Once you've done it once, you'll know exactly where to look forever.</em></p>
+
+        </div><!-- /.article-body -->
+
+        <!-- AdSense Ad: Mid-Article / Before FAQ -->
+        <div class="adsense-wrap" style="text-align:center;margin:24px 0;overflow:hidden;">
+          <ins class="adsbygoogle" data-ad-client="ca-pub-9666660563566889" data-ad-format="auto" data-ad-slot="auto" data-full-width-responsive="true" style="display:block"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <div class="faq-section" id="faq-section" itemscope="" itemtype="https://schema.org/FAQPage">
+          <h2 class="faq-title">Frequently Asked Questions</h2>
+
+          <div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+            <button aria-controls="faq-1" aria-expanded="false" class="faq-question">
+              <span itemprop="name">What is VAN 1067 in Valorant?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="faq-1" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Vanguard anti-cheat detected that TPM 2.0 and/or Secure Boot are disabled on your system. Both need to be enabled in your BIOS for the game to launch. VAN 1067 is specifically the error code for this requirement check failing — it's not a network error or a Riot server issue, it's a local hardware/firmware configuration check.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+            <button aria-controls="faq-2" aria-expanded="false" class="faq-question">
+              <span itemprop="name">I enabled TPM and Secure Boot but still getting VAN 1067.</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="faq-2" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Do a full shutdown (not restart) and cold boot. Then verify in tpm.msc that it shows spec version 2.0 specifically, and in System Information that Secure Boot State shows "On." If Secure Boot shows "Off" despite enabling it in BIOS, your Windows installation may be in Legacy/MBR mode which prevents Secure Boot from activating — that requires a disk conversion using the MBR2GPT tool before Secure Boot will work.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+            <button aria-controls="faq-3" aria-expanded="false" class="faq-question">
+              <span itemprop="name">My BIOS has no Secure Boot option. Where is it?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="faq-3" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Your BIOS might be in Legacy/CSM mode which hides Secure Boot. Look for a CSM or Legacy Boot option and disable it — this should reveal the Secure Boot settings in the Security or Boot menu. Make sure your Windows installation is in UEFI/GPT mode before doing this. If Windows was installed in Legacy mode, disabling CSM without first converting the disk will cause a boot failure.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+            <button aria-controls="faq-4" aria-expanded="false" class="faq-question">
+              <span itemprop="name">I'm on AMD Ryzen and can't find TPM anywhere in BIOS.</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="faq-4" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Look for "AMD fTPM" or "fTPM switch" in your BIOS — it may be under Advanced, Security, or a CPU-specific submenu. AMD boards never call it just "TPM" — it's always listed as fTPM. If you're on MSI, check Settings → Security → AMD fTPM. ASUS: Advanced → AMD fTPM configuration. Gigabyte: Peripherals → AMD CPU fTPM. It's there — just not where you'd expect it.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+            <button aria-controls="faq-5" aria-expanded="false" class="faq-question">
+              <span itemprop="name">My TPM shows version 1.2, not 2.0. What now?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="faq-5" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Version 1.2 doesn't satisfy Vanguard's requirement. Check if your board has a firmware (BIOS) update that enables TPM 2.0 mode — many older boards shipped with TPM 1.2 by default and a BIOS update unlocked 2.0. Also check whether a discrete TPM 2.0 module can be installed via a header connector on your board. Without one of these options, Valorant cannot be run on that system.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+            <button aria-controls="faq-6" aria-expanded="false" class="faq-question">
+              <span itemprop="name">Enabling Secure Boot broke my other OS / Windows won't boot.</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="faq-6" itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Your Windows installation was in Legacy/MBR mode. You'll need to boot from Windows recovery media, convert the disk using MBR2GPT, and ensure your BIOS is set to UEFI mode. This is recoverable — the conversion doesn't delete data. Boot into Windows Recovery Environment (hold Shift while clicking Restart), go to Troubleshoot → Advanced Options → Command Prompt, and run: mbr2gpt /convert /allowFullOS. Then re-enable Secure Boot in BIOS.</p>
+            </div>
+          </div>
+
+        </div><!-- /.faq-section -->
+
+        <div class="author-box">
+          <div class="author-avatar-wrap">
+            <div class="author-avatar">RS</div>
+          </div>
+          <div class="author-info">
+            <div class="author-name-row">
+              <h4>Rohit Sharma</h4>
+              <span class="author-title">Senior Tech Writer &amp; DIY Repair Specialist</span>
+            </div>
+            <p class="author-bio">Rohit Sharma is a seasoned technology writer with over 8 years of experience covering home appliances, consumer electronics, and DIY repair guides. He has personally tested and documented hundreds of repair procedures, helping thousands of readers resolve error codes without expensive service calls. Rohit writes with engineering accuracy in plain, jargon-free language anyone can follow.</p>
+            <div class="author-social-row">
+              <a class="author-social-link" href="https://x.com/rohitsharma_ftl" rel="noopener" target="_blank">
+                <svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                <span>Follow on X</span>
+              </a>
+              <a class="author-social-link" href="https://www.linkedin.com/in/rohitsharma-fixthelogic" rel="noopener" target="_blank">
+                <svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+                <span>LinkedIn</span>
+              </a>
+              <a class="author-social-link" href="contact.html">
+                <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                <span>Contact</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="related-posts">
+          <h3>More Software Error Guides</h3>
+          <div class="related-grid">
+            <article class="article-card">
+              <a aria-hidden="true" href="steam-missing-file-privileges-fix.html" tabindex="-1">
+                <img alt="Steam Missing File Privileges error" class="card-thumb" height="338" loading="lazy" src="images/steam-missing-file-privileges/hero-image.png" width="600"/>
+              </a>
+              <div class="card-body">
+                <span class="card-tag">Software Errors</span>
+                <h3><a href="steam-missing-file-privileges-fix.html">Steam &#8220;Missing File Privileges&#8221; Error Fix &#8212; Works Every Time</a></h3>
+                <p class="card-excerpt">Steam blocked during a game update? 6 fixes from running as Administrator to clearing the download cache.</p>
+                <div class="card-meta"><time datetime="2026-03-27">Mar 27, 2026</time><a class="read-more" href="steam-missing-file-privileges-fix.html">Read More →</a></div>
+              </div>
+            </article>
+            <article class="article-card">
+              <a aria-hidden="true" href="err-connection-timed-out-chrome-fix.html" tabindex="-1">
+                <img alt="ERR_CONNECTION_TIMED_OUT Chrome error" class="card-thumb" height="338" loading="lazy" src="images/err-connection-timed-out/hero-image.png" width="600"/>
+              </a>
+              <div class="card-body">
+                <span class="card-tag">Software Errors</span>
+                <h3><a href="err-connection-timed-out-chrome-fix.html">&#8220;ERR_CONNECTION_TIMED_OUT&#8221; in Chrome: 5 Fixes That Actually Work</a></h3>
+                <p class="card-excerpt">Chrome showing ERR_CONNECTION_TIMED_OUT? 5 fixes from clearing cache to resetting the Windows network stack.</p>
+                <div class="card-meta"><time datetime="2026-03-04">Mar 4, 2026</time><a class="read-more" href="err-connection-timed-out-chrome-fix.html">Read More →</a></div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </article><!-- /.col-main -->
+
+      <aside aria-label="Sidebar" class="col-sidebar">
+        <div class="sidebar-widget">
+          <div class="widget-head">Quick Summary</div>
+          <div class="widget-body">
+            <p style="font-size:0.83rem;color:var(--gray-700);margin-bottom:12px;"><strong style="color:var(--blue);">VAN 1067</strong> = TPM 2.0 or Secure Boot disabled</p>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;padding:0;">
+              <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">1.</span><strong>Check tpm.msc + System Info first</strong></li>
+              <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">2.</span>Enter BIOS (Delete / F2)</li>
+              <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">3.</span>Enable fTPM (AMD) or PTT (Intel)</li>
+              <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">4.</span>Enable Secure Boot → set to Standard</li>
+              <li style="font-size:0.82rem;color:var(--gray-600);display:flex;gap:8px;"><span style="color:var(--blue);font-weight:700;flex-shrink:0;">5.</span>Full shutdown + cold boot</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sidebar-widget">
+          <div class="widget-head">Search Guides</div>
+          <div class="widget-body">
+            <div class="search-form" role="search">
+              <input aria-label="Search" placeholder="e.g. VAN 1067, TPM 2.0…" type="search"/>
+              <button type="submit">Go</button>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-widget">
+          <div class="widget-head">About This Site</div>
+          <div class="widget-body">
+            <div class="about-logo">Fix The <span>Logic</span></div>
+            <p>DIY troubleshooting guides in practice. No jargon, no upsells — just fixes that work.</p>
+            <p style="margin-top:10px;"><a href="about.html" style="font-size:0.83rem;font-weight:700;color:var(--blue);">Learn more →</a></p>
+          </div>
+        </div>
+        <div class="sidebar-widget">
+          <div class="widget-head">All Categories</div>
+          <div class="widget-body">
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;padding:0;">
+              <li><a href="appliances.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">→ Appliances</a></li>
+              <li><a href="printers-office.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">→ Printers &amp; Office</a></li>
+              <li><a href="smart-home.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">→ Smart Home</a></li>
+              <li><a href="gadgets.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">→ Gadgets</a></li>
+              <li><a href="software-errors.html" style="font-size:0.85rem;font-weight:600;color:var(--blue);">→ Software Errors</a></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">Fix The <span>Logic</span></div>
+        <p>Your go-to resource for clear, reliable troubleshooting guides. We help you solve tech problems quickly and safely — no jargon, no guesswork.</p>
+        <div class="footer-social">
+          <a class="footer-social-link" href="https://x.com/fixthelogic" rel="noopener" target="_blank"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a>
+          <a class="footer-social-link" href="https://www.linkedin.com/company/fixthelogic" rel="noopener" target="_blank"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a>
+          <a class="footer-social-link" href="https://www.facebook.com/fixthelogic" rel="noopener" target="_blank"><svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></a>
+          <a class="footer-social-link" href="contact.html"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></a>
+        </div>
+        <p style="font-size:0.78rem;color:rgba(255,255,255,0.3);margin-top:14px;">fixthelogic.in</p>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="appliances.html">Appliances</a></li>
+          <li><a href="printers-office.html">Printers &amp; Office</a></li>
+          <li><a href="smart-home.html">Smart Home</a></li>
+          <li><a href="software-errors.html">Software Errors</a></li>
+          <li><a href="gadgets.html">Gadgets</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="write-for-us.html">Write for Us</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="dmca.html">DMCA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      <strong style="color:rgba(255,255,255,0.55);">Disclaimer:</strong> Fix The Logic provides informational troubleshooting guides only. Always follow all manufacturer safety guidelines. We are not responsible for voided warranties or any unintended device changes.
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">© 2026 Fix The Logic. All rights reserved. | <a href="privacy-policy.html" style="color:rgba(255,255,255,0.4);">Privacy Policy</a> | <a href="terms.html" style="color:rgba(255,255,255,0.4);">Terms</a> | <a href="disclaimer.html" style="color:rgba(255,255,255,0.4);">Disclaimer</a> | <a href="dmca.html" style="color:rgba(255,255,255,0.4);">DMCA</a></div>
+  </div>
+</footer>
+
+<script src="css/nav.js"></script>
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#1a2340;color:#fff;padding:16px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 -4px 24px rgba(0,0,0,0.25);">
+  <p style="margin:0;font-size:0.88rem;line-height:1.6;max-width:700px;">We use cookies to analyse traffic and serve personalised ads via Google AdSense &amp; Analytics. By clicking <strong>Accept All</strong> you consent to our use of cookies as described in our <a href="/cookie-policy.html" style="color:#60aaff;text-decoration:underline;">Cookie Policy</a>.</p>
+  <div style="display:flex;gap:10px;flex-shrink:0;">
+    <button onclick="ftlCookieReject()" style="background:transparent;border:1px solid rgba(255,255,255,0.35);color:#fff;padding:8px 18px;border-radius:6px;cursor:pointer;font-size:0.84rem;">Reject Non-Essential</button>
+    <button onclick="ftlCookieAccept()" style="background:#0056b3;border:none;color:#fff;padding:8px 20px;border-radius:6px;cursor:pointer;font-size:0.84rem;font-weight:600;">Accept All</button>
+  </div>
+</div>
+<script>
+(function(){
+  var CONSENT_KEY='ftl_cookie_consent';
+  function setCookie(n,v,d){var e=new Date();e.setTime(e.getTime()+d*864e5);document.cookie=n+'='+v+';expires='+e.toUTCString()+';path=/;SameSite=Lax';}
+  function getCookie(n){var c=document.cookie.split(';');for(var i=0;i<c.length;i++){var p=c[i].trim();if(p.indexOf(n+'=')===0)return p.substring(n.length+1);}return null;}
+  window.ftlCookieAccept=function(){setCookie(CONSENT_KEY,'accepted',365);document.getElementById('cookie-banner').style.display='none';};
+  window.ftlCookieReject=function(){setCookie(CONSENT_KEY,'rejected',365);document.getElementById('cookie-banner').style.display='none';};
+  document.addEventListener('DOMContentLoaded',function(){
+    if(!getCookie(CONSENT_KEY)){document.getElementById('cookie-banner').style.display='flex';}
+  });
+})();
+</script>
+<!-- End Cookie Consent Banner -->
+</body>
+</html>
