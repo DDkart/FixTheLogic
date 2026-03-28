@@ -12,6 +12,7 @@
   <meta property="og:description" content="Get in touch with the Fix The Logic team. Submit a troubleshooting question, report a guide error, or send a general enquiry." />
   <meta property="og:image" content="https://fixthelogic.in/images/samsung-4c/hero-image.png" />
   <meta property="og:site_name" content="Fix The Logic" />
+  <meta name="twitter:site" content="@fixthelogic" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Contact Us – Fix The Logic" />
   <meta name="twitter:description" content="Get in touch with the Fix The Logic team. Submit a troubleshooting question, report a guide error, or send a general enquiry." />
@@ -44,10 +45,10 @@
     <div class="container">
       <div class="header-inner">
         <a href="https://fixthelogic.in/" class="logo">Fix The <span>Logic</span></a>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
           <span></span><span></span><span></span>
         </button>
-                        <nav class="site-nav" role="navigation" aria-label="Main">
+                        <nav id="site-nav" class="site-nav" role="navigation" aria-label="Main">
           <a href="https://fixthelogic.in/">Home</a>
           <a href="appliances.html">Appliances</a>
           <a href="printers-office.html">Printers &amp; Office</a>
@@ -136,7 +137,22 @@
     </div>
   </main>
   <script>
-  function handleSubmit(e){e.preventDefault();document.getElementById('form-success').style.display='block';e.target.reset();var b=e.target.querySelector('.btn-primary');b.disabled=true;b.textContent='Sent ✓';}
+  function handleSubmit(e) {
+    e.preventDefault();
+    var fname   = document.getElementById('fname').value.trim();
+    var lname   = document.getElementById('lname').value.trim();
+    var email   = document.getElementById('email').value.trim();
+    var subject = document.getElementById('subject').value;
+    var msg     = document.getElementById('msg').value.trim();
+    if (!fname || !email || !subject || !msg) return;
+    var mailSubject = encodeURIComponent('[FixTheLogic] ' + subject + ' — from ' + fname + ' ' + lname);
+    var mailBody    = encodeURIComponent('Name: ' + fname + ' ' + lname + '\nEmail: ' + email + '\n\nMessage:\n' + msg);
+    window.location.href = 'mailto:hello@fixthelogic.in?subject=' + mailSubject + '&body=' + mailBody;
+    var successEl = document.getElementById('form-success');
+    if (successEl) successEl.style.display = 'block';
+    var btn = e.target.querySelector('.btn-primary');
+    if (btn) { btn.disabled = true; btn.textContent = 'Opening Mail…'; }
+  }
   </script>
     <footer class="site-footer" role="contentinfo">
     <div class="container">
