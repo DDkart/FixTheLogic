@@ -5,7 +5,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://fixthelogic.in/</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -13,7 +13,7 @@
   <!-- Category pages -->
   <url>
     <loc>https://fixthelogic.in/appliances.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -31,7 +31,7 @@
   </url>
   <url>
     <loc>https://fixthelogic.in/gadgets.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -433,6 +433,26 @@
     <image:image>
       <image:loc>https://fixthelogic.in/images/daikin-e7-error/hero-image.png</image:loc>
       <image:title>Daikin AC E7 Error Code Fix (Fan Motor Fault Explained)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://fixthelogic.in/jbl-earbuds-one-side-not-working-fix.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://fixthelogic.in/images/jbl-earbuds-one-side/hero-image.png</image:loc>
+      <image:title>JBL Earbuds One Side Not Working — 6 Fixes to Try Right Now</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://fixthelogic.in/godrej-washing-machine-e4-error-fix.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://fixthelogic.in/images/godrej-e4-error/hero-image.png</image:loc>
+      <image:title>Godrej Washing Machine E4 Error Code — Causes and Fix</image:title>
     </image:image>
   </url>
   <url>
